@@ -1,0 +1,23 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "BereaBijbel" } = Astro.props;
+
+// Alleen indexeerbaar als expliciet ingesteld via omgevingsvariabele.
+// Standaard (niet ingesteld, demo, preview) = noindex.
+const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
+---
+
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		{!indexable && <meta name="robots" content="noindex,nofollow" />}
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
