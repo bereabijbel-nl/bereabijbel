@@ -54,6 +54,7 @@ const grondtekstPerVers = new Map(
 const versDetail: Record<
 	number,
 	{
+		grondtekst: string;
 		woorden: {
 			tekst: string;
 			strong: string;
@@ -67,6 +68,7 @@ for (const v of verzen) {
 	const gt = grondtekstPerVers.get(v.vers);
 	if (!gt) continue;
 	versDetail[v.vers] = {
+		grondtekst: gt.woorden.map((w) => w.tekst).join(" "),
 		woorden: gt.woorden.map((w) => {
 			const { totaal, voorbeelden } = zoekVindplaatsen(w.strong, {
 				boek: boek!,
@@ -230,8 +232,9 @@ for (const v of verzen) {
 			return html;
 		}
 
-		function buildDetail(woorden: WoordDetail[]): string {
-			let html = '<div class="segmenten">';
+		function buildDetail(grondtekst: string, woorden: WoordDetail[]): string {
+			let html = `<div class="detail-row"><div class="detail-label">grondtekst</div><div class="detail-body"><span class="grondtekst">${grondtekst}</span></div></div>`;
+			html += '<div class="segmenten">';
 			woorden.forEach((w, i) => {
 				html += `<div class="segment" tabindex="0" role="button" aria-label="${w.strong}">`;
 				html += `<div class="seg-grondtekst">${w.tekst}</div>`;
@@ -245,7 +248,7 @@ for (const v of verzen) {
 
 		function initVersen() {
 			const el = document.getElementById("versdetail");
-			const versDetail: Record<string, { woorden: WoordDetail[] }> = el
+			const versDetail: Record<string, { grondtekst: string; woorden: WoordDetail[] }> = el
 				? JSON.parse(el.textContent || "{}")
 				: {};
 
@@ -275,7 +278,7 @@ for (const v of verzen) {
 
 					panel.innerHTML =
 						'<p class="placeholder-detail">Nog geen BereaBijbel-vertaling — hieronder wel al de grondtekst met Strong-nummers.</p>' +
-						buildDetail(detail.woorden);
+						buildDetail(detail.grondtekst, detail.woorden);
 					row.appendChild(panel);
 
 					const uitlegEl = panel.querySelector(".woord-uitleg") as HTMLElement;
@@ -419,6 +422,19 @@ for (const v of verzen) {
 		border-radius: 0 0 8px 8px;
 	}
 	.placeholder-detail { font-style: italic; color: var(--tertiary); margin: 0 0 0.8rem; }
+
+	.detail-row { display: flex; gap: 0.7rem; padding: 0.4rem 0 0.9rem; }
+	.detail-label {
+		flex-shrink: 0;
+		width: 6.4rem;
+		font-weight: 700;
+		color: var(--accent-donker);
+		font-family: sans-serif;
+		font-size: 0.78rem;
+		padding-top: 0.15rem;
+	}
+	.detail-body { flex: 1; }
+	.detail-body .grondtekst { font-style: italic; }
 
 	.segmenten {
 		display: flex;
