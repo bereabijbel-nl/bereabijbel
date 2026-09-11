@@ -26,12 +26,8 @@ const { boekInfo } = Astro.props as { boekInfo: BoekInfo };
 const hoofdstukken = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
 ---
 
-<Base title={`${boekInfo.naam_en} — BereaBijbel`}>
-	<nav class="broodkruimel">
-		<a href="/">BereaBijbel</a> / {boekInfo.naam_en}
-	</nav>
-
-	<h1>{boekInfo.naam_en}</h1>
+<Base title={`${boekInfo.naam_en} — BereaBijbel`} huidigeNav="bijbel">
+	<h1 id="hoofdstuktitel">{boekInfo.naam_en}</h1>
 
 	<ul class="hoofdstukkenlijst">
 		{hoofdstukken.map((h) => (
@@ -41,10 +37,11 @@ const hoofdstukken = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i +
 </Base>
 
 <style>
-	.broodkruimel {
-		font-size: 0.9rem;
-		color: #666;
-		margin: 1rem 0;
+	#hoofdstuktitel {
+		text-align: center;
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin: 2rem 0 1.4rem;
 	}
 	.hoofdstukkenlijst {
 		display: grid;
@@ -52,14 +49,16 @@ const hoofdstukken = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i +
 		gap: 0.5rem;
 		list-style: none;
 		padding: 0;
-		max-width: 40rem;
 	}
 	.hoofdstukkenlijst a {
 		display: block;
 		text-align: center;
-		padding: 0.5rem;
-		border: 1px solid #ddd;
-		border-radius: 4px;
+		padding: 0.4rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
 		text-decoration: none;
+		color: var(--accent-donker);
+		font-size: 0.9rem;
 	}
+	.hoofdstukkenlijst a:hover { background: var(--bg-soft); }
 </style>

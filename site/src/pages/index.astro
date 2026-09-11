@@ -19,45 +19,59 @@ const ot = index.filter((b) => b.testament === "ot");
 const nt = index.filter((b) => b.testament === "nt");
 ---
 
-<Base title="BereaBijbel">
-	<h1>BereaBijbel</h1>
+<Base title="BereaBijbel" huidigeNav="home">
+	<div class="intro prose">
+		<p>
+			BereaBijbel is een nieuwe Nederlandse Bijbelvertaling, rechtstreeks uit
+			het Hebreeuws, Aramees en Grieks.<br /><i>Volledig licentievrij.</i>
+		</p>
+	</div>
+
 	<p class="testdata-melding">
 		Testversie — deze site draait op de Engelse King James Version (Pure
-		Cambridge Edition) als vuldata, zodat de structuur getest kan worden.
-		De Nederlandse BereaBijbel-vertaling volgt per boek.
+		Cambridge Edition) als vuldata, zodat de structuur getest kan worden. De
+		Nederlandse BereaBijbel-vertaling volgt per boek.
 	</p>
 
-	<h2>Oude Testament</h2>
+	<h2 class="sectie">Oude Testament</h2>
 	<ul class="boekenlijst">
 		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
 	</ul>
 
-	<h2>Nieuwe Testament</h2>
+	<h2 class="sectie">Nieuwe Testament</h2>
 	<ul class="boekenlijst">
 		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
 	</ul>
 </Base>
 
 <style>
+	.intro p {
+		text-align: center;
+		max-width: 48ch;
+		margin: 3rem auto 0;
+		color: var(--dark);
+		font-size: 1rem;
+		line-height: 1.6;
+	}
 	.testdata-melding {
-		background: #fef3cd;
-		border: 1px solid #f0d78c;
-		padding: 0.5rem 1rem;
+		background: var(--gewogen-soft);
+		border: 1px solid var(--gewogen);
+		padding: 0.6rem 1rem;
 		font-size: 0.9rem;
-		border-radius: 4px;
-		max-width: 40rem;
+		border-radius: 8px;
+		margin: 1.6rem 0 0;
 	}
 	.boekenlijst {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-		gap: 0.5rem;
+		gap: 0.3rem 1rem;
 		list-style: none;
 		padding: 0;
-		max-width: 50rem;
 	}
 	.boekenlijst a {
 		display: block;
-		padding: 0.4rem 0.6rem;
+		padding: 0.3rem 0;
 		text-decoration: none;
 	}
+	.boekenlijst a:hover { text-decoration: underline; }
 </style>

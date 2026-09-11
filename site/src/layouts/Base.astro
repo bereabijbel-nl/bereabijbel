@@ -1,9 +1,10 @@
 ---
 interface Props {
-  title?: string;
+	title?: string;
+	huidigeNav?: "home" | "over" | "contact" | "bijbel";
 }
 
-const { title = "BereaBijbel" } = Astro.props;
+const { title = "BereaBijbel", huidigeNav = "" } = Astro.props;
 
 // Alleen indexeerbaar als expliciet ingesteld via omgevingsvariabele.
 // Standaard (niet ingesteld, demo, preview) = noindex.
@@ -16,8 +17,191 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 		<meta name="viewport" content="width=device-width" />
 		{!indexable && <meta name="robots" content="noindex,nofollow" />}
 		<title>{title}</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+			:root {
+				--light: #ffffff;
+				--lightgray: #e5e5e5;
+				--gray: #b3b3b3;
+				--darkgray: #333333;
+				--dark: #111111;
+				--secondary: #1a1a1a;
+				--tertiary: #757575;
+				--bg: var(--light);
+				--bg-soft: #f5f5f5;
+				--border: var(--lightgray);
+				--tekst: var(--darkgray);
+				--accent: var(--secondary);
+				--accent-donker: var(--dark);
+				--gewogen: #9c7a2e;
+				--gewogen-soft: #f7f0dd;
+				--body-font: "Lora", Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root:not([data-theme="light"]) {
+					--light: #1b1a17;
+					--lightgray: #34322b;
+					--gray: #6b6558;
+					--darkgray: #e4dfd1;
+					--dark: #f5f2ea;
+					--secondary: #e8e3d4;
+					--tertiary: #a39c89;
+					--bg-soft: #242219;
+					--gewogen: #d9b25c;
+					--gewogen-soft: #322a17;
+				}
+			}
+			:root[data-theme="dark"] {
+				--light: #1b1a17;
+				--lightgray: #34322b;
+				--gray: #6b6558;
+				--darkgray: #e4dfd1;
+				--dark: #f5f2ea;
+				--secondary: #e8e3d4;
+				--tertiary: #a39c89;
+				--bg-soft: #242219;
+				--gewogen: #d9b25c;
+				--gewogen-soft: #322a17;
+			}
+
+			* { box-sizing: border-box; }
+			html, body { margin: 0; padding: 0; }
+			body {
+				font-family: var(--body-font);
+				background: var(--bg);
+				color: var(--tekst);
+				line-height: 1.7;
+				-webkit-font-smoothing: antialiased;
+			}
+			:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+			::selection { background: var(--bg-soft); }
+			a { color: var(--accent); }
+
+			.site-header {
+				text-align: center;
+				padding: 2.2rem 1rem 0;
+				margin-bottom: 2rem;
+			}
+			.page-title {
+				margin: 0 0 0.3rem;
+				font-size: 1.75rem;
+				font-weight: 700;
+			}
+			.page-title a {
+				color: var(--secondary);
+				text-decoration: none;
+			}
+			.page-title a:hover { color: var(--accent-donker); }
+			.site-subtitle {
+				margin: 0 0 1rem;
+				font-size: 1.05rem;
+				font-style: italic;
+				color: var(--secondary);
+			}
+			.site-nav {
+				font-size: 0.82rem;
+				text-align: center;
+				border-top: 1px solid var(--border);
+				border-bottom: 1px solid var(--border);
+				padding: 1rem 0;
+				margin: 0.8rem 0 0;
+			}
+			.site-nav a {
+				font-family: var(--body-font);
+				font-size: inherit;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				color: var(--secondary);
+				text-decoration: none;
+			}
+			.site-nav a:hover { text-decoration: underline; }
+			.site-nav a[aria-current="true"] { color: var(--tertiary); cursor: default; }
+			.site-nav a[aria-current="true"]:hover { text-decoration: none; }
+			.nav-sep { color: var(--gray); margin: 0 0.5rem; }
+
+			main {
+				max-width: 700px;
+				margin: 0 auto;
+				padding: 0 1.2rem 4.5rem;
+			}
+
+			.prose p { margin: 0 0 1.1rem; }
+			.prose ul { margin: 0 0 1.1rem; padding-left: 1.3rem; }
+			.prose li { margin-bottom: 0.4rem; }
+			h2.sectie {
+				font-size: 1.4rem;
+				font-weight: 700;
+				color: var(--dark);
+				margin: 2.2rem 0 1rem;
+			}
+			h2.sectie:first-child { margin-top: 0; }
+
+			footer.foot {
+				text-align: center;
+				margin-top: 3.5rem;
+				padding-top: 1.2rem;
+				border-top: 1px solid var(--border);
+				font-family: sans-serif;
+				font-size: 0.74rem;
+				color: var(--tertiary);
+			}
+			footer.foot span { margin: 0 0.6rem; }
+
+			.toast {
+				position: fixed;
+				bottom: 1.5rem;
+				left: 50%;
+				transform: translateX(-50%);
+				background: var(--dark);
+				color: var(--light);
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				font-family: sans-serif;
+				font-size: 0.85rem;
+				opacity: 0.95;
+				z-index: 50;
+			}
+			.toast[hidden] { display: none; }
+
+			@media (prefers-reduced-motion: reduce) {
+				* { transition: none !important; }
+			}
+		</style>
 	</head>
 	<body>
-		<slot />
+		<header class="site-header">
+			<h2 class="page-title"><a href="/">BereaBijbel</a></h2>
+			<p class="site-subtitle">Een betrouwbare vertaling in begrijpelijk Nederlands</p>
+			<nav class="site-nav">
+				<a href="/" aria-current={huidigeNav === "home" ? "true" : "false"}>Home</a><span class="nav-sep">|</span>
+				<a href="/gen/1" aria-current={huidigeNav === "bijbel" ? "true" : "false"}>Bijbel</a><span class="nav-sep">|</span>
+				<a href="/over" aria-current={huidigeNav === "over" ? "true" : "false"}>Over</a><span class="nav-sep">|</span>
+				<a href="/contact" aria-current={huidigeNav === "contact" ? "true" : "false"}>Contact</a>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="foot">
+			<span>CC0 — data</span><span>MIT — code</span>
+		</footer>
+
+		<div id="toast" class="toast" hidden></div>
+
+		<script>
+			let toastTimer: ReturnType<typeof setTimeout>;
+			function toonToast(tekst: string) {
+				const el = document.getElementById("toast");
+				if (!el) return;
+				el.textContent = tekst;
+				el.hidden = false;
+				clearTimeout(toastTimer);
+				toastTimer = setTimeout(() => { el.hidden = true; }, 2400);
+			}
+			(window as any).toonToast = toonToast;
+		</script>
 	</body>
 </html>

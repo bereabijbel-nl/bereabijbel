@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 		for (let h = 1; h <= boek.hoofdstukken; h++) {
 			paths.push({
 				params: { boek: boek.code, hoofdstuk: String(h) },
-				props: { boekInfo: boek },
+				props: { boekInfo: boek, alleBoeken: index },
 			});
 		}
 	}
@@ -32,66 +32,290 @@ export async function getStaticPaths() {
 }
 
 const { boek, hoofdstuk } = Astro.params;
-const { boekInfo } = Astro.props as { boekInfo: BoekInfo };
+const { boekInfo, alleBoeken } = Astro.props as { boekInfo: BoekInfo; alleBoeken: BoekInfo[] };
 
 const hoofdstukNummer = Number(hoofdstuk);
 const bestandsnaam = String(hoofdstukNummer).padStart(2, "0") + ".json";
 const hoofdstukData = JSON.parse(
 	fs.readFileSync(path.join(DATA_ROOT, boek!, bestandsnaam), "utf-8"),
 );
+const verzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
 
-const vorige = hoofdstukNummer > 1 ? hoofdstukNummer - 1 : null;
-const volgende = hoofdstukNummer < boekInfo.hoofdstukken ? hoofdstukNummer + 1 : null;
+const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
 ---
 
-<Base title={`${boekInfo.naam_en} ${hoofdstukNummer} — BereaBijbel`}>
+<Base title={`${boekInfo.naam_en} ${hoofdstukNummer} — BereaBijbel`} huidigeNav="bijbel">
 	<p class="testdata-melding">
 		Testdata — King James Version (Pure Cambridge Edition), Engels. Nederlandse
 		vertaling volgt.
 	</p>
 
-	<nav class="broodkruimel">
-		<a href="/">BereaBijbel</a> / <a href={`/${boek}/`}>{boekInfo.naam_en}</a> / {hoofdstukNummer}
+	<div class="zoekbalk">
+		<input id="search" type="text" placeholder="Zoek op vers, bijv. John 3:16" autocomplete="off" />
+	</div>
+	<div id="search-error" class="search-error" hidden></div>
+
+	<h1 id="hoofdstuktitel">{boekInfo.naam_en} {hoofdstukNummer}</h1>
+
+	<nav class="hfdnav">
+		<select id="book-select">
+			{alleBoeken.map((b) => (
+				<option value={b.code} selected={b.code === boek}>{b.naam_en}</option>
+			))}
+		</select>
+		<select id="chapter-select">
+			{hoofdstukkenVanDitBoek.map((h) => (
+				<option value={h} selected={h === hoofdstukNummer}>{h}</option>
+			))}
+		</select>
 	</nav>
 
-	<h1>{boekInfo.naam_en} {hoofdstukNummer}</h1>
-
-	<div class="verzen">
-		{hoofdstukData.verzen.map((v: { vers: number; tekst: string }) => (
-			<p><sup>{v.vers}</sup> {v.tekst}</p>
+	<div id="chapter-verses">
+		{verzen.map((v) => (
+			<div class="vers" id={`vers-${v.vers}`} data-vers={v.vers}>
+				<div class="vers-hoofd">
+					<div class="vnr">{v.vers}</div>
+					<div class="vtekst placeholder-tekst">{v.tekst}</div>
+					<button class="meld-btn" type="button" title="Verbetering voorstellen bij dit vers" data-meld>
+						<svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 17V4M5 4h9l-2 3 2 3H5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+			</div>
 		))}
 	</div>
 
-	<nav class="hoofdstuknavigatie">
-		{vorige ? <a href={`/${boek}/${vorige}`}>&larr; Hoofdstuk {vorige}</a> : <span />}
-		{volgende ? <a href={`/${boek}/${volgende}`}>Hoofdstuk {volgende} &rarr;</a> : <span />}
-	</nav>
+	<script type="application/json" id="boekenindex" set:html={JSON.stringify(alleBoeken)} />
+
+	<script>
+		function normalizeBoek(s: string) {
+			return s.trim().toLowerCase().replace(/\./g, "");
+		}
+
+		function initZoek() {
+			const el = document.getElementById("boekenindex");
+			if (!el) return;
+			const boeken: { code: string; naam_en: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
+
+			const zoekEl = document.getElementById("search") as HTMLInputElement | null;
+			const errorEl = document.getElementById("search-error");
+			if (!zoekEl || !errorEl) return;
+
+			zoekEl.addEventListener("keydown", (e) => {
+				if (e.key !== "Enter") return;
+				e.preventDefault();
+				errorEl.hidden = true;
+				const query = zoekEl.value.trim();
+				if (!query) return;
+
+				const m = query.match(/^(.*?)\s+(\d+)(?::(\d+))?\s*$/);
+				if (!m) {
+					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "John 3:16".';
+					errorEl.hidden = false;
+					return;
+				}
+				const rawBoek = normalizeBoek(m[1]);
+				const gevonden = boeken.find((b) => normalizeBoek(b.naam_en).indexOf(rawBoek) === 0);
+				if (!gevonden) {
+					errorEl.textContent = `Boek "${m[1]}" niet gevonden.`;
+					errorEl.hidden = false;
+					return;
+				}
+				const hst = parseInt(m[2], 10);
+				if (hst < 1 || hst > gevonden.hoofdstukken) {
+					errorEl.textContent = `${gevonden.naam_en} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
+					errorEl.hidden = false;
+					return;
+				}
+				const vers = m[3] ? `#vers-${m[3]}` : "";
+				window.location.href = `/${gevonden.code}/${hst}${vers}`;
+			});
+		}
+
+		function initSelects() {
+			const boekSelect = document.getElementById("book-select") as HTMLSelectElement | null;
+			const hstSelect = document.getElementById("chapter-select") as HTMLSelectElement | null;
+			if (boekSelect) {
+				boekSelect.addEventListener("change", () => {
+					window.location.href = `/${boekSelect.value}/1`;
+				});
+			}
+			if (hstSelect) {
+				hstSelect.addEventListener("change", () => {
+					const boek = window.location.pathname.split("/")[1];
+					window.location.href = `/${boek}/${hstSelect.value}`;
+				});
+			}
+		}
+
+		function initVersen() {
+			document.querySelectorAll<HTMLElement>(".vers").forEach((row) => {
+				const hoofd = row.querySelector(".vers-hoofd");
+				hoofd?.addEventListener("click", (e) => {
+					if ((e.target as HTMLElement).closest("[data-meld]")) return;
+					const open = row.classList.contains("open");
+					document.querySelectorAll(".vers.open").forEach((r) => {
+						r.classList.remove("open");
+						r.querySelector(".vers-detail")?.remove();
+					});
+					if (open) return;
+					row.classList.add("open");
+					const panel = document.createElement("div");
+					panel.className = "vers-detail";
+					panel.innerHTML =
+						'<p class="placeholder-detail">Nog geen BereaBijbel-vertaling — dit is KJV-vuldata, geen verantwoording beschikbaar.</p>';
+					row.appendChild(panel);
+				});
+			});
+
+			document.querySelectorAll<HTMLElement>("[data-meld]").forEach((btn) => {
+				btn.addEventListener("click", (e) => {
+					e.stopPropagation();
+					(window as any).toonToast?.(
+						"Bedankt voor je melding — wordt in deze testversie nog niet verwerkt.",
+					);
+				});
+			});
+		}
+
+		function markeerVanuitHash() {
+			const hash = window.location.hash;
+			if (!hash) return;
+			const target = document.querySelector(hash);
+			if (!target) return;
+			target.scrollIntoView({ behavior: "smooth", block: "center" });
+			target.classList.add("flits");
+			setTimeout(() => target.classList.remove("flits"), 1600);
+		}
+
+		initZoek();
+		initSelects();
+		initVersen();
+		markeerVanuitHash();
+	</script>
 </Base>
 
 <style>
 	.testdata-melding {
-		background: #fef3cd;
-		border: 1px solid #f0d78c;
+		background: var(--gewogen-soft);
+		border: 1px solid var(--gewogen);
 		padding: 0.5rem 1rem;
 		font-size: 0.9rem;
-		border-radius: 4px;
+		border-radius: 8px;
 	}
-	.broodkruimel {
-		font-size: 0.9rem;
-		color: #666;
-		margin: 1rem 0;
+	.zoekbalk {
+		position: relative;
+		max-width: 640px;
+		margin: 1.4rem auto 0.4rem;
 	}
-	.verzen p {
-		line-height: 1.7;
-		margin: 0.5rem 0;
+	#search {
+		display: block;
+		width: 100%;
+		font-family: var(--body-font);
+		font-size: 0.95rem;
+		line-height: 1.5;
+		text-align: center;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.6rem 0.8rem;
+		color: var(--tekst);
+		background: var(--bg);
 	}
-	.verzen sup {
-		color: #888;
-		margin-right: 0.25rem;
+	#search::placeholder { color: var(--gray); }
+	#search:focus { outline: none; border-color: var(--accent); }
+	.search-error {
+		max-width: 640px;
+		margin: 0.4rem auto 0;
+		color: #a33;
+		font-size: 0.8rem;
+		font-family: sans-serif;
+		text-align: center;
 	}
-	.hoofdstuknavigatie {
+	.search-error[hidden] { display: none; }
+
+	#hoofdstuktitel {
+		text-align: center;
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: var(--tekst);
+		margin: 2rem 0 0.4rem;
+	}
+
+	.hfdnav {
 		display: flex;
-		justify-content: space-between;
-		margin-top: 2rem;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		font-size: 0.85rem;
+		padding: 1rem 0;
+		margin-bottom: 1.1rem;
 	}
+	.hfdnav select {
+		font-family: var(--body-font);
+		font-size: 0.85rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.3rem 1.6rem 0.3rem 0.8rem;
+		background: var(--bg);
+		color: var(--accent-donker);
+		cursor: pointer;
+	}
+	.hfdnav select:focus { outline: none; border-color: var(--accent); }
+
+	#chapter-verses { font-size: 1.05rem; }
+	.vers { position: relative; border-radius: 8px; line-height: 1.75; }
+	.vers-hoofd {
+		display: flex;
+		gap: 0.8rem;
+		padding: 0.5rem 0.8rem 0.5rem 0.4rem;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+	.vers-hoofd:hover { background: var(--bg-soft); }
+	.vers.open .vers-hoofd { border-radius: 8px 8px 0 0; background: var(--bg-soft); }
+	.vnr {
+		color: var(--gray);
+		font-size: 0.75rem;
+		min-width: 1.7rem;
+		text-align: right;
+		padding-top: 0.35rem;
+		flex-shrink: 0;
+		font-family: sans-serif;
+	}
+	.vtekst { flex: 1; }
+	.vers-detail {
+		padding: 1rem 1.2rem 1.2rem;
+		font-size: 0.92rem;
+		background: var(--bg-soft);
+		border-radius: 0 0 8px 8px;
+	}
+	.placeholder-detail { font-style: italic; color: var(--tertiary); margin: 0; }
+
+	.meld-btn {
+		flex-shrink: 0;
+		align-self: flex-start;
+		margin-top: 0.3rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		border-radius: 999px;
+		background: none;
+		color: var(--tertiary);
+		cursor: pointer;
+		opacity: 0;
+		transition: opacity 0.15s, background 0.15s, color 0.15s;
+	}
+	.vers-hoofd:hover .meld-btn { opacity: 1; }
+	.meld-btn:hover { background: var(--lightgray); color: var(--accent-donker); }
+
+	@keyframes flits {
+		0% { background: var(--lightgray); }
+		100% { background: var(--bg-soft); }
+	}
+	.vers.flits .vers-hoofd { animation: flits 1.6s ease-out 1; }
 </style>
