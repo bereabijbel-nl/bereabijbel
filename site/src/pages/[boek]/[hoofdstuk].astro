@@ -1,0 +1,97 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import Base from "../../layouts/Base.astro";
+
+interface BoekInfo {
+	code: string;
+	nummer: number;
+	naam_en: string;
+	testament: "ot" | "nt";
+	hoofdstukken: number;
+}
+
+const DATA_ROOT = path.join(process.cwd(), "..", "data", "kjv");
+
+export async function getStaticPaths() {
+	const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
+	const index: BoekInfo[] = JSON.parse(
+		fs.readFileSync(path.join(dataRoot, "index.json"), "utf-8"),
+	);
+
+	const paths = [];
+	for (const boek of index) {
+		for (let h = 1; h <= boek.hoofdstukken; h++) {
+			paths.push({
+				params: { boek: boek.code, hoofdstuk: String(h) },
+				props: { boekInfo: boek },
+			});
+		}
+	}
+	return paths;
+}
+
+const { boek, hoofdstuk } = Astro.params;
+const { boekInfo } = Astro.props as { boekInfo: BoekInfo };
+
+const hoofdstukNummer = Number(hoofdstuk);
+const bestandsnaam = String(hoofdstukNummer).padStart(2, "0") + ".json";
+const hoofdstukData = JSON.parse(
+	fs.readFileSync(path.join(DATA_ROOT, boek!, bestandsnaam), "utf-8"),
+);
+
+const vorige = hoofdstukNummer > 1 ? hoofdstukNummer - 1 : null;
+const volgende = hoofdstukNummer < boekInfo.hoofdstukken ? hoofdstukNummer + 1 : null;
+---
+
+<Base title={`${boekInfo.naam_en} ${hoofdstukNummer} — BereaBijbel`}>
+	<p class="testdata-melding">
+		Testdata — King James Version (Pure Cambridge Edition), Engels. Nederlandse
+		vertaling volgt.
+	</p>
+
+	<nav class="broodkruimel">
+		<a href="/">BereaBijbel</a> / <a href={`/${boek}/`}>{boekInfo.naam_en}</a> / {hoofdstukNummer}
+	</nav>
+
+	<h1>{boekInfo.naam_en} {hoofdstukNummer}</h1>
+
+	<div class="verzen">
+		{hoofdstukData.verzen.map((v: { vers: number; tekst: string }) => (
+			<p><sup>{v.vers}</sup> {v.tekst}</p>
+		))}
+	</div>
+
+	<nav class="hoofdstuknavigatie">
+		{vorige ? <a href={`/${boek}/${vorige}`}>&larr; Hoofdstuk {vorige}</a> : <span />}
+		{volgende ? <a href={`/${boek}/${volgende}`}>Hoofdstuk {volgende} &rarr;</a> : <span />}
+	</nav>
+</Base>
+
+<style>
+	.testdata-melding {
+		background: #fef3cd;
+		border: 1px solid #f0d78c;
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+		border-radius: 4px;
+	}
+	.broodkruimel {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 1rem 0;
+	}
+	.verzen p {
+		line-height: 1.7;
+		margin: 0.5rem 0;
+	}
+	.verzen sup {
+		color: #888;
+		margin-right: 0.25rem;
+	}
+	.hoofdstuknavigatie {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
+</style>

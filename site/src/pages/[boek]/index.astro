@@ -1,0 +1,65 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import Base from "../../layouts/Base.astro";
+
+interface BoekInfo {
+	code: string;
+	nummer: number;
+	naam_en: string;
+	testament: "ot" | "nt";
+	hoofdstukken: number;
+}
+
+export async function getStaticPaths() {
+	const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
+	const index: BoekInfo[] = JSON.parse(
+		fs.readFileSync(path.join(dataRoot, "index.json"), "utf-8"),
+	);
+	return index.map((boek) => ({
+		params: { boek: boek.code },
+		props: { boekInfo: boek },
+	}));
+}
+
+const { boekInfo } = Astro.props as { boekInfo: BoekInfo };
+const hoofdstukken = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
+---
+
+<Base title={`${boekInfo.naam_en} — BereaBijbel`}>
+	<nav class="broodkruimel">
+		<a href="/">BereaBijbel</a> / {boekInfo.naam_en}
+	</nav>
+
+	<h1>{boekInfo.naam_en}</h1>
+
+	<ul class="hoofdstukkenlijst">
+		{hoofdstukken.map((h) => (
+			<li><a href={`/${boekInfo.code}/${h}`}>{h}</a></li>
+		))}
+	</ul>
+</Base>
+
+<style>
+	.broodkruimel {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 1rem 0;
+	}
+	.hoofdstukkenlijst {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		max-width: 40rem;
+	}
+	.hoofdstukkenlijst a {
+		display: block;
+		text-align: center;
+		padding: 0.5rem;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		text-decoration: none;
+	}
+</style>

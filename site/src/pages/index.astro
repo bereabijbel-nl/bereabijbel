@@ -1,8 +1,63 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import Base from "../layouts/Base.astro";
+
+interface BoekInfo {
+	code: string;
+	nummer: number;
+	naam_en: string;
+	testament: "ot" | "nt";
+	hoofdstukken: number;
+}
+
+const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
+const index: BoekInfo[] = JSON.parse(
+	fs.readFileSync(path.join(dataRoot, "index.json"), "utf-8"),
+);
+const ot = index.filter((b) => b.testament === "ot");
+const nt = index.filter((b) => b.testament === "nt");
 ---
 
 <Base title="BereaBijbel">
 	<h1>BereaBijbel</h1>
-	<p>In opbouw.</p>
+	<p class="testdata-melding">
+		Testversie — deze site draait op de Engelse King James Version (Pure
+		Cambridge Edition) als vuldata, zodat de structuur getest kan worden.
+		De Nederlandse BereaBijbel-vertaling volgt per boek.
+	</p>
+
+	<h2>Oude Testament</h2>
+	<ul class="boekenlijst">
+		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+	</ul>
+
+	<h2>Nieuwe Testament</h2>
+	<ul class="boekenlijst">
+		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+	</ul>
 </Base>
+
+<style>
+	.testdata-melding {
+		background: #fef3cd;
+		border: 1px solid #f0d78c;
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+		border-radius: 4px;
+		max-width: 40rem;
+	}
+	.boekenlijst {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		max-width: 50rem;
+	}
+	.boekenlijst a {
+		display: block;
+		padding: 0.4rem 0.6rem;
+		text-decoration: none;
+	}
+</style>
