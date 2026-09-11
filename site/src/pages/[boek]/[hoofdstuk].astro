@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Base from "../../layouts/Base.astro";
+import { laadGrondtekstHoofdstuk, zoekVindplaatsen } from "../../lib/grondtekst";
 
 interface BoekInfo {
 	code: string;
@@ -42,12 +43,58 @@ const hoofdstukData = JSON.parse(
 const verzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
 
 const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
+
+// Grondtekst + Strong-nummers erbij, indien beschikbaar voor dit hoofdstuk.
+const naamPerCode = new Map(alleBoeken.map((b) => [b.code, b.naam_en]));
+const grondtekstHoofdstuk = laadGrondtekstHoofdstuk(boekInfo.testament, boek!, hoofdstukNummer);
+const grondtekstPerVers = new Map(
+	(grondtekstHoofdstuk?.verzen ?? []).map((v) => [v.vers, v]),
+);
+
+const versDetail: Record<
+	number,
+	{
+		woorden: {
+			tekst: string;
+			strong: string;
+			morf: string | null;
+			vindplaatsen: { totaal: number; voorbeelden: { boek: string; naam: string; hoofdstuk: number; vers: number; tekst: string }[] };
+		}[];
+	}
+> = {};
+
+for (const v of verzen) {
+	const gt = grondtekstPerVers.get(v.vers);
+	if (!gt) continue;
+	versDetail[v.vers] = {
+		woorden: gt.woorden.map((w) => {
+			const { totaal, voorbeelden } = zoekVindplaatsen(w.strong, {
+				boek: boek!,
+				hoofdstuk: hoofdstukNummer,
+				vers: v.vers,
+			});
+			return {
+				tekst: w.tekst,
+				strong: w.strong,
+				morf: w.morf,
+				vindplaatsen: {
+					totaal,
+					voorbeelden: voorbeelden.map((vp) => ({
+						...vp,
+						naam: naamPerCode.get(vp.boek) ?? vp.boek,
+					})),
+				},
+			};
+		}),
+	};
+}
 ---
 
 <Base title={`${boekInfo.naam_en} ${hoofdstukNummer} — BereaBijbel`} huidigeNav="bijbel">
 	<p class="testdata-melding">
 		Testdata — King James Version (Pure Cambridge Edition), Engels. Nederlandse
-		vertaling volgt.
+		vertaling volgt. Grondtekst en Strong-nummers ({boekInfo.testament === "ot" ? "WLC" : "Elzevir TR"}) zijn
+		al beschikbaar, los van de vertaling.
 	</p>
 
 	<div class="zoekbalk">
@@ -87,6 +134,7 @@ const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_,
 	</div>
 
 	<script type="application/json" id="boekenindex" set:html={JSON.stringify(alleBoeken)} />
+	<script type="application/json" id="versdetail" set:html={JSON.stringify(versDetail)} />
 
 	<script>
 		function normalizeBoek(s: string) {
@@ -149,7 +197,58 @@ const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_,
 			}
 		}
 
+		interface WoordDetail {
+			tekst: string;
+			strong: string;
+			morf: string | null;
+			vindplaatsen: {
+				totaal: number;
+				voorbeelden: { boek: string; naam: string; hoofdstuk: number; vers: number; tekst: string }[];
+			};
+		}
+
+		function buildVindplaatsenHtml(w: WoordDetail): string {
+			const { totaal, voorbeelden } = w.vindplaatsen;
+			if (totaal === 0) {
+				return '<p class="vindplaatsen-note">Geen andere vindplaatsen van dit grondtaalwoord.</p>';
+			}
+			let html = '<ul class="vindplaatsen-list">';
+			for (const vp of voorbeelden) {
+				html += `<li class="vp-item"><div class="vp-item-hoofd"><span class="vp-ref">${vp.naam} ${vp.hoofdstuk}:${vp.vers}</span><span class="vp-vorm">${vp.tekst}</span></div></li>`;
+			}
+			html += "</ul>";
+			if (totaal > voorbeelden.length) {
+				html += `<p class="vindplaatsen-note">En ${totaal - voorbeelden.length} andere vindplaats${totaal - voorbeelden.length === 1 ? "" : "en"} (totaal ${totaal}).</p>`;
+			}
+			return html;
+		}
+
+		function buildWoordUitleg(w: WoordDetail): string {
+			let html = `<p class="uitleg-intro"><b>${w.strong}</b>${w.morf ? " — " + w.morf : ""}</p>`;
+			html += '<p class="field-label">Ook elders in de Bijbel</p>';
+			html += buildVindplaatsenHtml(w);
+			return html;
+		}
+
+		function buildDetail(woorden: WoordDetail[]): string {
+			let html = '<div class="segmenten">';
+			woorden.forEach((w, i) => {
+				html += `<div class="segment" tabindex="0" role="button" aria-label="${w.strong}">`;
+				html += `<div class="seg-grondtekst">${w.tekst}</div>`;
+				html += `<button type="button" class="seg-strong-btn" data-i="${i}">${w.strong}</button>`;
+				html += "</div>";
+			});
+			html += "</div>";
+			html += '<div class="woord-uitleg" hidden></div>';
+			return html;
+		}
+
 		function initVersen() {
+			const el = document.getElementById("versdetail");
+			const versDetail: Record<string, { woorden: WoordDetail[] }> = el
+				? JSON.parse(el.textContent || "{}")
+				: {};
+
 			document.querySelectorAll<HTMLElement>(".vers").forEach((row) => {
 				const hoofd = row.querySelector(".vers-hoofd");
 				hoofd?.addEventListener("click", (e) => {
@@ -161,11 +260,39 @@ const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_,
 					});
 					if (open) return;
 					row.classList.add("open");
+
+					const versNummer = row.dataset.vers!;
+					const detail = versDetail[versNummer];
+
 					const panel = document.createElement("div");
 					panel.className = "vers-detail";
+					if (!detail) {
+						panel.innerHTML =
+							'<p class="placeholder-detail">Nog geen grondtekst gekoppeld aan dit vers.</p>';
+						row.appendChild(panel);
+						return;
+					}
+
 					panel.innerHTML =
-						'<p class="placeholder-detail">Nog geen BereaBijbel-vertaling — dit is KJV-vuldata, geen verantwoording beschikbaar.</p>';
+						'<p class="placeholder-detail">Nog geen BereaBijbel-vertaling — hieronder wel al de grondtekst met Strong-nummers.</p>' +
+						buildDetail(detail.woorden);
 					row.appendChild(panel);
+
+					const uitlegEl = panel.querySelector(".woord-uitleg") as HTMLElement;
+					panel.querySelectorAll<HTMLElement>(".seg-strong-btn").forEach((btn) => {
+						btn.addEventListener("click", (e) => {
+							e.stopPropagation();
+							const i = parseInt(btn.getAttribute("data-i") || "0", 10);
+							if (!uitlegEl.hidden && uitlegEl.dataset.open === String(i)) {
+								uitlegEl.hidden = true;
+								uitlegEl.dataset.open = "";
+								return;
+							}
+							uitlegEl.innerHTML = buildWoordUitleg(detail.woorden[i]);
+							uitlegEl.hidden = false;
+							uitlegEl.dataset.open = String(i);
+						});
+					});
 				});
 			});
 
@@ -291,7 +418,66 @@ const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_,
 		background: var(--bg-soft);
 		border-radius: 0 0 8px 8px;
 	}
-	.placeholder-detail { font-style: italic; color: var(--tertiary); margin: 0; }
+	.placeholder-detail { font-style: italic; color: var(--tertiary); margin: 0 0 0.8rem; }
+
+	.segmenten {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.1rem;
+	}
+	.segment {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		min-width: 3.2rem;
+		max-width: 11rem;
+		padding: 0.2rem 0.3rem;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.segment:hover, .segment:focus { background: var(--lightgray); outline: none; }
+	.seg-grondtekst {
+		font-style: italic;
+		color: var(--dark);
+		font-size: 1.05rem;
+		margin: 0.1rem 0;
+	}
+	.seg-strong-btn {
+		font-family: sans-serif;
+		font-size: 0.6rem;
+		color: var(--tertiary);
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	.seg-strong-btn:hover, .seg-strong-btn:focus { color: var(--accent); text-decoration: underline; }
+
+	.woord-uitleg {
+		margin-top: 1rem;
+		padding-top: 0.9rem;
+		border-top: 1px solid var(--border);
+		font-size: 0.88rem;
+		text-align: left;
+	}
+	.woord-uitleg[hidden] { display: none; }
+	.uitleg-intro { margin: 0 0 0.6rem; color: var(--tekst); }
+	.uitleg-intro b { color: var(--accent-donker); }
+	.field-label {
+		font-family: sans-serif;
+		font-size: 0.66rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--tertiary);
+		margin: 0.7rem 0 0.3rem;
+	}
+	.vindplaatsen-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
+	.vp-item { padding: 0.3rem 0.4rem; border-radius: 4px; }
+	.vp-item-hoofd { display: flex; gap: 0.6rem; font-size: 0.88rem; }
+	.vp-ref { color: var(--tekst); font-weight: 600; min-width: 9rem; }
+	.vp-vorm { font-style: italic; color: var(--dark); }
+	.vindplaatsen-note { margin: 0.35rem 0 0; font-size: 0.8rem; color: var(--tertiary); }
 
 	.meld-btn {
 		flex-shrink: 0;

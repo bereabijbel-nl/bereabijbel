@@ -1,0 +1,5373 @@
+{
+  "boek": "mrk",
+  "boeknummer": 41,
+  "hoofdstuk": 6,
+  "bron": "Elzevir TR (byztxt)",
+  "verzen": [
+    {
+      "vers": 1,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εξηλθεν",
+          "strong": "G1831",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "εκειθεν",
+          "strong": "G1564",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηλθεν",
+          "strong": "G2064",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "πατριδα",
+          "strong": "G3968",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ακολουθουσιν",
+          "strong": "G190",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "μαθηται",
+          "strong": "G3101",
+          "morf": "N-NPM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        }
+      ]
+    },
+    {
+      "vers": 2,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "γενομενου",
+          "strong": "G1096",
+          "morf": "V-2ADP-GSN"
+        },
+        {
+          "tekst": "σαββατου",
+          "strong": "G4521",
+          "morf": "N-GSN"
+        },
+        {
+          "tekst": "ηρξατο",
+          "strong": "G756",
+          "morf": "V-AMI-3S"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "συναγωγη",
+          "strong": "G4864",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "διδασκειν",
+          "strong": "G1321",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "πολλοι",
+          "strong": "G4183",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "ακουοντες",
+          "strong": "G191",
+          "morf": "V-PAP-NPM"
+        },
+        {
+          "tekst": "εξεπλησσοντο",
+          "strong": "G1605",
+          "morf": "V-IPI-3P"
+        },
+        {
+          "tekst": "λεγοντες",
+          "strong": "G3004",
+          "morf": "V-PAP-NPM"
+        },
+        {
+          "tekst": "ποθεν",
+          "strong": "G4159",
+          "morf": "ADV-I"
+        },
+        {
+          "tekst": "τουτω",
+          "strong": "G3778",
+          "morf": "D-DSM"
+        },
+        {
+          "tekst": "ταυτα",
+          "strong": "G3778",
+          "morf": "D-NPN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τις",
+          "strong": "G5101",
+          "morf": "I-NSF"
+        },
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "σοφια",
+          "strong": "G4678",
+          "morf": "N-NSF"
+        },
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "δοθεισα",
+          "strong": "G1325",
+          "morf": "V-APP-NSF"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δυναμεις",
+          "strong": "G1411",
+          "morf": "N-NPF"
+        },
+        {
+          "tekst": "τοιαυται",
+          "strong": "G5108",
+          "morf": "D-NPF"
+        },
+        {
+          "tekst": "δια",
+          "strong": "G1223",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPF"
+        },
+        {
+          "tekst": "χειρων",
+          "strong": "G5495",
+          "morf": "N-GPF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "γινονται",
+          "strong": "G1096",
+          "morf": "V-PNI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 3,
+      "woorden": [
+        {
+          "tekst": "ουχ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ουτος",
+          "strong": "G3778",
+          "morf": "D-NSM"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "τεκτων",
+          "strong": "G5045",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "υιος",
+          "strong": "G5207",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "μαριας",
+          "strong": "G3137",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "αδελφος",
+          "strong": "G80",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιακωβου",
+          "strong": "G2385",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιωση",
+          "strong": "G2500",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιουδα",
+          "strong": "G2455",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "σιμωνος",
+          "strong": "G4613",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εισιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "αι",
+          "strong": "G3588",
+          "morf": "T-NPF"
+        },
+        {
+          "tekst": "αδελφαι",
+          "strong": "G79",
+          "morf": "N-NPF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "ωδε",
+          "strong": "G5602",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ημας",
+          "strong": "G1473",
+          "morf": "P-1AP"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εσκανδαλιζοντο",
+          "strong": "G4624",
+          "morf": "V-IPI-3P"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        }
+      ]
+    },
+    {
+      "vers": 4,
+      "woorden": [
+        {
+          "tekst": "ελεγεν",
+          "strong": "G3004",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ιησους",
+          "strong": "G2424",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "προφητης",
+          "strong": "G4396",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "ατιμος",
+          "strong": "G820",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "ει",
+          "strong": "G1487",
+          "morf": "COND"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "πατριδι",
+          "strong": "G3968",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "συγγενεσιν",
+          "strong": "G4773",
+          "morf": "A-DPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "οικια",
+          "strong": "G3614",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        }
+      ]
+    },
+    {
+      "vers": 5,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ηδυνατο",
+          "strong": "G1410",
+          "morf": "V-INI-3S-ATT"
+        },
+        {
+          "tekst": "εκει",
+          "strong": "G1563",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ουδεμιαν",
+          "strong": "G3762",
+          "morf": "A-ASF-N"
+        },
+        {
+          "tekst": "δυναμιν",
+          "strong": "G1411",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "ποιησαι",
+          "strong": "G4160",
+          "morf": "V-AAN"
+        },
+        {
+          "tekst": "ει",
+          "strong": "G1487",
+          "morf": "COND"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ολιγοις",
+          "strong": "G3641",
+          "morf": "A-DPM"
+        },
+        {
+          "tekst": "αρρωστοις",
+          "strong": "G732",
+          "morf": "A-DPM"
+        },
+        {
+          "tekst": "επιθεις",
+          "strong": "G2007",
+          "morf": "V-2AAP-NSM"
+        },
+        {
+          "tekst": "τας",
+          "strong": "G3588",
+          "morf": "T-APF"
+        },
+        {
+          "tekst": "χειρας",
+          "strong": "G5495",
+          "morf": "N-APF"
+        },
+        {
+          "tekst": "εθεραπευσεν",
+          "strong": "G2323",
+          "morf": "V-AAI-3S"
+        }
+      ]
+    },
+    {
+      "vers": 6,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εθαυμαζεν",
+          "strong": "G2296",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "δια",
+          "strong": "G1223",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "απιστιαν",
+          "strong": "G570",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "αυτων",
+          "strong": "G846",
+          "morf": "P-GPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "περιηγεν",
+          "strong": "G4013",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "τας",
+          "strong": "G3588",
+          "morf": "T-APF"
+        },
+        {
+          "tekst": "κωμας",
+          "strong": "G2968",
+          "morf": "N-APF"
+        },
+        {
+          "tekst": "κυκλω",
+          "strong": "G2945",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "διδασκων",
+          "strong": "G1321",
+          "morf": "V-PAP-NSM"
+        }
+      ]
+    },
+    {
+      "vers": 7,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "προσκαλειται",
+          "strong": "G4341",
+          "morf": "V-PNI-3S"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "δωδεκα",
+          "strong": "G1427",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηρξατο",
+          "strong": "G756",
+          "morf": "V-AMI-3S"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "αποστελλειν",
+          "strong": "G649",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εδιδου",
+          "strong": "G1325",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "εξουσιαν",
+          "strong": "G1849",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPN"
+        },
+        {
+          "tekst": "πνευματων",
+          "strong": "G4151",
+          "morf": "N-GPN"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPN"
+        },
+        {
+          "tekst": "ακαθαρτων",
+          "strong": "G169",
+          "morf": "A-GPN"
+        }
+      ]
+    },
+    {
+      "vers": 8,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "παρηγγειλεν",
+          "strong": "G3853",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "μηδεν",
+          "strong": "G3367",
+          "morf": "A-ASN-N"
+        },
+        {
+          "tekst": "αιρωσιν",
+          "strong": "G142",
+          "morf": "V-PAS-3P"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "οδον",
+          "strong": "G3598",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "ει",
+          "strong": "G1487",
+          "morf": "COND"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ραβδον",
+          "strong": "G4464",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "μονον",
+          "strong": "G3440",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "πηραν",
+          "strong": "G4082",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "αρτον",
+          "strong": "G740",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "ζωνην",
+          "strong": "G2223",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "χαλκον",
+          "strong": "G5475",
+          "morf": "N-ASM"
+        }
+      ]
+    },
+    {
+      "vers": 9,
+      "woorden": [
+        {
+          "tekst": "αλλ",
+          "strong": "G235",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "υποδεδεμενους",
+          "strong": "G5265",
+          "morf": "V-RPP-APM"
+        },
+        {
+          "tekst": "σανδαλια",
+          "strong": "G4547",
+          "morf": "N-APN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ενδυσασθαι",
+          "strong": "G1746",
+          "morf": "V-AMN"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "χιτωνας",
+          "strong": "G5509",
+          "morf": "N-APM"
+        }
+      ]
+    },
+    {
+      "vers": 10,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ελεγεν",
+          "strong": "G3004",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "οπου",
+          "strong": "G3699",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εαν",
+          "strong": "G1437",
+          "morf": "COND"
+        },
+        {
+          "tekst": "εισελθητε",
+          "strong": "G1525",
+          "morf": "V-2AAS-2P"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "οικιαν",
+          "strong": "G3614",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "εκει",
+          "strong": "G1563",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "μενετε",
+          "strong": "G3306",
+          "morf": "V-PAM-2P"
+        },
+        {
+          "tekst": "εως",
+          "strong": "G2193",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "αν",
+          "strong": "G302",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "εξελθητε",
+          "strong": "G1831",
+          "morf": "V-2AAS-2P"
+        },
+        {
+          "tekst": "εκειθεν",
+          "strong": "G1564",
+          "morf": "ADV"
+        }
+      ]
+    },
+    {
+      "vers": 11,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οσοι",
+          "strong": "G3745",
+          "morf": "K-NPM"
+        },
+        {
+          "tekst": "αν",
+          "strong": "G302",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "δεξωνται",
+          "strong": "G1209",
+          "morf": "V-ADS-3P"
+        },
+        {
+          "tekst": "υμας",
+          "strong": "G4771",
+          "morf": "P-2AP"
+        },
+        {
+          "tekst": "μηδε",
+          "strong": "G3366",
+          "morf": "CONJ-N"
+        },
+        {
+          "tekst": "ακουσωσιν",
+          "strong": "G191",
+          "morf": "V-AAS-3P"
+        },
+        {
+          "tekst": "υμων",
+          "strong": "G4771",
+          "morf": "P-2GP"
+        },
+        {
+          "tekst": "εκπορευομενοι",
+          "strong": "G1607",
+          "morf": "V-PNP-NPM"
+        },
+        {
+          "tekst": "εκειθεν",
+          "strong": "G1564",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εκτιναξατε",
+          "strong": "G1621",
+          "morf": "V-AAM-2P"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "χουν",
+          "strong": "G5522",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "υποκατω",
+          "strong": "G5270",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPM"
+        },
+        {
+          "tekst": "ποδων",
+          "strong": "G4228",
+          "morf": "N-GPM"
+        },
+        {
+          "tekst": "υμων",
+          "strong": "G4771",
+          "morf": "P-2GP"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "μαρτυριον",
+          "strong": "G3142",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "αμην",
+          "strong": "G281",
+          "morf": "HEB"
+        },
+        {
+          "tekst": "λεγω",
+          "strong": "G3004",
+          "morf": "V-PAI-1S"
+        },
+        {
+          "tekst": "υμιν",
+          "strong": "G4771",
+          "morf": "P-2DP"
+        },
+        {
+          "tekst": "ανεκτοτερον",
+          "strong": "G414",
+          "morf": "A-NSN-C"
+        },
+        {
+          "tekst": "εσται",
+          "strong": "G1510",
+          "morf": "V-FDI-3S"
+        },
+        {
+          "tekst": "σοδομοις",
+          "strong": "G4670",
+          "morf": "N-DPN"
+        },
+        {
+          "tekst": "η",
+          "strong": "G2228",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "γομορροις",
+          "strong": "G1116",
+          "morf": "N-DPN"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ημερα",
+          "strong": "G2250",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "κρισεως",
+          "strong": "G2920",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "η",
+          "strong": "G2228",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "πολει",
+          "strong": "G4172",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "εκεινη",
+          "strong": "G1565",
+          "morf": "D-DSF"
+        }
+      ]
+    },
+    {
+      "vers": 12,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εξελθοντες",
+          "strong": "G1831",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "εκηρυσσον",
+          "strong": "G2784",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "μετανοησωσιν",
+          "strong": "G3340",
+          "morf": "V-AAS-3P"
+        }
+      ]
+    },
+    {
+      "vers": 13,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δαιμονια",
+          "strong": "G1140",
+          "morf": "N-APN"
+        },
+        {
+          "tekst": "πολλα",
+          "strong": "G4183",
+          "morf": "A-APN"
+        },
+        {
+          "tekst": "εξεβαλλον",
+          "strong": "G1544",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηλειφον",
+          "strong": "G218",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "ελαιω",
+          "strong": "G1637",
+          "morf": "N-DSN"
+        },
+        {
+          "tekst": "πολλους",
+          "strong": "G4183",
+          "morf": "A-APM"
+        },
+        {
+          "tekst": "αρρωστους",
+          "strong": "G732",
+          "morf": "A-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εθεραπευον",
+          "strong": "G2323",
+          "morf": "V-IAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 14,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηκουσεν",
+          "strong": "G191",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "βασιλευς",
+          "strong": "G935",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "ηρωδης",
+          "strong": "G2264",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "φανερον",
+          "strong": "G5318",
+          "morf": "A-NSN"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εγενετο",
+          "strong": "G1096",
+          "morf": "V-2ADI-3S"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-NSN"
+        },
+        {
+          "tekst": "ονομα",
+          "strong": "G3686",
+          "morf": "N-NSN"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ελεγεν",
+          "strong": "G3004",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιωαννης",
+          "strong": "G2491",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "βαπτιζων",
+          "strong": "G907",
+          "morf": "V-PAP-NSM"
+        },
+        {
+          "tekst": "εκ",
+          "strong": "G1537",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "νεκρων",
+          "strong": "G3498",
+          "morf": "A-GPM"
+        },
+        {
+          "tekst": "ηγερθη",
+          "strong": "G1453",
+          "morf": "V-API-3S"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δια",
+          "strong": "G1223",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τουτο",
+          "strong": "G3778",
+          "morf": "D-ASN"
+        },
+        {
+          "tekst": "ενεργουσιν",
+          "strong": "G1754",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "αι",
+          "strong": "G3588",
+          "morf": "T-NPF"
+        },
+        {
+          "tekst": "δυναμεις",
+          "strong": "G1411",
+          "morf": "N-NPF"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        }
+      ]
+    },
+    {
+      "vers": 15,
+      "woorden": [
+        {
+          "tekst": "αλλοι",
+          "strong": "G243",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "ελεγον",
+          "strong": "G3004",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηλιας",
+          "strong": "G2243",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "αλλοι",
+          "strong": "G243",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ελεγον",
+          "strong": "G3004",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "προφητης",
+          "strong": "G4396",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "η",
+          "strong": "G2228",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "ως",
+          "strong": "G5613",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1520",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPM"
+        },
+        {
+          "tekst": "προφητων",
+          "strong": "G4396",
+          "morf": "N-GPM"
+        }
+      ]
+    },
+    {
+      "vers": 16,
+      "woorden": [
+        {
+          "tekst": "ακουσας",
+          "strong": "G191",
+          "morf": "V-AAP-NSM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ηρωδης",
+          "strong": "G2264",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ον",
+          "strong": "G3739",
+          "morf": "R-ASM"
+        },
+        {
+          "tekst": "εγω",
+          "strong": "G1473",
+          "morf": "P-1NS"
+        },
+        {
+          "tekst": "απεκεφαλισα",
+          "strong": "G607",
+          "morf": "V-AAI-1S"
+        },
+        {
+          "tekst": "ιωαννην",
+          "strong": "G2491",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "ουτος",
+          "strong": "G3778",
+          "morf": "D-NSM"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "αυτος",
+          "strong": "G846",
+          "morf": "P-NSM"
+        },
+        {
+          "tekst": "ηγερθη",
+          "strong": "G1453",
+          "morf": "V-API-3S"
+        },
+        {
+          "tekst": "εκ",
+          "strong": "G1537",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "νεκρων",
+          "strong": "G3498",
+          "morf": "A-GPM"
+        }
+      ]
+    },
+    {
+      "vers": 17,
+      "woorden": [
+        {
+          "tekst": "αυτος",
+          "strong": "G846",
+          "morf": "P-NSM"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ηρωδης",
+          "strong": "G2264",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "αποστειλας",
+          "strong": "G649",
+          "morf": "V-AAP-NSM"
+        },
+        {
+          "tekst": "εκρατησεν",
+          "strong": "G2902",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "ιωαννην",
+          "strong": "G2491",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εδησεν",
+          "strong": "G1210",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "φυλακη",
+          "strong": "G5438",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "δια",
+          "strong": "G1223",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ηρωδιαδα",
+          "strong": "G2266",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "γυναικα",
+          "strong": "G1135",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "φιλιππου",
+          "strong": "G5376",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSM"
+        },
+        {
+          "tekst": "αδελφου",
+          "strong": "G80",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αυτην",
+          "strong": "G846",
+          "morf": "P-ASF"
+        },
+        {
+          "tekst": "εγαμησεν",
+          "strong": "G1060",
+          "morf": "V-AAI-3S"
+        }
+      ]
+    },
+    {
+      "vers": 18,
+      "woorden": [
+        {
+          "tekst": "ελεγεν",
+          "strong": "G3004",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ιωαννης",
+          "strong": "G2491",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSM"
+        },
+        {
+          "tekst": "ηρωδη",
+          "strong": "G2264",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εξεστιν",
+          "strong": "G1832",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "σοι",
+          "strong": "G4771",
+          "morf": "P-2DS"
+        },
+        {
+          "tekst": "εχειν",
+          "strong": "G2192",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "γυναικα",
+          "strong": "G1135",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSM"
+        },
+        {
+          "tekst": "αδελφου",
+          "strong": "G80",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "σου",
+          "strong": "G4771",
+          "morf": "P-2GS"
+        }
+      ]
+    },
+    {
+      "vers": 19,
+      "woorden": [
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηρωδιας",
+          "strong": "G2266",
+          "morf": "N-NSF"
+        },
+        {
+          "tekst": "ενειχεν",
+          "strong": "G1758",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηθελεν",
+          "strong": "G2309",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "αποκτειναι",
+          "strong": "G615",
+          "morf": "V-AAN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ηδυνατο",
+          "strong": "G1410",
+          "morf": "V-INI-3S-ATT"
+        }
+      ]
+    },
+    {
+      "vers": 20,
+      "woorden": [
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηρωδης",
+          "strong": "G2264",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "εφοβειτο",
+          "strong": "G5399",
+          "morf": "V-INI-3S"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "ιωαννην",
+          "strong": "G2491",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "ειδως",
+          "strong": "G1492",
+          "morf": "V-RAP-NSM"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "ανδρα",
+          "strong": "G435",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "δικαιον",
+          "strong": "G1342",
+          "morf": "A-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αγιον",
+          "strong": "G40",
+          "morf": "A-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "συνετηρει",
+          "strong": "G4933",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ακουσας",
+          "strong": "G191",
+          "morf": "V-AAP-NSM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "πολλα",
+          "strong": "G4183",
+          "morf": "A-APN"
+        },
+        {
+          "tekst": "εποιει",
+          "strong": "G4160",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηδεως",
+          "strong": "G2234",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "ηκουεν",
+          "strong": "G191",
+          "morf": "V-IAI-3S"
+        }
+      ]
+    },
+    {
+      "vers": 21,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "γενομενης",
+          "strong": "G1096",
+          "morf": "V-2ADP-GSF"
+        },
+        {
+          "tekst": "ημερας",
+          "strong": "G2250",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "ευκαιρου",
+          "strong": "G2121",
+          "morf": "A-GSF"
+        },
+        {
+          "tekst": "οτε",
+          "strong": "G3753",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ηρωδης",
+          "strong": "G2264",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPN"
+        },
+        {
+          "tekst": "γενεσιοις",
+          "strong": "G1077",
+          "morf": "N-DPN"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "δειπνον",
+          "strong": "G1173",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "εποιει",
+          "strong": "G4160",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "μεγιστασιν",
+          "strong": "G3175",
+          "morf": "N-DPM-S"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "χιλιαρχοις",
+          "strong": "G5506",
+          "morf": "N-DPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "πρωτοις",
+          "strong": "G4413",
+          "morf": "A-DPM-S"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "γαλιλαιας",
+          "strong": "G1056",
+          "morf": "N-GSF"
+        }
+      ]
+    },
+    {
+      "vers": 22,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εισελθουσης",
+          "strong": "G1525",
+          "morf": "V-2AAP-GSF"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "θυγατρος",
+          "strong": "G2364",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "αυτης",
+          "strong": "G846",
+          "morf": "P-GSF"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "ηρωδιαδος",
+          "strong": "G2266",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ορχησαμενης",
+          "strong": "G3738",
+          "morf": "V-ADP-GSF"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αρεσασης",
+          "strong": "G700",
+          "morf": "V-AAP-GSF"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSM"
+        },
+        {
+          "tekst": "ηρωδη",
+          "strong": "G2264",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "συνανακειμενοις",
+          "strong": "G4873",
+          "morf": "V-PNP-DPM"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "βασιλευς",
+          "strong": "G935",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSN"
+        },
+        {
+          "tekst": "κορασιω",
+          "strong": "G2877",
+          "morf": "N-DSN"
+        },
+        {
+          "tekst": "αιτησον",
+          "strong": "G154",
+          "morf": "V-AAM-2S"
+        },
+        {
+          "tekst": "με",
+          "strong": "G1473",
+          "morf": "P-1AS"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3739",
+          "morf": "R-ASN"
+        },
+        {
+          "tekst": "εαν",
+          "strong": "G1437",
+          "morf": "COND"
+        },
+        {
+          "tekst": "θελης",
+          "strong": "G2309",
+          "morf": "V-PAS-2S"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δωσω",
+          "strong": "G1325",
+          "morf": "V-FAI-1S"
+        },
+        {
+          "tekst": "σοι",
+          "strong": "G4771",
+          "morf": "P-2DS"
+        }
+      ]
+    },
+    {
+      "vers": 23,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ωμοσεν",
+          "strong": "G3660",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτη",
+          "strong": "G846",
+          "morf": "P-DSF"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3739",
+          "morf": "R-ASN"
+        },
+        {
+          "tekst": "εαν",
+          "strong": "G1437",
+          "morf": "COND"
+        },
+        {
+          "tekst": "με",
+          "strong": "G1473",
+          "morf": "P-1AS"
+        },
+        {
+          "tekst": "αιτησης",
+          "strong": "G154",
+          "morf": "V-AAS-2S"
+        },
+        {
+          "tekst": "δωσω",
+          "strong": "G1325",
+          "morf": "V-FAI-1S"
+        },
+        {
+          "tekst": "σοι",
+          "strong": "G4771",
+          "morf": "P-2DS"
+        },
+        {
+          "tekst": "εως",
+          "strong": "G2193",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ημισους",
+          "strong": "G2255",
+          "morf": "A-GSN"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "βασιλειας",
+          "strong": "G932",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "μου",
+          "strong": "G1473",
+          "morf": "P-1GS"
+        }
+      ]
+    },
+    {
+      "vers": 24,
+      "woorden": [
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εξελθουσα",
+          "strong": "G1831",
+          "morf": "V-2AAP-NSF"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "μητρι",
+          "strong": "G3384",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "αυτης",
+          "strong": "G846",
+          "morf": "P-GSF"
+        },
+        {
+          "tekst": "τι",
+          "strong": "G5101",
+          "morf": "I-ASN"
+        },
+        {
+          "tekst": "αιτησομαι",
+          "strong": "G154",
+          "morf": "V-FMI-1S"
+        },
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "κεφαλην",
+          "strong": "G2776",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "ιωαννου",
+          "strong": "G2491",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSM"
+        },
+        {
+          "tekst": "βαπτιστου",
+          "strong": "G910",
+          "morf": "N-GSM"
+        }
+      ]
+    },
+    {
+      "vers": 25,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εισελθουσα",
+          "strong": "G1525",
+          "morf": "V-2AAP-NSF"
+        },
+        {
+          "tekst": "ευθεως",
+          "strong": "G2112",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "μετα",
+          "strong": "G3326",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "σπουδης",
+          "strong": "G4710",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "βασιλεα",
+          "strong": "G935",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "ητησατο",
+          "strong": "G154",
+          "morf": "V-AMI-3S"
+        },
+        {
+          "tekst": "λεγουσα",
+          "strong": "G3004",
+          "morf": "V-PAP-NSF"
+        },
+        {
+          "tekst": "θελω",
+          "strong": "G2309",
+          "morf": "V-PAI-1S"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "μοι",
+          "strong": "G1473",
+          "morf": "P-1DS"
+        },
+        {
+          "tekst": "δως",
+          "strong": "G1325",
+          "morf": "V-2AAS-2S"
+        },
+        {
+          "tekst": "εξ",
+          "strong": "G1537",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτης",
+          "strong": "G846",
+          "morf": "P-GSF"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "πινακι",
+          "strong": "G4094",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "κεφαλην",
+          "strong": "G2776",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "ιωαννου",
+          "strong": "G2491",
+          "morf": "N-GSM"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSM"
+        },
+        {
+          "tekst": "βαπτιστου",
+          "strong": "G910",
+          "morf": "N-GSM"
+        }
+      ]
+    },
+    {
+      "vers": 26,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "περιλυπος",
+          "strong": "G4036",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "γενομενος",
+          "strong": "G1096",
+          "morf": "V-2ADP-NSM"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "βασιλευς",
+          "strong": "G935",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "δια",
+          "strong": "G1223",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "ορκους",
+          "strong": "G3727",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "συνανακειμενους",
+          "strong": "G4873",
+          "morf": "V-PNP-APM"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "ηθελησεν",
+          "strong": "G2309",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτην",
+          "strong": "G846",
+          "morf": "P-ASF"
+        },
+        {
+          "tekst": "αθετησαι",
+          "strong": "G114",
+          "morf": "V-AAN"
+        }
+      ]
+    },
+    {
+      "vers": 27,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ευθεως",
+          "strong": "G2112",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "αποστειλας",
+          "strong": "G649",
+          "morf": "V-AAP-NSM"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "βασιλευς",
+          "strong": "G935",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "σπεκουλατωρα",
+          "strong": "G4688",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "επεταξεν",
+          "strong": "G2004",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "ενεχθηναι",
+          "strong": "G5342",
+          "morf": "V-APN"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "κεφαλην",
+          "strong": "G2776",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        }
+      ]
+    },
+    {
+      "vers": 28,
+      "woorden": [
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "απελθων",
+          "strong": "G565",
+          "morf": "V-2AAP-NSM"
+        },
+        {
+          "tekst": "απεκεφαλισεν",
+          "strong": "G607",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "φυλακη",
+          "strong": "G5438",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηνεγκεν",
+          "strong": "G5342",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "κεφαλην",
+          "strong": "G2776",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "πινακι",
+          "strong": "G4094",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εδωκεν",
+          "strong": "G1325",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτην",
+          "strong": "G846",
+          "morf": "P-ASF"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSN"
+        },
+        {
+          "tekst": "κορασιω",
+          "strong": "G2877",
+          "morf": "N-DSN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-NSN"
+        },
+        {
+          "tekst": "κορασιον",
+          "strong": "G2877",
+          "morf": "N-NSN"
+        },
+        {
+          "tekst": "εδωκεν",
+          "strong": "G1325",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτην",
+          "strong": "G846",
+          "morf": "P-ASF"
+        },
+        {
+          "tekst": "τη",
+          "strong": "G3588",
+          "morf": "T-DSF"
+        },
+        {
+          "tekst": "μητρι",
+          "strong": "G3384",
+          "morf": "N-DSF"
+        },
+        {
+          "tekst": "αυτης",
+          "strong": "G846",
+          "morf": "P-GSF"
+        }
+      ]
+    },
+    {
+      "vers": 29,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ακουσαντες",
+          "strong": "G191",
+          "morf": "V-AAP-NPM"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "μαθηται",
+          "strong": "G3101",
+          "morf": "N-NPM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "ηλθον",
+          "strong": "G2064",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηραν",
+          "strong": "G142",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-ASN"
+        },
+        {
+          "tekst": "πτωμα",
+          "strong": "G4430",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εθηκαν",
+          "strong": "G5087",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "αυτο",
+          "strong": "G846",
+          "morf": "P-ASN"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "μνημειω",
+          "strong": "G3419",
+          "morf": "N-DSN"
+        }
+      ]
+    },
+    {
+      "vers": 30,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "συναγονται",
+          "strong": "G4863",
+          "morf": "V-PPI-3P"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "αποστολοι",
+          "strong": "G652",
+          "morf": "N-NPM"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "ιησουν",
+          "strong": "G2424",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "απηγγειλαν",
+          "strong": "G518",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "παντα",
+          "strong": "G3956",
+          "morf": "A-APN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οσα",
+          "strong": "G3745",
+          "morf": "K-APN"
+        },
+        {
+          "tekst": "εποιησαν",
+          "strong": "G4160",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οσα",
+          "strong": "G3745",
+          "morf": "K-APN"
+        },
+        {
+          "tekst": "εδιδαξαν",
+          "strong": "G1321",
+          "morf": "V-AAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 31,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "δευτε",
+          "strong": "G1205",
+          "morf": "V-PAM-2P"
+        },
+        {
+          "tekst": "υμεις",
+          "strong": "G4771",
+          "morf": "P-2NP"
+        },
+        {
+          "tekst": "αυτοι",
+          "strong": "G846",
+          "morf": "P-NPM"
+        },
+        {
+          "tekst": "κατ",
+          "strong": "G2596",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ιδιαν",
+          "strong": "G2398",
+          "morf": "A-ASF"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ερημον",
+          "strong": "G2048",
+          "morf": "A-ASM"
+        },
+        {
+          "tekst": "τοπον",
+          "strong": "G5117",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αναπαυεσθε",
+          "strong": "G373",
+          "morf": "V-PMM-2P"
+        },
+        {
+          "tekst": "ολιγον",
+          "strong": "G3641",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ησαν",
+          "strong": "G1510",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "ερχομενοι",
+          "strong": "G2064",
+          "morf": "V-PNP-NPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "υπαγοντες",
+          "strong": "G5217",
+          "morf": "V-PAP-NPM"
+        },
+        {
+          "tekst": "πολλοι",
+          "strong": "G4183",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ουδε",
+          "strong": "G3761",
+          "morf": "CONJ-N"
+        },
+        {
+          "tekst": "φαγειν",
+          "strong": "G5315",
+          "morf": "V-2AAN"
+        },
+        {
+          "tekst": "ηυκαιρουν",
+          "strong": "G2119",
+          "morf": "V-IAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 32,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "απηλθον",
+          "strong": "G565",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ερημον",
+          "strong": "G2048",
+          "morf": "A-ASM"
+        },
+        {
+          "tekst": "τοπον",
+          "strong": "G5117",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSN"
+        },
+        {
+          "tekst": "πλοιω",
+          "strong": "G4143",
+          "morf": "N-DSN"
+        },
+        {
+          "tekst": "κατ",
+          "strong": "G2596",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ιδιαν",
+          "strong": "G2398",
+          "morf": "A-ASF"
+        }
+      ]
+    },
+    {
+      "vers": 33,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ειδον",
+          "strong": "G3708",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "υπαγοντας",
+          "strong": "G5217",
+          "morf": "V-PAP-APM"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "οχλοι",
+          "strong": "G3793",
+          "morf": "N-NPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "επεγνωσαν",
+          "strong": "G1921",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "πολλοι",
+          "strong": "G4183",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "πεζη",
+          "strong": "G3979",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "απο",
+          "strong": "G575",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "πασων",
+          "strong": "G3956",
+          "morf": "A-GPF"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPF"
+        },
+        {
+          "tekst": "πολεων",
+          "strong": "G4172",
+          "morf": "N-GPF"
+        },
+        {
+          "tekst": "συνεδραμον",
+          "strong": "G4936",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "εκει",
+          "strong": "G1563",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "προηλθον",
+          "strong": "G4281",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "συνηλθον",
+          "strong": "G4905",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        }
+      ]
+    },
+    {
+      "vers": 34,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εξελθων",
+          "strong": "G1831",
+          "morf": "V-2AAP-NSM"
+        },
+        {
+          "tekst": "ειδεν",
+          "strong": "G3708",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ιησους",
+          "strong": "G2424",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "πολυν",
+          "strong": "G4183",
+          "morf": "A-ASM"
+        },
+        {
+          "tekst": "οχλον",
+          "strong": "G3793",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εσπλαγχνισθη",
+          "strong": "G4697",
+          "morf": "V-AOI-3S"
+        },
+        {
+          "tekst": "επ",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ησαν",
+          "strong": "G1510",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "ως",
+          "strong": "G5613",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "προβατα",
+          "strong": "G4263",
+          "morf": "N-NPN"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εχοντα",
+          "strong": "G2192",
+          "morf": "V-PAP-NPN"
+        },
+        {
+          "tekst": "ποιμενα",
+          "strong": "G4166",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηρξατο",
+          "strong": "G756",
+          "morf": "V-AMI-3S"
+        },
+        {
+          "tekst": "διδασκειν",
+          "strong": "G1321",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "πολλα",
+          "strong": "G4183",
+          "morf": "A-APN"
+        }
+      ]
+    },
+    {
+      "vers": 35,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηδη",
+          "strong": "G2235",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ωρας",
+          "strong": "G5610",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "πολλης",
+          "strong": "G4183",
+          "morf": "A-GSF"
+        },
+        {
+          "tekst": "γενομενης",
+          "strong": "G1096",
+          "morf": "V-2ADP-GSF"
+        },
+        {
+          "tekst": "προσελθοντες",
+          "strong": "G4334",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "μαθηται",
+          "strong": "G3101",
+          "morf": "N-NPM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "λεγουσιν",
+          "strong": "G3004",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ερημος",
+          "strong": "G2048",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "τοπος",
+          "strong": "G5117",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηδη",
+          "strong": "G2235",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ωρα",
+          "strong": "G5610",
+          "morf": "N-NSF"
+        },
+        {
+          "tekst": "πολλη",
+          "strong": "G4183",
+          "morf": "A-NSF"
+        }
+      ]
+    },
+    {
+      "vers": 36,
+      "woorden": [
+        {
+          "tekst": "απολυσον",
+          "strong": "G630",
+          "morf": "V-AAM-2S"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "απελθοντες",
+          "strong": "G565",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "κυκλω",
+          "strong": "G2945",
+          "morf": "N-DSM"
+        },
+        {
+          "tekst": "αγρους",
+          "strong": "G68",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "κωμας",
+          "strong": "G2968",
+          "morf": "N-APF"
+        },
+        {
+          "tekst": "αγορασωσιν",
+          "strong": "G59",
+          "morf": "V-AAS-3P"
+        },
+        {
+          "tekst": "εαυτοις",
+          "strong": "G1438",
+          "morf": "F-3DPM"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "τι",
+          "strong": "G5101",
+          "morf": "I-ASN"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "φαγωσιν",
+          "strong": "G5315",
+          "morf": "V-2AAS-3P"
+        },
+        {
+          "tekst": "ουκ",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "εχουσιν",
+          "strong": "G2192",
+          "morf": "V-PAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 37,
+      "woorden": [
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αποκριθεις",
+          "strong": "G611",
+          "morf": "V-AOP-NSM"
+        },
+        {
+          "tekst": "ειπεν",
+          "strong": "G3004",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "δοτε",
+          "strong": "G1325",
+          "morf": "V-2AAM-2P"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "υμεις",
+          "strong": "G4771",
+          "morf": "P-2NP"
+        },
+        {
+          "tekst": "φαγειν",
+          "strong": "G5315",
+          "morf": "V-2AAN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "λεγουσιν",
+          "strong": "G3004",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "αυτω",
+          "strong": "G846",
+          "morf": "P-DSM"
+        },
+        {
+          "tekst": "απελθοντες",
+          "strong": "G565",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "αγορασωμεν",
+          "strong": "G59",
+          "morf": "V-AAS-1P"
+        },
+        {
+          "tekst": "διακοσιων",
+          "strong": "G1250",
+          "morf": "A-GPN"
+        },
+        {
+          "tekst": "δηναριων",
+          "strong": "G1220",
+          "morf": "N-GPN"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δωμεν",
+          "strong": "G1325",
+          "morf": "V-2AAS-1P"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "φαγειν",
+          "strong": "G5315",
+          "morf": "V-2AAN"
+        }
+      ]
+    },
+    {
+      "vers": 38,
+      "woorden": [
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "λεγει",
+          "strong": "G3004",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "ποσους",
+          "strong": "G4214",
+          "morf": "Q-APM"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "εχετε",
+          "strong": "G2192",
+          "morf": "V-PAI-2P"
+        },
+        {
+          "tekst": "υπαγετε",
+          "strong": "G5217",
+          "morf": "V-PAM-2P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιδετε",
+          "strong": "G3708",
+          "morf": "V-2AAM-2P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "γνοντες",
+          "strong": "G1097",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "λεγουσιν",
+          "strong": "G3004",
+          "morf": "V-PAI-3P"
+        },
+        {
+          "tekst": "πεντε",
+          "strong": "G4002",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "ιχθυας",
+          "strong": "G2486",
+          "morf": "N-APM"
+        }
+      ]
+    },
+    {
+      "vers": 39,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "επεταξεν",
+          "strong": "G2004",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "ανακλιναι",
+          "strong": "G347",
+          "morf": "V-AAN"
+        },
+        {
+          "tekst": "παντας",
+          "strong": "G3956",
+          "morf": "A-APM"
+        },
+        {
+          "tekst": "συμποσια",
+          "strong": "G4849",
+          "morf": "N-APN"
+        },
+        {
+          "tekst": "συμποσια",
+          "strong": "G4849",
+          "morf": "N-APN"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSM"
+        },
+        {
+          "tekst": "χλωρω",
+          "strong": "G5515",
+          "morf": "A-DSM"
+        },
+        {
+          "tekst": "χορτω",
+          "strong": "G5528",
+          "morf": "N-DSM"
+        }
+      ]
+    },
+    {
+      "vers": 40,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ανεπεσον",
+          "strong": "G377",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "πρασιαι",
+          "strong": "G4237",
+          "morf": "N-NPF"
+        },
+        {
+          "tekst": "πρασιαι",
+          "strong": "G4237",
+          "morf": "N-NPF"
+        },
+        {
+          "tekst": "ανα",
+          "strong": "G303",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "εκατον",
+          "strong": "G1540",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ανα",
+          "strong": "G303",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "πεντηκοντα",
+          "strong": "G4004",
+          "morf": "A-NUI"
+        }
+      ]
+    },
+    {
+      "vers": 41,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "λαβων",
+          "strong": "G2983",
+          "morf": "V-2AAP-NSM"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "πεντε",
+          "strong": "G4002",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "ιχθυας",
+          "strong": "G2486",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "αναβλεψας",
+          "strong": "G308",
+          "morf": "V-AAP-NSM"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "ουρανον",
+          "strong": "G3772",
+          "morf": "N-ASM"
+        },
+        {
+          "tekst": "ευλογησεν",
+          "strong": "G2127",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "κατεκλασεν",
+          "strong": "G2622",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εδιδου",
+          "strong": "G1325",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "μαθηταις",
+          "strong": "G3101",
+          "morf": "N-DPM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "παραθωσιν",
+          "strong": "G3908",
+          "morf": "V-2AAS-3P"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "δυο",
+          "strong": "G1417",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "ιχθυας",
+          "strong": "G2486",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "εμερισεν",
+          "strong": "G3307",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "πασιν",
+          "strong": "G3956",
+          "morf": "A-DPM"
+        }
+      ]
+    },
+    {
+      "vers": 42,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εφαγον",
+          "strong": "G5315",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "παντες",
+          "strong": "G3956",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εχορτασθησαν",
+          "strong": "G5526",
+          "morf": "V-API-3P"
+        }
+      ]
+    },
+    {
+      "vers": 43,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηραν",
+          "strong": "G142",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "κλασματων",
+          "strong": "G2801",
+          "morf": "N-GPN"
+        },
+        {
+          "tekst": "δωδεκα",
+          "strong": "G1427",
+          "morf": "A-NUI"
+        },
+        {
+          "tekst": "κοφινους",
+          "strong": "G2894",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "πληρεις",
+          "strong": "G4134",
+          "morf": "A-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "απο",
+          "strong": "G575",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "των",
+          "strong": "G3588",
+          "morf": "T-GPM"
+        },
+        {
+          "tekst": "ιχθυων",
+          "strong": "G2486",
+          "morf": "N-GPM"
+        }
+      ]
+    },
+    {
+      "vers": 44,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ησαν",
+          "strong": "G1510",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "φαγοντες",
+          "strong": "G5315",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "αρτους",
+          "strong": "G740",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "ωσει",
+          "strong": "G5616",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "πεντακισχιλιοι",
+          "strong": "G4000",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "ανδρες",
+          "strong": "G435",
+          "morf": "N-NPM"
+        }
+      ]
+    },
+    {
+      "vers": 45,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ευθεως",
+          "strong": "G2112",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ηναγκασεν",
+          "strong": "G315",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "μαθητας",
+          "strong": "G3101",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "εμβηναι",
+          "strong": "G1684",
+          "morf": "V-2AAN"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-ASN"
+        },
+        {
+          "tekst": "πλοιον",
+          "strong": "G4143",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "προαγειν",
+          "strong": "G4254",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-ASN"
+        },
+        {
+          "tekst": "περαν",
+          "strong": "G4008",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "βηθσαιδαν",
+          "strong": "G966",
+          "morf": "N-PRI"
+        },
+        {
+          "tekst": "εως",
+          "strong": "G2193",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "αυτος",
+          "strong": "G846",
+          "morf": "P-NSM"
+        },
+        {
+          "tekst": "απολυση",
+          "strong": "G630",
+          "morf": "V-AAS-3S"
+        },
+        {
+          "tekst": "τον",
+          "strong": "G3588",
+          "morf": "T-ASM"
+        },
+        {
+          "tekst": "οχλον",
+          "strong": "G3793",
+          "morf": "N-ASM"
+        }
+      ]
+    },
+    {
+      "vers": 46,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αποταξαμενος",
+          "strong": "G657",
+          "morf": "V-AMP-NSM"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "απηλθεν",
+          "strong": "G565",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-ASN"
+        },
+        {
+          "tekst": "ορος",
+          "strong": "G3735",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "προσευξασθαι",
+          "strong": "G4336",
+          "morf": "V-ADN"
+        }
+      ]
+    },
+    {
+      "vers": 47,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οψιας",
+          "strong": "G3798",
+          "morf": "A-GSF"
+        },
+        {
+          "tekst": "γενομενης",
+          "strong": "G1096",
+          "morf": "V-2ADP-GSF"
+        },
+        {
+          "tekst": "ην",
+          "strong": "G1510",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-NSN"
+        },
+        {
+          "tekst": "πλοιον",
+          "strong": "G4143",
+          "morf": "N-NSN"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "μεσω",
+          "strong": "G3319",
+          "morf": "A-DSN"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "θαλασσης",
+          "strong": "G2281",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αυτος",
+          "strong": "G846",
+          "morf": "P-NSM"
+        },
+        {
+          "tekst": "μονος",
+          "strong": "G3441",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "γης",
+          "strong": "G1093",
+          "morf": "N-GSF"
+        }
+      ]
+    },
+    {
+      "vers": 48,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ειδεν",
+          "strong": "G3708",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "βασανιζομενους",
+          "strong": "G928",
+          "morf": "V-PPP-APM"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τω",
+          "strong": "G3588",
+          "morf": "T-DSM"
+        },
+        {
+          "tekst": "ελαυνειν",
+          "strong": "G1643",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "ην",
+          "strong": "G1510",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ανεμος",
+          "strong": "G417",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "εναντιος",
+          "strong": "G1727",
+          "morf": "A-NSM"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "περι",
+          "strong": "G4012",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τεταρτην",
+          "strong": "G5067",
+          "morf": "A-ASF"
+        },
+        {
+          "tekst": "φυλακην",
+          "strong": "G5438",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "νυκτος",
+          "strong": "G3571",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "ερχεται",
+          "strong": "G2064",
+          "morf": "V-PNI-3S"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "περιπατων",
+          "strong": "G4043",
+          "morf": "V-PAP-NSM"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "θαλασσης",
+          "strong": "G2281",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ηθελεν",
+          "strong": "G2309",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "παρελθειν",
+          "strong": "G3928",
+          "morf": "V-2AAN"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        }
+      ]
+    },
+    {
+      "vers": 49,
+      "woorden": [
+        {
+          "tekst": "οι",
+          "strong": "G3588",
+          "morf": "T-NPM"
+        },
+        {
+          "tekst": "δε",
+          "strong": "G1161",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ιδοντες",
+          "strong": "G3708",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "περιπατουντα",
+          "strong": "G4043",
+          "morf": "V-PAP-ASM"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "της",
+          "strong": "G3588",
+          "morf": "T-GSF"
+        },
+        {
+          "tekst": "θαλασσης",
+          "strong": "G2281",
+          "morf": "N-GSF"
+        },
+        {
+          "tekst": "εδοξαν",
+          "strong": "G1380",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "φαντασμα",
+          "strong": "G5326",
+          "morf": "N-NSN"
+        },
+        {
+          "tekst": "ειναι",
+          "strong": "G1510",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ανεκραξαν",
+          "strong": "G349",
+          "morf": "V-AAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 50,
+      "woorden": [
+        {
+          "tekst": "παντες",
+          "strong": "G3956",
+          "morf": "A-NPM"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "ειδον",
+          "strong": "G3708",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εταραχθησαν",
+          "strong": "G5015",
+          "morf": "V-API-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ευθεως",
+          "strong": "G2112",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ελαλησεν",
+          "strong": "G2980",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "μετ",
+          "strong": "G3326",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτων",
+          "strong": "G846",
+          "morf": "P-GPM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "λεγει",
+          "strong": "G3004",
+          "morf": "V-PAI-3S"
+        },
+        {
+          "tekst": "αυτοις",
+          "strong": "G846",
+          "morf": "P-DPM"
+        },
+        {
+          "tekst": "θαρσειτε",
+          "strong": "G2293",
+          "morf": "V-PAM-2P"
+        },
+        {
+          "tekst": "εγω",
+          "strong": "G1473",
+          "morf": "P-1NS"
+        },
+        {
+          "tekst": "ειμι",
+          "strong": "G1510",
+          "morf": "V-PAI-1S"
+        },
+        {
+          "tekst": "μη",
+          "strong": "G3361",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "φοβεισθε",
+          "strong": "G5399",
+          "morf": "V-PNM-2P"
+        }
+      ]
+    },
+    {
+      "vers": 51,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "ανεβη",
+          "strong": "G305",
+          "morf": "V-2AAI-3S"
+        },
+        {
+          "tekst": "προς",
+          "strong": "G4314",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "αυτους",
+          "strong": "G846",
+          "morf": "P-APM"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "το",
+          "strong": "G3588",
+          "morf": "T-ASN"
+        },
+        {
+          "tekst": "πλοιον",
+          "strong": "G4143",
+          "morf": "N-ASN"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εκοπασεν",
+          "strong": "G2869",
+          "morf": "V-AAI-3S"
+        },
+        {
+          "tekst": "ο",
+          "strong": "G3588",
+          "morf": "T-NSM"
+        },
+        {
+          "tekst": "ανεμος",
+          "strong": "G417",
+          "morf": "N-NSM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "λιαν",
+          "strong": "G3029",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εκ",
+          "strong": "G1537",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "περισσου",
+          "strong": "G4053",
+          "morf": "A-GSN"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "εαυτοις",
+          "strong": "G1438",
+          "morf": "F-3DPM"
+        },
+        {
+          "tekst": "εξισταντο",
+          "strong": "G1839",
+          "morf": "V-IMI-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εθαυμαζον",
+          "strong": "G2296",
+          "morf": "V-IAI-3P"
+        }
+      ]
+    },
+    {
+      "vers": 52,
+      "woorden": [
+        {
+          "tekst": "ου",
+          "strong": "G3756",
+          "morf": "PRT-N"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "συνηκαν",
+          "strong": "G4920",
+          "morf": "V-AAI-3P"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "αρτοις",
+          "strong": "G740",
+          "morf": "N-DPM"
+        },
+        {
+          "tekst": "ην",
+          "strong": "G1510",
+          "morf": "V-IAI-3S"
+        },
+        {
+          "tekst": "γαρ",
+          "strong": "G1063",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "η",
+          "strong": "G3588",
+          "morf": "T-NSF"
+        },
+        {
+          "tekst": "καρδια",
+          "strong": "G2588",
+          "morf": "N-NSF"
+        },
+        {
+          "tekst": "αυτων",
+          "strong": "G846",
+          "morf": "P-GPM"
+        },
+        {
+          "tekst": "πεπωρωμενη",
+          "strong": "G4456",
+          "morf": "V-RPP-NSF"
+        }
+      ]
+    },
+    {
+      "vers": 53,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "διαπερασαντες",
+          "strong": "G1276",
+          "morf": "V-AAP-NPM"
+        },
+        {
+          "tekst": "ηλθον",
+          "strong": "G2064",
+          "morf": "V-2AAI-3P"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "γην",
+          "strong": "G1093",
+          "morf": "N-ASF"
+        },
+        {
+          "tekst": "γενησαρετ",
+          "strong": "G1082",
+          "morf": "N-PRI"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "προσωρμισθησαν",
+          "strong": "G4358",
+          "morf": "V-API-3P"
+        }
+      ]
+    },
+    {
+      "vers": 54,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εξελθοντων",
+          "strong": "G1831",
+          "morf": "V-2AAP-GPM"
+        },
+        {
+          "tekst": "αυτων",
+          "strong": "G846",
+          "morf": "P-GPM"
+        },
+        {
+          "tekst": "εκ",
+          "strong": "G1537",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSN"
+        },
+        {
+          "tekst": "πλοιου",
+          "strong": "G4143",
+          "morf": "N-GSN"
+        },
+        {
+          "tekst": "ευθεως",
+          "strong": "G2112",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "επιγνοντες",
+          "strong": "G1921",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        }
+      ]
+    },
+    {
+      "vers": 55,
+      "woorden": [
+        {
+          "tekst": "περιδραμοντες",
+          "strong": "G4063",
+          "morf": "V-2AAP-NPM"
+        },
+        {
+          "tekst": "ολην",
+          "strong": "G3650",
+          "morf": "A-ASF"
+        },
+        {
+          "tekst": "την",
+          "strong": "G3588",
+          "morf": "T-ASF"
+        },
+        {
+          "tekst": "περιχωρον",
+          "strong": "G4066",
+          "morf": "A-ASF"
+        },
+        {
+          "tekst": "εκεινην",
+          "strong": "G1565",
+          "morf": "D-ASF"
+        },
+        {
+          "tekst": "ηρξαντο",
+          "strong": "G756",
+          "morf": "V-AMI-3P"
+        },
+        {
+          "tekst": "επι",
+          "strong": "G1909",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "τοις",
+          "strong": "G3588",
+          "morf": "T-DPM"
+        },
+        {
+          "tekst": "κραββατοις",
+          "strong": "G2895",
+          "morf": "N-DPM"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "κακως",
+          "strong": "G2560",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εχοντας",
+          "strong": "G2192",
+          "morf": "V-PAP-APM"
+        },
+        {
+          "tekst": "περιφερειν",
+          "strong": "G4064",
+          "morf": "V-PAN"
+        },
+        {
+          "tekst": "οπου",
+          "strong": "G3699",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "ηκουον",
+          "strong": "G191",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "οτι",
+          "strong": "G3754",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "εκει",
+          "strong": "G1563",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "εστιν",
+          "strong": "G1510",
+          "morf": "V-PAI-3S"
+        }
+      ]
+    },
+    {
+      "vers": 56,
+      "woorden": [
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οπου",
+          "strong": "G3699",
+          "morf": "ADV"
+        },
+        {
+          "tekst": "αν",
+          "strong": "G302",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "εισεπορευετο",
+          "strong": "G1531",
+          "morf": "V-INI-3S"
+        },
+        {
+          "tekst": "εις",
+          "strong": "G1519",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "κωμας",
+          "strong": "G2968",
+          "morf": "N-APF"
+        },
+        {
+          "tekst": "η",
+          "strong": "G2228",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "πολεις",
+          "strong": "G4172",
+          "morf": "N-APF"
+        },
+        {
+          "tekst": "η",
+          "strong": "G2228",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "αγρους",
+          "strong": "G68",
+          "morf": "N-APM"
+        },
+        {
+          "tekst": "εν",
+          "strong": "G1722",
+          "morf": "PREP"
+        },
+        {
+          "tekst": "ταις",
+          "strong": "G3588",
+          "morf": "T-DPF"
+        },
+        {
+          "tekst": "αγοραις",
+          "strong": "G58",
+          "morf": "N-DPF"
+        },
+        {
+          "tekst": "ετιθουν",
+          "strong": "G5087",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "τους",
+          "strong": "G3588",
+          "morf": "T-APM"
+        },
+        {
+          "tekst": "ασθενουντας",
+          "strong": "G770",
+          "morf": "V-PAP-APM"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "παρεκαλουν",
+          "strong": "G3870",
+          "morf": "V-IAI-3P"
+        },
+        {
+          "tekst": "αυτον",
+          "strong": "G846",
+          "morf": "P-ASM"
+        },
+        {
+          "tekst": "ινα",
+          "strong": "G2443",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "καν",
+          "strong": "G2579",
+          "morf": "COND-K"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSN"
+        },
+        {
+          "tekst": "κρασπεδου",
+          "strong": "G2899",
+          "morf": "N-GSN"
+        },
+        {
+          "tekst": "του",
+          "strong": "G3588",
+          "morf": "T-GSN"
+        },
+        {
+          "tekst": "ιματιου",
+          "strong": "G2440",
+          "morf": "N-GSN"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "αψωνται",
+          "strong": "G680",
+          "morf": "V-AMS-3P"
+        },
+        {
+          "tekst": "και",
+          "strong": "G2532",
+          "morf": "CONJ"
+        },
+        {
+          "tekst": "οσοι",
+          "strong": "G3745",
+          "morf": "K-NPM"
+        },
+        {
+          "tekst": "αν",
+          "strong": "G302",
+          "morf": "PRT"
+        },
+        {
+          "tekst": "ηπτοντο",
+          "strong": "G680",
+          "morf": "V-INI-3P"
+        },
+        {
+          "tekst": "αυτου",
+          "strong": "G846",
+          "morf": "P-GSM"
+        },
+        {
+          "tekst": "εσωζοντο",
+          "strong": "G4982",
+          "morf": "V-IPI-3P"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2513 @@
+{
+  "boek": "1ch",
+  "boeknummer": 13,
+  "hoofdstuk": 29,
+  "bron": "WLC (openscriptures/morphhb), vers-genummerd volgens Engelse/KJV-indeling",
+  "verzen": [
+    {
+      "vers": 1,
+      "woorden": [
+        {
+          "tekst": "וַ/יֹּ֨אמֶר",
+          "strong": "H559",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֤יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּ֨לֶךְ֙",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/קָּהָ֔ל",
+          "strong": "H6951",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁלֹמֹ֨ה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "בְנִ֥/י",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "אֶחָ֛ד",
+          "strong": "H259",
+          "morf": null
+        },
+        {
+          "tekst": "בָּֽחַר",
+          "strong": "H977",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהִ֖ים",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "נַ֣עַר",
+          "strong": "H5288",
+          "morf": null
+        },
+        {
+          "tekst": "וָ/רָ֑ךְ",
+          "strong": "H7390",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/מְּלָאכָ֣ה",
+          "strong": "H4399",
+          "morf": null
+        },
+        {
+          "tekst": "גְדוֹלָ֔ה",
+          "strong": "H1419",
+          "morf": null
+        },
+        {
+          "tekst": "כִּ֣י",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "לֹ֤א",
+          "strong": "H3808",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/אָדָם֙",
+          "strong": "H120",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/בִּירָ֔ה",
+          "strong": "H1002",
+          "morf": null
+        },
+        {
+          "tekst": "כִּ֖י",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֥ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהִֽים",
+          "strong": "H430",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 2,
+      "woorden": [
+        {
+          "tekst": "וּֽ/כְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "כֹּחִ֞/י",
+          "strong": "H3581",
+          "morf": null
+        },
+        {
+          "tekst": "הֲכִינ֣וֹתִי",
+          "strong": "H3559",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/בֵית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהַ֗/י",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/זָּהָ֣ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "לַ֠/זָּהָב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/כֶּ֨סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/כֶּ֜סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/נְּחֹ֣שֶׁת",
+          "strong": "H5178",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/נְּחֹ֗שֶׁת",
+          "strong": "H5178",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/בַּרְזֶל֙",
+          "strong": "H1270",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/בַּרְזֶ֔ל",
+          "strong": "H1270",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הָ/עֵצִ֖ים",
+          "strong": "H6086",
+          "morf": null
+        },
+        {
+          "tekst": "לָ/עֵצִ֑ים",
+          "strong": "H6086",
+          "morf": null
+        },
+        {
+          "tekst": "אַבְנֵי",
+          "strong": "H68",
+          "morf": null
+        },
+        {
+          "tekst": "שֹׁ֨הַם",
+          "strong": "H7718",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/מִלּוּאִ֜ים",
+          "strong": "H4394",
+          "morf": null
+        },
+        {
+          "tekst": "אַבְנֵי",
+          "strong": "H68",
+          "morf": null
+        },
+        {
+          "tekst": "פ֣וּךְ",
+          "strong": "H6320",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/רִקְמָ֗ה",
+          "strong": "H7553",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/כֹ֨ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "אֶ֧בֶן",
+          "strong": "H68",
+          "morf": null
+        },
+        {
+          "tekst": "יְקָרָ֛ה",
+          "strong": "H3368",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/אַבְנֵי",
+          "strong": "H68",
+          "morf": null
+        },
+        {
+          "tekst": "שַׁ֖יִשׁ",
+          "strong": "H7893",
+          "morf": null
+        },
+        {
+          "tekst": "לָ/רֹֽב",
+          "strong": "H7230",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 3,
+      "woorden": [
+        {
+          "tekst": "וְ/ע֗וֹד",
+          "strong": "H5750",
+          "morf": null
+        },
+        {
+          "tekst": "בִּ/רְצוֹתִ/י֙",
+          "strong": "H7521",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/בֵ֣ית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהַ֔/י",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "יֶשׁ",
+          "strong": "H3426",
+          "morf": null
+        },
+        {
+          "tekst": "סְגֻלָּ֖ה",
+          "strong": "H5459",
+          "morf": null
+        },
+        {
+          "tekst": "זָהָ֣ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "וָ/כָ֑סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "נָתַ֤תִּי",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/בֵית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהַ/י֙",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/מַ֔עְלָ/ה",
+          "strong": "H4605",
+          "morf": null
+        },
+        {
+          "tekst": "מִ/כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הֲכִינ֖וֹתִי",
+          "strong": "H3559",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/בֵ֥ית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/קֹּֽדֶשׁ",
+          "strong": "H6944",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 4,
+      "woorden": [
+        {
+          "tekst": "שְׁלֹ֧שֶׁת",
+          "strong": "H7969",
+          "morf": null
+        },
+        {
+          "tekst": "אֲלָפִ֛ים",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכְּרֵ֥י",
+          "strong": "H3603",
+          "morf": null
+        },
+        {
+          "tekst": "זָהָ֖ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "מִ/זְּהַ֣ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "אוֹפִ֑יר",
+          "strong": "H211",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/שִׁבְעַ֨ת",
+          "strong": "H7651",
+          "morf": null
+        },
+        {
+          "tekst": "אֲלָפִ֤ים",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכַּר",
+          "strong": "H3603",
+          "morf": null
+        },
+        {
+          "tekst": "כֶּ֨סֶף֙",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "מְזֻקָּ֔ק",
+          "strong": "H2212",
+          "morf": null
+        },
+        {
+          "tekst": "לָ/ט֖וּחַ",
+          "strong": "H2902",
+          "morf": null
+        },
+        {
+          "tekst": "קִיר֥וֹת",
+          "strong": "H7023",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/בָּתִּֽים",
+          "strong": "H1004",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 5,
+      "woorden": [
+        {
+          "tekst": "לַ/זָּהָ֤ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/זָּהָב֙",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/לַ/כֶּ֣סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/כֶּ֔סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/לְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "מְלָאכָ֖ה",
+          "strong": "H4399",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/יַ֣ד",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "חָרָשִׁ֑ים",
+          "strong": "H2796",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/מִ֣י",
+          "strong": "H4310",
+          "morf": null
+        },
+        {
+          "tekst": "מִתְנַדֵּ֔ב",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/מַלֹּ֥אות",
+          "strong": "H4390",
+          "morf": null
+        },
+        {
+          "tekst": "יָד֛/וֹ",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/יּ֖וֹם",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָֽה",
+          "strong": "H3068",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 6,
+      "woorden": [
+        {
+          "tekst": "וַ/יִּֽתְנַדְּבוּ֩",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "שָׂרֵ֨י",
+          "strong": "H8269",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/אָב֜וֹת",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/שָׂרֵ֣י",
+          "strong": "H8269",
+          "morf": null
+        },
+        {
+          "tekst": "שִׁבְטֵ֣י",
+          "strong": "H7626",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵ֗ל",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/שָׂרֵ֤י",
+          "strong": "H8269",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/אֲלָפִים֙",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/מֵּא֔וֹת",
+          "strong": "H3967",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/לְ/שָׂרֵ֖י",
+          "strong": "H8269",
+          "morf": null
+        },
+        {
+          "tekst": "מְלֶ֥אכֶת",
+          "strong": "H4399",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּֽלֶךְ",
+          "strong": "H4428",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 7,
+      "woorden": [
+        {
+          "tekst": "וַֽ/יִּתְּנ֞וּ",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/עֲבוֹדַ֣ת",
+          "strong": "H5656",
+          "morf": null
+        },
+        {
+          "tekst": "בֵּית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/אֱלֹהִ֗ים",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "זָהָ֞ב",
+          "strong": "H2091",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכָּרִ֣ים",
+          "strong": "H3603",
+          "morf": null
+        },
+        {
+          "tekst": "חֲמֵֽשֶׁת",
+          "strong": "H2568",
+          "morf": null
+        },
+        {
+          "tekst": "אֲלָפִים֮",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/אֲדַרְכֹנִ֣ים",
+          "strong": "H150",
+          "morf": null
+        },
+        {
+          "tekst": "רִבּוֹ֒",
+          "strong": "H7239",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/כֶ֗סֶף",
+          "strong": "H3701",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכָּרִים֙",
+          "strong": "H3603",
+          "morf": null
+        },
+        {
+          "tekst": "עֲשֶׂ֣רֶת",
+          "strong": "H6235",
+          "morf": null
+        },
+        {
+          "tekst": "אֲלָפִ֔ים",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/נְחֹ֕שֶׁת",
+          "strong": "H5178",
+          "morf": null
+        },
+        {
+          "tekst": "רִבּ֛וֹ",
+          "strong": "H7239",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/שְׁמוֹנַ֥ת",
+          "strong": "H8083",
+          "morf": null
+        },
+        {
+          "tekst": "אֲלָפִ֖ים",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכָּרִ֑ים",
+          "strong": "H3603",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/בַרְזֶ֖ל",
+          "strong": "H1270",
+          "morf": null
+        },
+        {
+          "tekst": "מֵֽאָה",
+          "strong": "H3967",
+          "morf": null
+        },
+        {
+          "tekst": "אֶ֥לֶף",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "כִּכָּרִֽים",
+          "strong": "H3603",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 8,
+      "woorden": [
+        {
+          "tekst": "וְ/הַ/נִּמְצָ֤א",
+          "strong": "H4672",
+          "morf": null
+        },
+        {
+          "tekst": "אִתּ/וֹ֙",
+          "strong": "H854",
+          "morf": null
+        },
+        {
+          "tekst": "אֲבָנִ֔ים",
+          "strong": "H68",
+          "morf": null
+        },
+        {
+          "tekst": "נָתְנ֖וּ",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/אוֹצַ֣ר",
+          "strong": "H214",
+          "morf": null
+        },
+        {
+          "tekst": "בֵּית",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֑ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "עַ֥ל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "יַד",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "יְחִיאֵ֖ל",
+          "strong": "H3171",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/גֵּרְשֻׁנִּֽי",
+          "strong": "H1649",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 9,
+      "woorden": [
+        {
+          "tekst": "וַ/יִּשְׂמְח֤וּ",
+          "strong": "H8055",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/עָם֙",
+          "strong": "H5971",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "הִֽתְנַדְּבָ֔/ם",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "כִּ֚י",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/לֵ֣ב",
+          "strong": "H3820",
+          "morf": null
+        },
+        {
+          "tekst": "שָׁלֵ֔ם",
+          "strong": "H8003",
+          "morf": null
+        },
+        {
+          "tekst": "הִֽתְנַדְּב֖וּ",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֑ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/גַם֙",
+          "strong": "H1571",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֣יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּ֔לֶךְ",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "שָׂמַ֖ח",
+          "strong": "H8055",
+          "morf": null
+        },
+        {
+          "tekst": "שִׂמְחָ֥ה",
+          "strong": "H8057",
+          "morf": null
+        },
+        {
+          "tekst": "גְדוֹלָֽה",
+          "strong": "H1419",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 10,
+      "woorden": [
+        {
+          "tekst": "וַ/יְבָ֤רֶךְ",
+          "strong": "H1288",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִיד֙",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "אֶת",
+          "strong": "H853",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֔ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/עֵינֵ֖י",
+          "strong": "H5869",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/קָּהָ֑ל",
+          "strong": "H6951",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יֹּ֣אמֶר",
+          "strong": "H559",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֗יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "בָּר֨וּךְ",
+          "strong": "H1288",
+          "morf": null
+        },
+        {
+          "tekst": "אַתָּ֤ה",
+          "strong": "H859",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָה֙",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהֵי֙",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵ֣ל",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "אָבִ֔י/נוּ",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "מֵ/עוֹלָ֖ם",
+          "strong": "H5769",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַד",
+          "strong": "H5704",
+          "morf": null
+        },
+        {
+          "tekst": "עוֹלָֽם",
+          "strong": "H5769",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 11,
+      "woorden": [
+        {
+          "tekst": "יְ֠הוָה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/גְּדֻלָּ֨ה",
+          "strong": "H1420",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/גְּבוּרָ֤ה",
+          "strong": "H1369",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/תִּפְאֶ֨רֶת֙",
+          "strong": "H8597",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/נֵּ֣צַח",
+          "strong": "H5331",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/ה֔וֹד",
+          "strong": "H1935",
+          "morf": null
+        },
+        {
+          "tekst": "כִּי",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "כֹ֖ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "בַּ/שָּׁמַ֣יִם",
+          "strong": "H8064",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/בָ/אָ֑רֶץ",
+          "strong": "H776",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָה֙",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מַּמְלָכָ֔ה",
+          "strong": "H4467",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/מִּתְנַשֵּׂ֖א",
+          "strong": "H4984",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/כֹ֥ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/רֹֽאשׁ",
+          "strong": "H7218",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 12,
+      "woorden": [
+        {
+          "tekst": "וְ/הָ/עֹ֤שֶׁר",
+          "strong": "H6239",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/כָּבוֹד֙",
+          "strong": "H3519",
+          "morf": null
+        },
+        {
+          "tekst": "מִ/לְּ/פָנֶ֔י/ךָ",
+          "strong": "H6440",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/אַתָּה֙",
+          "strong": "H859",
+          "morf": null
+        },
+        {
+          "tekst": "מוֹשֵׁ֣ל",
+          "strong": "H4910",
+          "morf": null
+        },
+        {
+          "tekst": "בַּ/כֹּ֔ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/בְ/יָדְ/ךָ֖",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "כֹּ֣חַ",
+          "strong": "H3581",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/גְבוּרָ֑ה",
+          "strong": "H1369",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/בְ/יָ֣דְ/ךָ֔",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/גַדֵּ֥ל",
+          "strong": "H1431",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/לְ/חַזֵּ֖ק",
+          "strong": "H2388",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/כֹּֽל",
+          "strong": "H3605",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 13,
+      "woorden": [
+        {
+          "tekst": "וְ/עַתָּ֣ה",
+          "strong": "H6258",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהֵ֔י/נוּ",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "מוֹדִ֥ים",
+          "strong": "H3034",
+          "morf": null
+        },
+        {
+          "tekst": "אֲנַ֖חְנוּ",
+          "strong": "H587",
+          "morf": null
+        },
+        {
+          "tekst": "וּֽ/מְהַֽלְלִ֖ים",
+          "strong": "H1984",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/שֵׁ֥ם",
+          "strong": "H8034",
+          "morf": null
+        },
+        {
+          "tekst": "תִּפְאַרְתֶּֽ/ךָ",
+          "strong": "H8597",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 14,
+      "woorden": [
+        {
+          "tekst": "וְ/כִ֨י",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "מִ֤י",
+          "strong": "H4310",
+          "morf": null
+        },
+        {
+          "tekst": "אֲנִי֙",
+          "strong": "H589",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/מִ֣י",
+          "strong": "H4310",
+          "morf": null
+        },
+        {
+          "tekst": "עַמִּ֔/י",
+          "strong": "H5971",
+          "morf": null
+        },
+        {
+          "tekst": "כִּֽי",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "נַעְצֹ֣ר",
+          "strong": "H6113",
+          "morf": null
+        },
+        {
+          "tekst": "כֹּ֔חַ",
+          "strong": "H3581",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/הִתְנַדֵּ֖ב",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "כָּ/זֹ֑את",
+          "strong": "H2063",
+          "morf": null
+        },
+        {
+          "tekst": "כִּֽי",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "מִמְּ/ךָ֣",
+          "strong": "H4480",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/כֹּ֔ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/מִ/יָּדְ/ךָ֖",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "נָתַ֥נּוּ",
+          "strong": "H5414",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 15,
+      "woorden": [
+        {
+          "tekst": "כִּֽי",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "גֵרִ֨ים",
+          "strong": "H1616",
+          "morf": null
+        },
+        {
+          "tekst": "אֲנַ֧חְנוּ",
+          "strong": "H587",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/פָנֶ֛י/ךָ",
+          "strong": "H6440",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/תוֹשָׁבִ֖ים",
+          "strong": "H8453",
+          "morf": null
+        },
+        {
+          "tekst": "כְּ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "אֲבֹתֵ֑י/נוּ",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "כַּ/צֵּ֧ל",
+          "strong": "H6738",
+          "morf": null
+        },
+        {
+          "tekst": "יָמֵ֛י/נוּ",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/אָ֖רֶץ",
+          "strong": "H776",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/אֵ֥ין",
+          "strong": "H369",
+          "morf": null
+        },
+        {
+          "tekst": "מִקְוֶֽה",
+          "strong": "H4723",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 16,
+      "woorden": [
+        {
+          "tekst": "יְהוָ֣ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהֵ֔י/נוּ",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "כֹ֣ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הֶ/הָמ֤וֹן",
+          "strong": "H1995",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/זֶּה֙",
+          "strong": "H2088",
+          "morf": null
+        },
+        {
+          "tekst": "אֲשֶׁ֣ר",
+          "strong": "H834",
+          "morf": null
+        },
+        {
+          "tekst": "הֲכִינֹ֔נוּ",
+          "strong": "H3559",
+          "morf": null
+        },
+        {
+          "tekst": "לִ/בְנֽוֹת",
+          "strong": "H1129",
+          "morf": null
+        },
+        {
+          "tekst": "בַ֖יִת",
+          "strong": "H1004",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/שֵׁ֣ם",
+          "strong": "H8034",
+          "morf": null
+        },
+        {
+          "tekst": "קָדְשֶׁ֑/ךָ",
+          "strong": "H6944",
+          "morf": null
+        },
+        {
+          "tekst": "מִ/יָּדְ/ךָ֥",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "ה֖וּא",
+          "strong": "H1931",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/כֹּֽל",
+          "strong": "H3605",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 17,
+      "woorden": [
+        {
+          "tekst": "וְ/יָדַ֣עְתִּי",
+          "strong": "H3045",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהַ֔/י",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "כִּ֤י",
+          "strong": "H3588",
+          "morf": null
+        },
+        {
+          "tekst": "אַתָּה֙",
+          "strong": "H859",
+          "morf": null
+        },
+        {
+          "tekst": "בֹּחֵ֣ן",
+          "strong": "H974",
+          "morf": null
+        },
+        {
+          "tekst": "לֵבָ֔ב",
+          "strong": "H3824",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/מֵישָׁרִ֖ים",
+          "strong": "H4339",
+          "morf": null
+        },
+        {
+          "tekst": "תִּרְצֶ֑ה",
+          "strong": "H7521",
+          "morf": null
+        },
+        {
+          "tekst": "אֲנִ֗י",
+          "strong": "H589",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/יֹ֤שֶׁר",
+          "strong": "H3476",
+          "morf": null
+        },
+        {
+          "tekst": "לְבָבִ/י֙",
+          "strong": "H3824",
+          "morf": null
+        },
+        {
+          "tekst": "הִתְנַדַּ֣בְתִּי",
+          "strong": "H5068",
+          "morf": null
+        },
+        {
+          "tekst": "כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "אֵ֔לֶּה",
+          "strong": "H428",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַתָּ֗ה",
+          "strong": "H6258",
+          "morf": null
+        },
+        {
+          "tekst": "עַמְּ/ךָ֙",
+          "strong": "H5971",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/נִּמְצְאוּ",
+          "strong": "H4672",
+          "morf": null
+        },
+        {
+          "tekst": "פֹ֔ה",
+          "strong": "H6311",
+          "morf": null
+        },
+        {
+          "tekst": "רָאִ֥יתִי",
+          "strong": "H7200",
+          "morf": null
+        },
+        {
+          "tekst": "בְ/שִׂמְחָ֖ה",
+          "strong": "H8057",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/הִֽתְנַדֶּב",
+          "strong": "H5068",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 18,
+      "woorden": [
+        {
+          "tekst": "יְהוָ֗ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱ֠לֹהֵי",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "אַבְרָהָ֞ם",
+          "strong": "H85",
+          "morf": null
+        },
+        {
+          "tekst": "יִצְחָ֤ק",
+          "strong": "H3327",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/יִשְׂרָאֵל֙",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "אֲבֹתֵ֔י/נוּ",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "שֳׁמְרָ/ה",
+          "strong": "H8104",
+          "morf": null
+        },
+        {
+          "tekst": "זֹּ֣את",
+          "strong": "H2063",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/עוֹלָ֔ם",
+          "strong": "H5769",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/יֵ֥צֶר",
+          "strong": "H3336",
+          "morf": null
+        },
+        {
+          "tekst": "מַחְשְׁב֖וֹת",
+          "strong": "H4284",
+          "morf": null
+        },
+        {
+          "tekst": "לְבַ֣ב",
+          "strong": "H3824",
+          "morf": null
+        },
+        {
+          "tekst": "עַמֶּ֑/ךָ",
+          "strong": "H5971",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הָכֵ֥ן",
+          "strong": "H3559",
+          "morf": null
+        },
+        {
+          "tekst": "לְבָבָ֖/ם",
+          "strong": "H3824",
+          "morf": null
+        },
+        {
+          "tekst": "אֵלֶֽי/ךָ",
+          "strong": "H413",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 19,
+      "woorden": [
+        {
+          "tekst": "וְ/לִ/שְׁלֹמֹ֣ה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "בְנִ֗/י",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "תֵּ֚ן",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "לֵבָ֣ב",
+          "strong": "H3824",
+          "morf": null
+        },
+        {
+          "tekst": "שָׁלֵ֔ם",
+          "strong": "H8003",
+          "morf": null
+        },
+        {
+          "tekst": "לִ/שְׁמוֹר֙",
+          "strong": "H8104",
+          "morf": null
+        },
+        {
+          "tekst": "מִצְוֺתֶ֔י/ךָ",
+          "strong": "H4687",
+          "morf": null
+        },
+        {
+          "tekst": "עֵדְוֺתֶ֖י/ךָ",
+          "strong": "H5715",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/חֻקֶּ֑י/ךָ",
+          "strong": "H2708",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/לַ/עֲשׂ֣וֹת",
+          "strong": "H6213",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/כֹּ֔ל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/לִ/בְנ֖וֹת",
+          "strong": "H1129",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/בִּירָ֥ה",
+          "strong": "H1002",
+          "morf": null
+        },
+        {
+          "tekst": "אֲשֶׁר",
+          "strong": "H834",
+          "morf": null
+        },
+        {
+          "tekst": "הֲכִינֽוֹתִי",
+          "strong": "H3559",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 20,
+      "woorden": [
+        {
+          "tekst": "וַ/יֹּ֤אמֶר",
+          "strong": "H559",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִיד֙",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/קָּהָ֔ל",
+          "strong": "H6951",
+          "morf": null
+        },
+        {
+          "tekst": "בָּֽרְכוּ",
+          "strong": "H1288",
+          "morf": null
+        },
+        {
+          "tekst": "נָ֖א",
+          "strong": "H4994",
+          "morf": null
+        },
+        {
+          "tekst": "אֶת",
+          "strong": "H853",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֣ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהֵי/כֶ֑ם",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יְבָרֲכ֣וּ",
+          "strong": "H1288",
+          "morf": null
+        },
+        {
+          "tekst": "כָֽל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/קָּהָ֗ל",
+          "strong": "H6951",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָה֙",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֱלֹהֵ֣י",
+          "strong": "H430",
+          "morf": null
+        },
+        {
+          "tekst": "אֲבֹֽתֵי/הֶ֔ם",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּקְּד֧וּ",
+          "strong": "H6915",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּֽשְׁתַּחֲו֛וּ",
+          "strong": "H7812",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֖ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/לַ/מֶּֽלֶךְ",
+          "strong": "H4428",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 21,
+      "woorden": [
+        {
+          "tekst": "וַ/יִּזְבְּח֣וּ",
+          "strong": "H2076",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֣ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "זְ֠בָחִים",
+          "strong": "H2077",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יַּעֲל֨וּ",
+          "strong": "H5927",
+          "morf": null
+        },
+        {
+          "tekst": "עֹל֜וֹת",
+          "strong": "H5930",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֗ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "לְֽ/מָחֳרַת֮",
+          "strong": "H4283",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/יּ֣וֹם",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/הוּא֒",
+          "strong": "H1931",
+          "morf": null
+        },
+        {
+          "tekst": "פָּרִ֨ים",
+          "strong": "H6499",
+          "morf": null
+        },
+        {
+          "tekst": "אֶ֜לֶף",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "אֵילִ֥ים",
+          "strong": "H352",
+          "morf": null
+        },
+        {
+          "tekst": "אֶ֛לֶף",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "כְּבָשִׂ֥ים",
+          "strong": "H3532",
+          "morf": null
+        },
+        {
+          "tekst": "אֶ֖לֶף",
+          "strong": "H505",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/נִסְכֵּי/הֶ֑ם",
+          "strong": "H5262",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/זְבָחִ֥ים",
+          "strong": "H2077",
+          "morf": null
+        },
+        {
+          "tekst": "לָ/רֹ֖ב",
+          "strong": "H7230",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵֽל",
+          "strong": "H3478",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 22,
+      "woorden": [
+        {
+          "tekst": "וַ/יֹּאכְל֨וּ",
+          "strong": "H398",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּשְׁתּ֜וּ",
+          "strong": "H8354",
+          "morf": null
+        },
+        {
+          "tekst": "לִ/פְנֵ֧י",
+          "strong": "H6440",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֛ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "בַּ/יּ֥וֹם",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/ה֖וּא",
+          "strong": "H1931",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/שִׂמְחָ֣ה",
+          "strong": "H8057",
+          "morf": null
+        },
+        {
+          "tekst": "גְדוֹלָ֑ה",
+          "strong": "H1419",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יַּמְלִ֤יכוּ",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "שֵׁנִית֙",
+          "strong": "H8145",
+          "morf": null
+        },
+        {
+          "tekst": "לִ/שְׁלֹמֹ֣ה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "בֶן",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֔יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּמְשְׁח֧וּ",
+          "strong": "H4886",
+          "morf": null
+        },
+        {
+          "tekst": "לַ/יהוָ֛ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/נָגִ֥יד",
+          "strong": "H5057",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/לְ/צָד֖וֹק",
+          "strong": "H6659",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/כֹהֵֽן",
+          "strong": "H3548",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 23,
+      "woorden": [
+        {
+          "tekst": "וַ/יֵּ֣שֶׁב",
+          "strong": "H3427",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁ֠לֹמֹה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "כִּסֵּ֨א",
+          "strong": "H3678",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֧ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/מֶ֛לֶךְ",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "תַּֽחַת",
+          "strong": "H8478",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֥יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "אָבִ֖י/ו",
+          "strong": "H1",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יַּצְלַ֑ח",
+          "strong": "H6743",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּשְׁמְע֥וּ",
+          "strong": "H8085",
+          "morf": null
+        },
+        {
+          "tekst": "אֵלָ֖י/ו",
+          "strong": "H413",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵֽל",
+          "strong": "H3478",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 24,
+      "woorden": [
+        {
+          "tekst": "וְ/כָל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/שָּׂרִים֙",
+          "strong": "H8269",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הַ/גִּבֹּרִ֔ים",
+          "strong": "H1368",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/גַ֕ם",
+          "strong": "H1571",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "בְּנֵ֖י",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּ֣לֶךְ",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֑יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "נָ֣תְנוּ",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "יָ֔ד",
+          "strong": "H3027",
+          "morf": null
+        },
+        {
+          "tekst": "תַּ֖חַת",
+          "strong": "H8478",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁלֹמֹ֥ה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּֽלֶךְ",
+          "strong": "H4428",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 25,
+      "woorden": [
+        {
+          "tekst": "וַ/יְגַדֵּ֨ל",
+          "strong": "H1431",
+          "morf": null
+        },
+        {
+          "tekst": "יְהוָ֤ה",
+          "strong": "H3068",
+          "morf": null
+        },
+        {
+          "tekst": "אֶת",
+          "strong": "H853",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁלֹמֹה֙",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/מַ֔עְלָ/ה",
+          "strong": "H4605",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/עֵינֵ֖י",
+          "strong": "H5869",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵ֑ל",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּתֵּ֤ן",
+          "strong": "H5414",
+          "morf": null
+        },
+        {
+          "tekst": "עָלָי/ו֙",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "ה֣וֹד",
+          "strong": "H1935",
+          "morf": null
+        },
+        {
+          "tekst": "מַלְכ֔וּת",
+          "strong": "H4438",
+          "morf": null
+        },
+        {
+          "tekst": "אֲ֠שֶׁר",
+          "strong": "H834",
+          "morf": null
+        },
+        {
+          "tekst": "לֹֽא",
+          "strong": "H3808",
+          "morf": null
+        },
+        {
+          "tekst": "הָיָ֧ה",
+          "strong": "H1961",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "מֶ֛לֶךְ",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "לְ/פָנָ֖י/ו",
+          "strong": "H6440",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵֽל",
+          "strong": "H3478",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 26,
+      "woorden": [
+        {
+          "tekst": "וְ/דָוִיד֙",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "בֶּן",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "יִשָׁ֔י",
+          "strong": "H3448",
+          "morf": null
+        },
+        {
+          "tekst": "מָלַ֖ךְ",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵֽל",
+          "strong": "H3478",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 27,
+      "woorden": [
+        {
+          "tekst": "וְ/הַ/יָּמִ֗ים",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "אֲשֶׁ֤ר",
+          "strong": "H834",
+          "morf": null
+        },
+        {
+          "tekst": "מָלַךְ֙",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵ֔ל",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "אַרְבָּעִ֖ים",
+          "strong": "H705",
+          "morf": null
+        },
+        {
+          "tekst": "שָׁנָ֑ה",
+          "strong": "H8141",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/חֶבְר֤וֹן",
+          "strong": "H2275",
+          "morf": null
+        },
+        {
+          "tekst": "מָלַךְ֙",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "שֶׁ֣בַע",
+          "strong": "H7651",
+          "morf": null
+        },
+        {
+          "tekst": "שָׁנִ֔ים",
+          "strong": "H8141",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/בִ/ירוּשָׁלִַ֥ם",
+          "strong": "H3389",
+          "morf": null
+        },
+        {
+          "tekst": "מָלַ֖ךְ",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁלֹשִׁ֥ים",
+          "strong": "H7970",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/שָׁלֽוֹשׁ",
+          "strong": "H7969",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 28,
+      "woorden": [
+        {
+          "tekst": "וַ/יָּ֨מָת֙",
+          "strong": "H4191",
+          "morf": null
+        },
+        {
+          "tekst": "בְּ/שֵׂיבָ֣ה",
+          "strong": "H7872",
+          "morf": null
+        },
+        {
+          "tekst": "טוֹבָ֔ה",
+          "strong": "H2896",
+          "morf": null
+        },
+        {
+          "tekst": "שְׂבַ֥ע",
+          "strong": "H7649",
+          "morf": null
+        },
+        {
+          "tekst": "יָמִ֖ים",
+          "strong": "H3117",
+          "morf": null
+        },
+        {
+          "tekst": "עֹ֣שֶׁר",
+          "strong": "H6239",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/כָב֑וֹד",
+          "strong": "H3519",
+          "morf": null
+        },
+        {
+          "tekst": "וַ/יִּמְלֹ֛ךְ",
+          "strong": "H4427",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁלֹמֹ֥ה",
+          "strong": "H8010",
+          "morf": null
+        },
+        {
+          "tekst": "בְנ֖/וֹ",
+          "strong": "H1121",
+          "morf": null
+        },
+        {
+          "tekst": "תַּחְתָּֽי/ו",
+          "strong": "H8478",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 29,
+      "woorden": [
+        {
+          "tekst": "וְ/דִבְרֵי֙",
+          "strong": "H1697",
+          "morf": null
+        },
+        {
+          "tekst": "דָּוִ֣יד",
+          "strong": "H1732",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/מֶּ֔לֶךְ",
+          "strong": "H4428",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/רִאשֹׁנִ֖ים",
+          "strong": "H7223",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הָ/אֲחרֹנִ֑ים",
+          "strong": "H314",
+          "morf": null
+        },
+        {
+          "tekst": "הִנָּ֣/ם",
+          "strong": "H2009",
+          "morf": null
+        },
+        {
+          "tekst": "כְּתוּבִ֗ים",
+          "strong": "H3789",
+          "morf": null
+        },
+        {
+          "tekst": "עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "דִּבְרֵי֙",
+          "strong": "H1697",
+          "morf": null
+        },
+        {
+          "tekst": "שְׁמוּאֵ֣ל",
+          "strong": "H8050",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/רֹאֶ֔ה",
+          "strong": "H7200",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "דִּבְרֵי֙",
+          "strong": "H1697",
+          "morf": null
+        },
+        {
+          "tekst": "נָתָ֣ן",
+          "strong": "H5416",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/נָּבִ֔יא",
+          "strong": "H5030",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "דִּבְרֵ֖י",
+          "strong": "H1697",
+          "morf": null
+        },
+        {
+          "tekst": "גָּ֥ד",
+          "strong": "H1410",
+          "morf": null
+        },
+        {
+          "tekst": "הַ/חֹזֶֽה",
+          "strong": "H2374",
+          "morf": null
+        }
+      ]
+    },
+    {
+      "vers": 30,
+      "woorden": [
+        {
+          "tekst": "עִ֥ם",
+          "strong": "H5973",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "מַלְכוּת֖/וֹ",
+          "strong": "H4438",
+          "morf": null
+        },
+        {
+          "tekst": "וּ/גְבוּרָת֑/וֹ",
+          "strong": "H1369",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/הָ/עִתִּ֗ים",
+          "strong": "H6256",
+          "morf": null
+        },
+        {
+          "tekst": "אֲשֶׁ֨ר",
+          "strong": "H834",
+          "morf": null
+        },
+        {
+          "tekst": "עָבְר֤וּ",
+          "strong": "H5674",
+          "morf": null
+        },
+        {
+          "tekst": "עָלָי/ו֙",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "יִשְׂרָאֵ֔ל",
+          "strong": "H3478",
+          "morf": null
+        },
+        {
+          "tekst": "וְ/עַ֖ל",
+          "strong": "H5921",
+          "morf": null
+        },
+        {
+          "tekst": "כָּל",
+          "strong": "H3605",
+          "morf": null
+        },
+        {
+          "tekst": "מַמְלְכ֥וֹת",
+          "strong": "H4467",
+          "morf": null
+        },
+        {
+          "tekst": "הָ/אֲרָצֽוֹת",
+          "strong": "H776",
+          "morf": null
+        }
+      ]
+    }
+  ]
+}

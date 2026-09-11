@@ -1,6 +1,9 @@
 # Claude Code lokale instellingen (machine-specifiek)
 .claude/
 
+# Gegenereerd build-artefact, zie pipeline/scripts/bouw-concordantie.js
+data/grondtekst/concordantie.json
+
 # Logs
 logs
 *.log
