@@ -17,6 +17,19 @@ const index: BoekInfo[] = JSON.parse(
 );
 const ot = index.filter((b) => b.testament === "ot");
 const nt = index.filter((b) => b.testament === "nt");
+
+// Voorbeeld op de homepage: eerste 5 verzen van Johannes 1, zoals in de referentie.
+const VOORBEELD_BOEK = "joh";
+const VOORBEELD_HOOFDSTUK = 1;
+const voorbeeldBoekInfo = index.find((b) => b.code === VOORBEELD_BOEK)!;
+const voorbeeldData = JSON.parse(
+	fs.readFileSync(path.join(dataRoot, VOORBEELD_BOEK, "01.json"), "utf-8"),
+);
+const voorbeeldVerzen: { vers: number; tekst: string }[] = voorbeeldData.verzen.slice(0, 5);
+const hoofdstukkenVanVoorbeeldboek = Array.from(
+	{ length: voorbeeldBoekInfo.hoofdstukken },
+	(_, i) => i + 1,
+);
 ---
 
 <Base title="BereaBijbel" huidigeNav="home">
@@ -33,6 +46,41 @@ const nt = index.filter((b) => b.testament === "nt");
 		Nederlandse BereaBijbel-vertaling volgt per boek.
 	</p>
 
+	<div class="zoekbalk">
+		<input id="search" type="text" placeholder="Zoek op vers, bijv. John 3:16" autocomplete="off" />
+	</div>
+	<div id="search-error" class="search-error" hidden></div>
+
+	<h2 id="hoofdstuktitel">{voorbeeldBoekInfo.naam_en} {VOORBEELD_HOOFDSTUK}</h2>
+
+	<nav class="hfdnav">
+		<select id="book-select">
+			{index.map((b) => (
+				<option value={b.code} selected={b.code === VOORBEELD_BOEK}>{b.naam_en}</option>
+			))}
+		</select>
+		<select id="chapter-select">
+			{hoofdstukkenVanVoorbeeldboek.map((h) => (
+				<option value={h} selected={h === VOORBEELD_HOOFDSTUK}>{h}</option>
+			))}
+		</select>
+	</nav>
+
+	<div id="home-verses">
+		{voorbeeldVerzen.map((v) => (
+			<div class="vers">
+				<div class="vers-hoofd">
+					<div class="vnr">{v.vers}</div>
+					<div class="vtekst placeholder-tekst">{v.tekst}</div>
+				</div>
+			</div>
+		))}
+	</div>
+
+	<div class="cta-wrap">
+		<a class="pill-btn" href={`/${VOORBEELD_BOEK}/${VOORBEELD_HOOFDSTUK}`}>Lees het hele hoofdstuk &rarr;</a>
+	</div>
+
 	<h2 class="sectie">Oude Testament</h2>
 	<ul class="boekenlijst">
 		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
@@ -42,6 +90,72 @@ const nt = index.filter((b) => b.testament === "nt");
 	<ul class="boekenlijst">
 		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
 	</ul>
+
+	<script type="application/json" id="boekenindex" set:html={JSON.stringify(index)} />
+
+	<script>
+		function normalizeBoek(s: string) {
+			return s.trim().toLowerCase().replace(/\./g, "");
+		}
+
+		function initZoek() {
+			const el = document.getElementById("boekenindex");
+			if (!el) return;
+			const boeken: { code: string; naam_en: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
+
+			const zoekEl = document.getElementById("search") as HTMLInputElement | null;
+			const errorEl = document.getElementById("search-error");
+			if (!zoekEl || !errorEl) return;
+
+			zoekEl.addEventListener("keydown", (e) => {
+				if (e.key !== "Enter") return;
+				e.preventDefault();
+				errorEl.hidden = true;
+				const query = zoekEl.value.trim();
+				if (!query) return;
+
+				const m = query.match(/^(.*?)\s+(\d+)(?::(\d+))?\s*$/);
+				if (!m) {
+					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "John 3:16".';
+					errorEl.hidden = false;
+					return;
+				}
+				const rawBoek = normalizeBoek(m[1]);
+				const gevonden = boeken.find((b) => normalizeBoek(b.naam_en).indexOf(rawBoek) === 0);
+				if (!gevonden) {
+					errorEl.textContent = `Boek "${m[1]}" niet gevonden.`;
+					errorEl.hidden = false;
+					return;
+				}
+				const hst = parseInt(m[2], 10);
+				if (hst < 1 || hst > gevonden.hoofdstukken) {
+					errorEl.textContent = `${gevonden.naam_en} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
+					errorEl.hidden = false;
+					return;
+				}
+				const vers = m[3] ? `#vers-${m[3]}` : "";
+				window.location.href = `/${gevonden.code}/${hst}${vers}`;
+			});
+		}
+
+		function initSelects() {
+			const boekSelect = document.getElementById("book-select") as HTMLSelectElement | null;
+			const hstSelect = document.getElementById("chapter-select") as HTMLSelectElement | null;
+			if (boekSelect) {
+				boekSelect.addEventListener("change", () => {
+					window.location.href = `/${boekSelect.value}/1`;
+				});
+			}
+			if (hstSelect) {
+				hstSelect.addEventListener("change", () => {
+					window.location.href = `/${(document.getElementById("book-select") as HTMLSelectElement).value}/${hstSelect.value}`;
+				});
+			}
+		}
+
+		initZoek();
+		initSelects();
+	</script>
 </Base>
 
 <style>
@@ -61,6 +175,97 @@ const nt = index.filter((b) => b.testament === "nt");
 		border-radius: 8px;
 		margin: 1.6rem 0 0;
 	}
+
+	.zoekbalk {
+		position: relative;
+		max-width: 640px;
+		margin: 2.2rem auto 0.4rem;
+	}
+	#search {
+		display: block;
+		width: 100%;
+		font-family: var(--body-font);
+		font-size: 0.95rem;
+		line-height: 1.5;
+		text-align: center;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.6rem 0.8rem;
+		color: var(--tekst);
+		background: var(--bg);
+	}
+	#search::placeholder { color: var(--gray); }
+	#search:focus { outline: none; border-color: var(--accent); }
+	.search-error {
+		max-width: 640px;
+		margin: 0.4rem auto 0;
+		color: #a33;
+		font-size: 0.8rem;
+		font-family: sans-serif;
+		text-align: center;
+	}
+	.search-error[hidden] { display: none; }
+
+	#hoofdstuktitel {
+		text-align: center;
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: var(--tekst);
+		margin: 2rem 0 0.4rem;
+	}
+
+	.hfdnav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		font-size: 0.85rem;
+		padding: 1rem 0;
+		margin-bottom: 1.1rem;
+	}
+	.hfdnav select {
+		font-family: var(--body-font);
+		font-size: 0.85rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.3rem 1.6rem 0.3rem 0.8rem;
+		background: var(--bg);
+		color: var(--accent-donker);
+		cursor: pointer;
+	}
+	.hfdnav select:focus { outline: none; border-color: var(--accent); }
+
+	#home-verses { font-size: 1.05rem; }
+	.vers { position: relative; border-radius: 8px; line-height: 1.75; }
+	.vers-hoofd { display: flex; gap: 0.8rem; padding: 0.5rem 0.8rem 0.5rem 0.4rem; }
+	.vnr {
+		color: var(--gray);
+		font-size: 0.75rem;
+		min-width: 1.7rem;
+		text-align: right;
+		padding-top: 0.35rem;
+		flex-shrink: 0;
+		font-family: sans-serif;
+	}
+	.vtekst { flex: 1; }
+
+	.cta-wrap { text-align: center; margin-top: 1.4rem; }
+	.pill-btn {
+		display: inline-block;
+		font-family: var(--body-font);
+		font-weight: 700;
+		font-size: 0.98rem;
+		background: var(--accent-donker);
+		color: var(--bg);
+		border: none;
+		padding: 0.7rem 1.5rem;
+		border-radius: 999px;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.pill-btn:hover { opacity: 0.88; }
+
 	.boekenlijst {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
