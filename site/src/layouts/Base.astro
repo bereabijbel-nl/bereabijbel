@@ -98,6 +98,12 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				font-size: 1.05rem;
 				color: var(--secondary);
 			}
+			.subtitel-spatie { display: inline; }
+			.subtitel-nl { display: none; }
+			@media (max-width: 480px) {
+				.subtitel-spatie { display: none; }
+				.subtitel-nl { display: block; }
+			}
 			.site-nav {
 				font-size: 0.82rem;
 				text-align: center;
@@ -377,7 +383,7 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 	<body>
 		<header class="site-header">
 			<h2 class="page-title"><a href="/">BereaBijbel</a></h2>
-			<p class="site-subtitle">Een betrouwbare vertaling in begrijpelijk Nederlands<br /><i>Volledig licentievrij</i></p>
+			<p class="site-subtitle">Een betrouwbare vertaling,<span class="subtitel-spatie"> </span><br class="subtitel-nl" />in begrijpelijk Nederlands<br /><i>Volledig licentievrij</i></p>
 			<nav class="site-nav">
 				<a href="/" aria-current={huidigeNav === "home" ? "true" : "false"}>Home</a><span class="nav-sep">|</span>
 				<a href="/bijbel" aria-current={huidigeNav === "bijbel" ? "true" : "false"}>Bijbel</a><span class="nav-sep">|</span>
