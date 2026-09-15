@@ -4,461 +4,527 @@
     "nummer": 1,
     "naam_en": "Genesis",
     "testament": "ot",
-    "hoofdstukken": 50
+    "hoofdstukken": 50,
+    "naam_nl": "Genesis"
   },
   {
     "code": "exo",
     "nummer": 2,
     "naam_en": "Exodus",
     "testament": "ot",
-    "hoofdstukken": 40
+    "hoofdstukken": 40,
+    "naam_nl": "Exodus"
   },
   {
     "code": "lev",
     "nummer": 3,
     "naam_en": "Leviticus",
     "testament": "ot",
-    "hoofdstukken": 27
+    "hoofdstukken": 27,
+    "naam_nl": "Leviticus"
   },
   {
     "code": "num",
     "nummer": 4,
     "naam_en": "Numbers",
     "testament": "ot",
-    "hoofdstukken": 36
+    "hoofdstukken": 36,
+    "naam_nl": "Numeri"
   },
   {
     "code": "deu",
     "nummer": 5,
     "naam_en": "Deuteronomy",
     "testament": "ot",
-    "hoofdstukken": 34
+    "hoofdstukken": 34,
+    "naam_nl": "Deuteronomium"
   },
   {
     "code": "jos",
     "nummer": 6,
     "naam_en": "Joshua",
     "testament": "ot",
-    "hoofdstukken": 24
+    "hoofdstukken": 24,
+    "naam_nl": "Jozua"
   },
   {
     "code": "jdg",
     "nummer": 7,
     "naam_en": "Judges",
     "testament": "ot",
-    "hoofdstukken": 21
+    "hoofdstukken": 21,
+    "naam_nl": "Richteren"
   },
   {
     "code": "rut",
     "nummer": 8,
     "naam_en": "Ruth",
     "testament": "ot",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "Ruth"
   },
   {
     "code": "1sa",
     "nummer": 9,
     "naam_en": "I Samuel",
     "testament": "ot",
-    "hoofdstukken": 31
+    "hoofdstukken": 31,
+    "naam_nl": "1 Samuël"
   },
   {
     "code": "2sa",
     "nummer": 10,
     "naam_en": "II Samuel",
     "testament": "ot",
-    "hoofdstukken": 24
+    "hoofdstukken": 24,
+    "naam_nl": "2 Samuël"
   },
   {
     "code": "1ki",
     "nummer": 11,
     "naam_en": "I Kings",
     "testament": "ot",
-    "hoofdstukken": 22
+    "hoofdstukken": 22,
+    "naam_nl": "1 Koningen"
   },
   {
     "code": "2ki",
     "nummer": 12,
     "naam_en": "II Kings",
     "testament": "ot",
-    "hoofdstukken": 25
+    "hoofdstukken": 25,
+    "naam_nl": "2 Koningen"
   },
   {
     "code": "1ch",
     "nummer": 13,
     "naam_en": "I Chronicles",
     "testament": "ot",
-    "hoofdstukken": 29
+    "hoofdstukken": 29,
+    "naam_nl": "1 Kronieken"
   },
   {
     "code": "2ch",
     "nummer": 14,
     "naam_en": "II Chronicles",
     "testament": "ot",
-    "hoofdstukken": 36
+    "hoofdstukken": 36,
+    "naam_nl": "2 Kronieken"
   },
   {
     "code": "ezr",
     "nummer": 15,
     "naam_en": "Ezra",
     "testament": "ot",
-    "hoofdstukken": 10
+    "hoofdstukken": 10,
+    "naam_nl": "Ezra"
   },
   {
     "code": "neh",
     "nummer": 16,
     "naam_en": "Nehemiah",
     "testament": "ot",
-    "hoofdstukken": 13
+    "hoofdstukken": 13,
+    "naam_nl": "Nehemia"
   },
   {
     "code": "est",
     "nummer": 17,
     "naam_en": "Esther",
     "testament": "ot",
-    "hoofdstukken": 10
+    "hoofdstukken": 10,
+    "naam_nl": "Ester"
   },
   {
     "code": "job",
     "nummer": 18,
     "naam_en": "Job",
     "testament": "ot",
-    "hoofdstukken": 42
+    "hoofdstukken": 42,
+    "naam_nl": "Job"
   },
   {
     "code": "psa",
     "nummer": 19,
     "naam_en": "Psalms",
     "testament": "ot",
-    "hoofdstukken": 150
+    "hoofdstukken": 150,
+    "naam_nl": "Psalmen"
   },
   {
     "code": "pro",
     "nummer": 20,
     "naam_en": "Proverbs",
     "testament": "ot",
-    "hoofdstukken": 31
+    "hoofdstukken": 31,
+    "naam_nl": "Spreuken"
   },
   {
     "code": "ecc",
     "nummer": 21,
     "naam_en": "Ecclesiastes",
     "testament": "ot",
-    "hoofdstukken": 12
+    "hoofdstukken": 12,
+    "naam_nl": "Prediker"
   },
   {
     "code": "sng",
     "nummer": 22,
     "naam_en": "Song of Solomon",
     "testament": "ot",
-    "hoofdstukken": 8
+    "hoofdstukken": 8,
+    "naam_nl": "Hooglied"
   },
   {
     "code": "isa",
     "nummer": 23,
     "naam_en": "Isaiah",
     "testament": "ot",
-    "hoofdstukken": 66
+    "hoofdstukken": 66,
+    "naam_nl": "Jesaja"
   },
   {
     "code": "jer",
     "nummer": 24,
     "naam_en": "Jeremiah",
     "testament": "ot",
-    "hoofdstukken": 52
+    "hoofdstukken": 52,
+    "naam_nl": "Jeremia"
   },
   {
     "code": "lam",
     "nummer": 25,
     "naam_en": "Lamentations",
     "testament": "ot",
-    "hoofdstukken": 5
+    "hoofdstukken": 5,
+    "naam_nl": "Klaagliederen"
   },
   {
     "code": "eze",
     "nummer": 26,
     "naam_en": "Ezekiel",
     "testament": "ot",
-    "hoofdstukken": 48
+    "hoofdstukken": 48,
+    "naam_nl": "Ezechiël"
   },
   {
     "code": "dan",
     "nummer": 27,
     "naam_en": "Daniel",
     "testament": "ot",
-    "hoofdstukken": 12
+    "hoofdstukken": 12,
+    "naam_nl": "Daniël"
   },
   {
     "code": "hos",
     "nummer": 28,
     "naam_en": "Hosea",
     "testament": "ot",
-    "hoofdstukken": 14
+    "hoofdstukken": 14,
+    "naam_nl": "Hosea"
   },
   {
     "code": "joe",
     "nummer": 29,
     "naam_en": "Joel",
     "testament": "ot",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "Joël"
   },
   {
     "code": "amo",
     "nummer": 30,
     "naam_en": "Amos",
     "testament": "ot",
-    "hoofdstukken": 9
+    "hoofdstukken": 9,
+    "naam_nl": "Amos"
   },
   {
     "code": "oba",
     "nummer": 31,
     "naam_en": "Obadiah",
     "testament": "ot",
-    "hoofdstukken": 1
+    "hoofdstukken": 1,
+    "naam_nl": "Obadja"
   },
   {
     "code": "jon",
     "nummer": 32,
     "naam_en": "Jonah",
     "testament": "ot",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "Jona"
   },
   {
     "code": "mic",
     "nummer": 33,
     "naam_en": "Micah",
     "testament": "ot",
-    "hoofdstukken": 7
+    "hoofdstukken": 7,
+    "naam_nl": "Micha"
   },
   {
     "code": "nah",
     "nummer": 34,
     "naam_en": "Nahum",
     "testament": "ot",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "Nahum"
   },
   {
     "code": "hab",
     "nummer": 35,
     "naam_en": "Habakkuk",
     "testament": "ot",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "Habakuk"
   },
   {
     "code": "zep",
     "nummer": 36,
     "naam_en": "Zephaniah",
     "testament": "ot",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "Sefanja"
   },
   {
     "code": "hag",
     "nummer": 37,
     "naam_en": "Haggai",
     "testament": "ot",
-    "hoofdstukken": 2
+    "hoofdstukken": 2,
+    "naam_nl": "Haggaï"
   },
   {
     "code": "zec",
     "nummer": 38,
     "naam_en": "Zechariah",
     "testament": "ot",
-    "hoofdstukken": 14
+    "hoofdstukken": 14,
+    "naam_nl": "Zacharia"
   },
   {
     "code": "mal",
     "nummer": 39,
     "naam_en": "Malachi",
     "testament": "ot",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "Maleachi"
   },
   {
     "code": "mat",
     "nummer": 40,
     "naam_en": "Matthew",
     "testament": "nt",
-    "hoofdstukken": 28
+    "hoofdstukken": 28,
+    "naam_nl": "Mattheüs"
   },
   {
     "code": "mrk",
     "nummer": 41,
     "naam_en": "Mark",
     "testament": "nt",
-    "hoofdstukken": 16
+    "hoofdstukken": 16,
+    "naam_nl": "Markus"
   },
   {
     "code": "luk",
     "nummer": 42,
     "naam_en": "Luke",
     "testament": "nt",
-    "hoofdstukken": 24
+    "hoofdstukken": 24,
+    "naam_nl": "Lukas"
   },
   {
     "code": "joh",
     "nummer": 43,
     "naam_en": "John",
     "testament": "nt",
-    "hoofdstukken": 21
+    "hoofdstukken": 21,
+    "naam_nl": "Johannes"
   },
   {
     "code": "act",
     "nummer": 44,
     "naam_en": "Acts",
     "testament": "nt",
-    "hoofdstukken": 28
+    "hoofdstukken": 28,
+    "naam_nl": "Handelingen"
   },
   {
     "code": "rom",
     "nummer": 45,
     "naam_en": "Romans",
     "testament": "nt",
-    "hoofdstukken": 16
+    "hoofdstukken": 16,
+    "naam_nl": "Romeinen"
   },
   {
     "code": "1co",
     "nummer": 46,
     "naam_en": "I Corinthians",
     "testament": "nt",
-    "hoofdstukken": 16
+    "hoofdstukken": 16,
+    "naam_nl": "1 Korinthe"
   },
   {
     "code": "2co",
     "nummer": 47,
     "naam_en": "II Corinthians",
     "testament": "nt",
-    "hoofdstukken": 13
+    "hoofdstukken": 13,
+    "naam_nl": "2 Korinthe"
   },
   {
     "code": "gal",
     "nummer": 48,
     "naam_en": "Galatians",
     "testament": "nt",
-    "hoofdstukken": 6
+    "hoofdstukken": 6,
+    "naam_nl": "Galaten"
   },
   {
     "code": "eph",
     "nummer": 49,
     "naam_en": "Ephesians",
     "testament": "nt",
-    "hoofdstukken": 6
+    "hoofdstukken": 6,
+    "naam_nl": "Efeze"
   },
   {
     "code": "php",
     "nummer": 50,
     "naam_en": "Philippians",
     "testament": "nt",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "Filippenzen"
   },
   {
     "code": "col",
     "nummer": 51,
     "naam_en": "Colossians",
     "testament": "nt",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "Kolossenzen"
   },
   {
     "code": "1th",
     "nummer": 52,
     "naam_en": "I Thessalonians",
     "testament": "nt",
-    "hoofdstukken": 5
+    "hoofdstukken": 5,
+    "naam_nl": "1 Thessalonicenzen"
   },
   {
     "code": "2th",
     "nummer": 53,
     "naam_en": "II Thessalonians",
     "testament": "nt",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "2 Thessalonicenzen"
   },
   {
     "code": "1ti",
     "nummer": 54,
     "naam_en": "I Timothy",
     "testament": "nt",
-    "hoofdstukken": 6
+    "hoofdstukken": 6,
+    "naam_nl": "1 Timotheüs"
   },
   {
     "code": "2ti",
     "nummer": 55,
     "naam_en": "II Timothy",
     "testament": "nt",
-    "hoofdstukken": 4
+    "hoofdstukken": 4,
+    "naam_nl": "2 Timotheüs"
   },
   {
     "code": "tit",
     "nummer": 56,
     "naam_en": "Titus",
     "testament": "nt",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "Titus"
   },
   {
     "code": "phm",
     "nummer": 57,
     "naam_en": "Philemon",
     "testament": "nt",
-    "hoofdstukken": 1
+    "hoofdstukken": 1,
+    "naam_nl": "Filemon"
   },
   {
     "code": "heb",
     "nummer": 58,
     "naam_en": "Hebrews",
     "testament": "nt",
-    "hoofdstukken": 13
+    "hoofdstukken": 13,
+    "naam_nl": "Hebreeën"
   },
   {
     "code": "jas",
     "nummer": 59,
     "naam_en": "James",
     "testament": "nt",
-    "hoofdstukken": 5
+    "hoofdstukken": 5,
+    "naam_nl": "Jakobus"
   },
   {
     "code": "1pe",
     "nummer": 60,
     "naam_en": "I Peter",
     "testament": "nt",
-    "hoofdstukken": 5
+    "hoofdstukken": 5,
+    "naam_nl": "1 Petrus"
   },
   {
     "code": "2pe",
     "nummer": 61,
     "naam_en": "II Peter",
     "testament": "nt",
-    "hoofdstukken": 3
+    "hoofdstukken": 3,
+    "naam_nl": "2 Petrus"
   },
   {
     "code": "1jo",
     "nummer": 62,
     "naam_en": "I John",
     "testament": "nt",
-    "hoofdstukken": 5
+    "hoofdstukken": 5,
+    "naam_nl": "1 Johannes"
   },
   {
     "code": "2jo",
     "nummer": 63,
     "naam_en": "II John",
     "testament": "nt",
-    "hoofdstukken": 1
+    "hoofdstukken": 1,
+    "naam_nl": "2 Johannes"
   },
   {
     "code": "3jo",
     "nummer": 64,
     "naam_en": "III John",
     "testament": "nt",
-    "hoofdstukken": 1
+    "hoofdstukken": 1,
+    "naam_nl": "3 Johannes"
   },
   {
     "code": "jud",
     "nummer": 65,
     "naam_en": "Jude",
     "testament": "nt",
-    "hoofdstukken": 1
+    "hoofdstukken": 1,
+    "naam_nl": "Judas"
   },
   {
     "code": "rev",
     "nummer": 66,
     "naam_en": "Revelation of John",
     "testament": "nt",
-    "hoofdstukken": 22
+    "hoofdstukken": 22,
+    "naam_nl": "Openbaring"
   }
 ]

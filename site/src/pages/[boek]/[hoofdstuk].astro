@@ -8,6 +8,7 @@ interface BoekInfo {
 	code: string;
 	nummer: number;
 	naam_en: string;
+	naam_nl: string;
 	testament: "ot" | "nt";
 	hoofdstukken: number;
 }
@@ -45,7 +46,7 @@ const verzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
 const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
 
 // Grondtekst + Strong-nummers erbij, indien beschikbaar voor dit hoofdstuk.
-const naamPerCode = new Map(alleBoeken.map((b) => [b.code, b.naam_en]));
+const naamPerCode = new Map(alleBoeken.map((b) => [b.code, b.naam_nl]));
 const grondtekstHoofdstuk = laadGrondtekstHoofdstuk(boekInfo.testament, boek!, hoofdstukNummer);
 const grondtekstPerVers = new Map(
 	(grondtekstHoofdstuk?.verzen ?? []).map((v) => [v.vers, v]),
@@ -92,18 +93,22 @@ for (const v of verzen) {
 }
 ---
 
-<Base title={`${boekInfo.naam_en} ${hoofdstukNummer} — BereaBijbel`} huidigeNav="bijbel">
+<Base title={`${boekInfo.naam_nl} ${hoofdstukNummer} — BereaBijbel`} huidigeNav="bijbel">
 	<div class="zoekbalk">
-		<input id="search" type="text" placeholder="Zoek op vers, bijv. John 3:16" autocomplete="off" />
+		<svg class="zoek-icoon" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			<circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6" />
+			<path d="M13.3 13.3 18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+		</svg>
+		<input id="search" type="text" placeholder="Zoek op vers" autocomplete="off" />
 	</div>
 	<div id="search-error" class="search-error" hidden></div>
 
-	<h1 id="hoofdstuktitel">{boekInfo.naam_en} {hoofdstukNummer}</h1>
+	<h1 id="hoofdstuktitel">{boekInfo.naam_nl} {hoofdstukNummer}</h1>
 
 	<nav class="hfdnav">
 		<select id="book-select">
 			{alleBoeken.map((b) => (
-				<option value={b.code} selected={b.code === boek}>{b.naam_en}</option>
+				<option value={b.code} selected={b.code === boek}>{b.naam_nl}</option>
 			))}
 		</select>
 		<select id="chapter-select">
@@ -140,7 +145,7 @@ for (const v of verzen) {
 		function initZoek() {
 			const el = document.getElementById("boekenindex");
 			if (!el) return;
-			const boeken: { code: string; naam_en: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
+			const boeken: { code: string; naam_nl: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
 
 			const zoekEl = document.getElementById("search") as HTMLInputElement | null;
 			const errorEl = document.getElementById("search-error");
@@ -155,12 +160,12 @@ for (const v of verzen) {
 
 				const m = query.match(/^(.*?)\s+(\d+)(?::(\d+))?\s*$/);
 				if (!m) {
-					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "John 3:16".';
+					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "Johannes 3:16".';
 					errorEl.hidden = false;
 					return;
 				}
 				const rawBoek = normalizeBoek(m[1]);
-				const gevonden = boeken.find((b) => normalizeBoek(b.naam_en).indexOf(rawBoek) === 0);
+				const gevonden = boeken.find((b) => normalizeBoek(b.naam_nl).indexOf(rawBoek) === 0);
 				if (!gevonden) {
 					errorEl.textContent = `Boek "${m[1]}" niet gevonden.`;
 					errorEl.hidden = false;
@@ -168,7 +173,7 @@ for (const v of verzen) {
 				}
 				const hst = parseInt(m[2], 10);
 				if (hst < 1 || hst > gevonden.hoofdstukken) {
-					errorEl.textContent = `${gevonden.naam_en} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
+					errorEl.textContent = `${gevonden.naam_nl} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
 					errorEl.hidden = false;
 					return;
 				}

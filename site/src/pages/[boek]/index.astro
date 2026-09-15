@@ -7,6 +7,7 @@ interface BoekInfo {
 	code: string;
 	nummer: number;
 	naam_en: string;
+	naam_nl: string;
 	testament: "ot" | "nt";
 	hoofdstukken: number;
 }
@@ -26,8 +27,8 @@ const { boekInfo } = Astro.props as { boekInfo: BoekInfo };
 const hoofdstukken = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
 ---
 
-<Base title={`${boekInfo.naam_en} — BereaBijbel`} huidigeNav="bijbel">
-	<h1 id="hoofdstuktitel">{boekInfo.naam_en}</h1>
+<Base title={`${boekInfo.naam_nl} — BereaBijbel`} huidigeNav="bijbel">
+	<h1 id="hoofdstuktitel">{boekInfo.naam_nl}</h1>
 
 	<ul class="hoofdstukkenlijst">
 		{hoofdstukken.map((h) => (

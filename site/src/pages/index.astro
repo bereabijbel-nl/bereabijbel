@@ -8,6 +8,7 @@ interface BoekInfo {
 	code: string;
 	nummer: number;
 	naam_en: string;
+	naam_nl: string;
 	testament: "ot" | "nt";
 	hoofdstukken: number;
 }
@@ -31,7 +32,7 @@ const hoofdstukkenVanVoorbeeldboek = Array.from(
 );
 
 // Zelfde grondtekst + Strong-koppeling als op de hoofdstukpagina, voor deze 5 verzen.
-const naamPerCode = new Map(index.map((b) => [b.code, b.naam_en]));
+const naamPerCode = new Map(index.map((b) => [b.code, b.naam_nl]));
 const grondtekstHoofdstuk = laadGrondtekstHoofdstuk(
 	voorbeeldBoekInfo.testament,
 	VOORBEELD_BOEK,
@@ -84,16 +85,20 @@ for (const v of voorbeeldVerzen) {
 
 <Base title="BereaBijbel" huidigeNav="home">
 	<div class="zoekbalk">
-		<input id="search" type="text" placeholder="Zoek op vers, bijv. John 3:16" autocomplete="off" />
+		<svg class="zoek-icoon" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			<circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6" />
+			<path d="M13.3 13.3 18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+		</svg>
+		<input id="search" type="text" placeholder="Zoek op vers" autocomplete="off" />
 	</div>
 	<div id="search-error" class="search-error" hidden></div>
 
-	<h2 id="hoofdstuktitel">{voorbeeldBoekInfo.naam_en} {VOORBEELD_HOOFDSTUK}</h2>
+	<h2 id="hoofdstuktitel">{voorbeeldBoekInfo.naam_nl} {VOORBEELD_HOOFDSTUK}</h2>
 
 	<nav class="hfdnav">
 		<select id="book-select">
 			{index.map((b) => (
-				<option value={b.code} selected={b.code === VOORBEELD_BOEK}>{b.naam_en}</option>
+				<option value={b.code} selected={b.code === VOORBEELD_BOEK}>{b.naam_nl}</option>
 			))}
 		</select>
 		<select id="chapter-select">
@@ -129,7 +134,7 @@ for (const v of voorbeeldVerzen) {
 		function initZoek() {
 			const el = document.getElementById("boekenindex");
 			if (!el) return;
-			const boeken: { code: string; naam_en: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
+			const boeken: { code: string; naam_nl: string; hoofdstukken: number }[] = JSON.parse(el.textContent || "[]");
 
 			const zoekEl = document.getElementById("search") as HTMLInputElement | null;
 			const errorEl = document.getElementById("search-error");
@@ -144,12 +149,12 @@ for (const v of voorbeeldVerzen) {
 
 				const m = query.match(/^(.*?)\s+(\d+)(?::(\d+))?\s*$/);
 				if (!m) {
-					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "John 3:16".';
+					errorEl.textContent = 'Gebruik het formaat "Boek hoofdstuk:vers", bijv. "Johannes 3:16".';
 					errorEl.hidden = false;
 					return;
 				}
 				const rawBoek = normalizeBoek(m[1]);
-				const gevonden = boeken.find((b) => normalizeBoek(b.naam_en).indexOf(rawBoek) === 0);
+				const gevonden = boeken.find((b) => normalizeBoek(b.naam_nl).indexOf(rawBoek) === 0);
 				if (!gevonden) {
 					errorEl.textContent = `Boek "${m[1]}" niet gevonden.`;
 					errorEl.hidden = false;
@@ -157,7 +162,7 @@ for (const v of voorbeeldVerzen) {
 				}
 				const hst = parseInt(m[2], 10);
 				if (hst < 1 || hst > gevonden.hoofdstukken) {
-					errorEl.textContent = `${gevonden.naam_en} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
+					errorEl.textContent = `${gevonden.naam_nl} heeft ${gevonden.hoofdstukken} hoofdstukken.`;
 					errorEl.hidden = false;
 					return;
 				}

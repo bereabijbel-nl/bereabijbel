@@ -7,6 +7,7 @@ interface BoekInfo {
 	code: string;
 	nummer: number;
 	naam_en: string;
+	naam_nl: string;
 	testament: "ot" | "nt";
 	hoofdstukken: number;
 }
@@ -24,12 +25,12 @@ const nt = index.filter((b) => b.testament === "nt");
 
 	<h2 class="sectie">Oude Testament</h2>
 	<ul class="boekenlijst">
-		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_nl}</a></li>)}
 	</ul>
 
 	<h2 class="sectie">Nieuwe Testament</h2>
 	<ul class="boekenlijst">
-		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_nl}</a></li>)}
 	</ul>
 </Base>
 
