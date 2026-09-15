@@ -93,12 +93,6 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				text-decoration: none;
 			}
 			.page-title a:hover { color: var(--accent-donker); }
-			.site-subtitle {
-				margin: 0 0 1rem;
-				font-size: 1.05rem;
-				font-style: italic;
-				color: var(--secondary);
-			}
 			.site-nav {
 				font-size: 0.82rem;
 				text-align: center;
@@ -378,7 +372,6 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 	<body>
 		<header class="site-header">
 			<h2 class="page-title"><a href="/">BereaBijbel</a></h2>
-			<p class="site-subtitle">Een betrouwbare vertaling in begrijpelijk Nederlands</p>
 			<nav class="site-nav">
 				<a href="/" aria-current={huidigeNav === "home" ? "true" : "false"}>Home</a><span class="nav-sep">|</span>
 				<a href="/bijbel" aria-current={huidigeNav === "bijbel" ? "true" : "false"}>Bijbel</a><span class="nav-sep">|</span>
