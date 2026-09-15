@@ -1,0 +1,50 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import Base from "../layouts/Base.astro";
+
+interface BoekInfo {
+	code: string;
+	nummer: number;
+	naam_en: string;
+	testament: "ot" | "nt";
+	hoofdstukken: number;
+}
+
+const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
+const index: BoekInfo[] = JSON.parse(
+	fs.readFileSync(path.join(dataRoot, "index.json"), "utf-8"),
+);
+const ot = index.filter((b) => b.testament === "ot");
+const nt = index.filter((b) => b.testament === "nt");
+---
+
+<Base title="Bijbel — BereaBijbel" huidigeNav="bijbel">
+	<h1 id="hoofdstuktitel">Bijbel</h1>
+
+	<h2 class="sectie">Oude Testament</h2>
+	<ul class="boekenlijst">
+		{ot.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+	</ul>
+
+	<h2 class="sectie">Nieuwe Testament</h2>
+	<ul class="boekenlijst">
+		{nt.map((b) => <li><a href={`/${b.code}/`}>{b.naam_en}</a></li>)}
+	</ul>
+</Base>
+
+<style>
+	.boekenlijst {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		gap: 0.3rem 1rem;
+		list-style: none;
+		padding: 0;
+	}
+	.boekenlijst a {
+		display: block;
+		padding: 0.3rem 0;
+		text-decoration: none;
+	}
+	.boekenlijst a:hover { text-decoration: underline; }
+</style>
