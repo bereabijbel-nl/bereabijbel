@@ -29,6 +29,7 @@ export interface WoordDetail {
 
 export interface VertalingDetail {
 	berea: { tekst: string; voetnoten: BereaVoetnoot[] } | null;
+	staten?: string | null;
 	kjv: string | null;
 }
 
@@ -86,8 +87,17 @@ function buildTabs(d: VersDetail): string {
 	const tabs = [
 		{ id: "berea", naam: "Grondtekst", inhoud: rasterHtml(d) + voetnotenHtml(d.berea) },
 	];
-	if (d.kjv !== null) {
-		tabs.push({ id: "kjv", naam: "KJV", inhoud: `<p class="tab-vers">${esc(d.kjv)}</p>` });
+	// Tab "Bijbels": de vertalingen naast elkaar. Alleen als er naast de BereaBijbel nog iets te
+	// vergelijken valt (Statenvertaling en KJV zijn demo-vuldata, zie PUBLIC_INDEXABLE in Base.astro).
+	if (d.kjv !== null || d.staten) {
+		const blok = (naam: string, tekst: string | null | undefined) =>
+			`<section class="vertaling"><p class="vt-label">${naam}</p>` +
+			(tekst ? `<p class="tab-vers">${esc(tekst)}</p>` : '<p class="tab-vers vt-leeg">Nog niet vertaald.</p>') +
+			"</section>";
+		let inhoud = blok("BereaBijbel", d.berea?.tekst);
+		if (d.staten) inhoud += blok("Statenvertaling", d.staten);
+		if (d.kjv !== null) inhoud += blok("KJV", d.kjv);
+		tabs.push({ id: "bijbels", naam: "Bijbels", inhoud });
 	}
 	let html = "";
 	if (tabs.length > 1) {
@@ -115,7 +125,7 @@ function vindplaatsenHtml(w: WoordDetail): string {
 	html += '</ul><div class="vp-voorbeeld" hidden></div>';
 	if (totaal > voorbeelden.length) {
 		const rest = totaal - voorbeelden.length;
-		html += `<p class="vindplaatsen-note">En ${rest} andere vindplaats${rest === 1 ? "" : "en"} (totaal ${totaal}).</p>`;
+		html += `<p class="vindplaatsen-note"><a class="alle-link" href="/strong/${w.strong}">En ${rest} andere vindplaats${rest === 1 ? "" : "en"} (totaal ${totaal}) &rarr;</a></p>`;
 	}
 	return html;
 }
@@ -144,7 +154,7 @@ function markeerWoorden(vtekst: HTMLElement, d: VersDetail): void {
 }
 
 interface HoofdstukJson {
-	verzen: Record<string, { gt?: [string, string][]; berea?: string; kjv?: string; kd?: [string, string[]?][] }>;
+	verzen: Record<string, { gt?: [string, string][]; berea?: string; staten?: string; kjv?: string; kd?: [string, string[]?][] }>;
 }
 const hoofdstukCache = new Map<string, Promise<HoofdstukJson | null>>();
 
@@ -177,6 +187,7 @@ async function toonVoorbeeld(item: HTMLElement, doel: HTMLElement): Promise<void
 	}
 	let html = "";
 	if (v.berea) html += `<p class="vp-vers">${esc(v.berea)}</p>`;
+	if (v.staten) html += `<p class="vp-vers"><span class="vp-bron">Statenvertaling</span> ${esc(v.staten)}</p>`;
 	if (v.kd) {
 		// Het Engelse woord of de woordgroep met hetzelfde Strong-nummer (uit de bron, niet geraden).
 		const delen = v.kd

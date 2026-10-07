@@ -30,3 +30,12 @@
 - **Omzetting**: `pipeline/scripts/verwerk-kjv-strong.js` (als argument `pipeline/vuldata/KJV.zip`; draait ook als `prebuild` van de site). Per vers een lijst van tekstdelen met hun Strong-nummers. Voetnoten en koppen vallen weg.
 - **Controle**: alle 31 102 verzen sluiten aan op onze versindeling; in 293 verzen verschilt de tekst licht van `data/kjv` (leestekens, uitgavenverschil).
 
+
+## Statenvertaling (naast de BereaBijbel)
+
+- **Bron**: [CrossWire SWORD Project, module DutSVV 2.1.1](https://www.crosswire.org/sword/modules/ModInfo.jsp?modName=DutSVV) (2020-08-01), pakket `DutSVV.zip` (1 606 261 bytes)
+- **Opgehaald**: 2026-10-07 van `crosswire.org/ftpmirror/pub/sword/packages/rawzip/DutSVV.zip`
+- **Licentie**: "Public Domain" (volgens de module). Tekst gebaseerd op de elektronische editie van Statenvertaling online.
+- **Gebruik**: alleen ter weergave in de tab "Bijbels" en bij de vindplaatsen, in de demo (zelfde schakelaar als de KJV). **Nooit in vertaalprompts** (CLAUDE.md, absolute regel 1).
+- **Omzetting**: `pipeline/scripts/verwerk-staten.js` naar `data/staten/<boek>/<hoofdstuk>.json`. Voetnoten vallen weg.
+- **Bekende restafwijking**: twee hoofdstukken hebben een ander versaantal dan de KJV-indeling (1 Samuël 23: 28 tegen 29; Handelingen 19: 40 tegen 41). Die worden niet getoond, omdat de versnummers daar zouden verspringen.

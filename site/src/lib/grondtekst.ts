@@ -56,6 +56,15 @@ function laadConcordantie(): Record<string, Vindplaats[]> {
 	return concordantieCache!;
 }
 
+// Alle vindplaatsen van één Strong-nummer, in Bijbelvolgorde (voor de pagina /strong/<nummer>).
+export function alleVindplaatsen(strong: string): Vindplaats[] {
+	return laadConcordantie()[strong] ?? [];
+}
+
+export function alleStrongNummers(): string[] {
+	return Object.keys(laadConcordantie());
+}
+
 export interface VindplaatsenResultaat {
 	totaal: number;
 	voorbeelden: Vindplaats[];

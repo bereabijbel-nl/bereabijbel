@@ -1,6 +1,6 @@
 // Eén hoofdstuk als JSON, voor de voorbeeldverzen bij de vindplaatsen (hover in het versdetail).
 // Per vers: de grondtekst als [woord, Strong]; de BereaBijbel-tekst als die er is; de KJV alleen
-// in de demo (zelfde schakelaar als noindex, zie Base.astro), bij voorkeur als tekstdelen met
+// in de demo, net als de Statenvertaling (zelfde schakelaar als noindex, zie Base.astro), de KJV bij voorkeur als tekstdelen met
 // Strong-nummers (data/kjv_strong, zie VERSIONS.md), anders als gewone tekst.
 import fs from "node:fs";
 import path from "node:path";
@@ -58,6 +58,7 @@ export const GET: APIRoute = ({ params, props }) => {
 	const grondtekst = laadGrondtekstHoofdstuk(props.testament, boek, hoofdstuk);
 	const berea = leesVerzen("bijbel", boek, bestand);
 	const kjv = toonKjv ? leesVerzen("kjv", boek, bestand) : new Map<number, string>();
+	const staten = toonKjv ? leesVerzen("staten", boek, bestand) : new Map<number, string>();
 	const kjvStrong = toonKjv ? leesKjvStrong(boek, bestand) : new Map<number, KjvDeel[]>();
 
 	const nummers = new Set<number>([
@@ -65,12 +66,13 @@ export const GET: APIRoute = ({ params, props }) => {
 		...berea.keys(),
 		...kjv.keys(),
 	]);
-	const verzen: Record<number, { gt?: [string, string][]; berea?: string; kjv?: string; kd?: KjvDeel[] }> = {};
+	const verzen: Record<number, { gt?: [string, string][]; berea?: string; staten?: string; kjv?: string; kd?: KjvDeel[] }> = {};
 	for (const n of nummers) {
 		const gt = grondtekst?.verzen.find((v) => v.vers === n);
 		verzen[n] = {
 			...(gt ? { gt: gt.woorden.map((w) => [w.tekst, w.strong] as [string, string]) } : {}),
 			...(berea.has(n) ? { berea: berea.get(n) } : {}),
+			...(staten.has(n) ? { staten: staten.get(n) } : {}),
 			...(kjvStrong.has(n) ? { kd: kjvStrong.get(n) } : kjv.has(n) ? { kjv: kjv.get(n) } : {}),
 		};
 	}

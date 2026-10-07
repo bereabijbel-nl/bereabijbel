@@ -16,6 +16,7 @@ interface BoekInfo {
 
 const DATA_ROOT = path.join(process.cwd(), "..", "data", "kjv");
 const BEREA_ROOT = path.join(process.cwd(), "..", "data", "bijbel");
+const STATEN_ROOT = path.join(process.cwd(), "..", "data", "staten");
 
 // Zelfde schakelaar als noindex (zie Base.astro): KJV is alleen vuldata in de demo.
 const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
@@ -60,6 +61,14 @@ try {
 } catch {}
 const bereaPerVers = new Map(bereaVerzen.map((v) => [v.vers, v]));
 const kjvPerVers = new Map(kjvVerzen.map((v) => [v.vers, v.tekst]));
+// Statenvertaling (publiek domein) naast de BereaBijbel; zelfde schakelaar als de KJV (demo).
+let statenPerVers = new Map<number, string>();
+try {
+	const staten: { vers: number; tekst: string }[] = JSON.parse(
+		fs.readFileSync(path.join(STATEN_ROOT, boek!, bestandsnaam), "utf-8"),
+	).verzen;
+	statenPerVers = new Map(staten.map((v) => [v.vers, v.tekst]));
+} catch {}
 
 // Versnummers volgen de vertaling; zonder vertaling de KJV (zelfde versindeling).
 const verzen = bereaVerzen.length > 0 ? bereaVerzen : kjvVerzen;
@@ -78,6 +87,7 @@ const versDetail: Record<
 	{
 		berea: { tekst: string; voetnoten: BereaVoetnoot[] } | null;
 		kjv: string | null;
+		staten: string | null;
 		koppeling: Koppeling[] | null;
 		rtl: boolean;
 		grondtekst: string | null;
@@ -96,6 +106,7 @@ for (const v of verzen) {
 	versDetail[v.vers] = {
 		berea: berea ? { tekst: berea.tekst, voetnoten: berea.voetnoten ?? [] } : null,
 		kjv: toonKjv ? (kjvPerVers.get(v.vers) ?? null) : null,
+		staten: toonKjv ? (statenPerVers.get(v.vers) ?? null) : null,
 		koppeling: berea?.koppeling ?? null,
 		rtl: boekInfo.testament === "ot",
 		grondtekst: gt ? gt.woorden.map((w) => w.tekst).join(" ") : null,
