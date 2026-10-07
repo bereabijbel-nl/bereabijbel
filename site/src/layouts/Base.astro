@@ -37,8 +37,6 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				--tekst: var(--darkgray);
 				--accent: var(--secondary);
 				--accent-donker: var(--dark);
-				--gewogen: #9c7a2e;
-				--gewogen-soft: #f7f0dd;
 				--body-font: "Lora", Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
 			}
 			@media (prefers-color-scheme: dark) {
@@ -51,8 +49,6 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 					--secondary: #e8e3d4;
 					--tertiary: #a39c89;
 					--bg-soft: #242219;
-					--gewogen: #d9b25c;
-					--gewogen-soft: #322a17;
 				}
 			}
 			:root[data-theme="dark"] {
@@ -64,8 +60,6 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				--secondary: #e8e3d4;
 				--tertiary: #a39c89;
 				--bg-soft: #242219;
-				--gewogen: #d9b25c;
-				--gewogen-soft: #322a17;
 			}
 
 			* { box-sizing: border-box; }
@@ -251,6 +245,7 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				cursor: pointer;
 			}
 			.vers-hoofd:hover { background: var(--bg-soft); }
+			.vers.open { box-shadow: 0 0 0 1px var(--border); }
 			.vers.open .vers-hoofd { border-radius: 8px 8px 0 0; background: var(--bg-soft); }
 			.vnr {
 				color: var(--gray);
@@ -263,25 +258,14 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 			}
 			.vtekst { flex: 1; }
 			.vers-detail {
-				padding: 1rem 1.2rem 1.2rem;
+				/* links op één lijn met de verstekst: 0,4 (padding) + 1,7 (nummer) + 0,8 (tussenruimte) */
+				padding: 0.4rem 1.2rem 1.3rem 2.9rem;
 				font-size: 0.92rem;
 				background: var(--bg-soft);
 				border-radius: 0 0 8px 8px;
 			}
+			@media (max-width: 560px) { .vers-detail { padding-left: 1.2rem; } }
 			.placeholder-detail { font-style: italic; color: var(--tertiary); margin: 0 0 0.8rem; }
-
-			.detail-row { display: flex; gap: 0.7rem; padding: 0.4rem 0 0.9rem; }
-			.detail-label {
-				flex-shrink: 0;
-				width: 6.4rem;
-				font-weight: 700;
-				color: var(--accent-donker);
-				font-family: sans-serif;
-				font-size: 0.78rem;
-				padding-top: 0.15rem;
-			}
-			.detail-body { flex: 1; }
-			.detail-body .grondtekst { font-style: italic; }
 
 			.tabs { display: flex; gap: 1.2rem; border-bottom: 1px solid var(--border); margin-bottom: 0.9rem; }
 			.tab {
@@ -299,46 +283,47 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 			.tab:hover { color: var(--accent-donker); }
 			.tab[aria-selected="true"] { color: var(--accent-donker); border-bottom-color: var(--accent-donker); }
 			.tab-paneel[hidden] { display: none; }
-			.tab-paneel { margin-bottom: 1rem; }
+			.tab-paneel { margin-bottom: 0; }
 			.tab-vers { margin: 0; font-size: 1rem; line-height: 1.7; }
-			.voetnoten { margin: 0; padding-left: 1.4rem; font-size: 0.88rem; line-height: 1.6; color: var(--tekst); }
-			.voetnoten li { margin-bottom: 0.4rem; }
+			.voetnoten { margin: 0; padding-left: 0; list-style: none; font-size: 0.88rem; line-height: 1.6; color: var(--tekst); }
+			.voetnoten li { margin-bottom: 0.4rem; padding: 0.3rem 0.5rem; margin-left: -0.5rem; border-radius: 4px; }
+			.voetnoten li.actief { background: var(--lightgray); }
 			.vn-anker { font-weight: 600; color: var(--accent-donker); }
 			.vn-anker::after { content: " —"; font-weight: 400; }
 
+			/* Woordenraster: gelijke cellen; grondtekst, Nederlandse tegenhanger, Strong-nummer. */
 			.segmenten {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.4rem 1.1rem;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(5.4rem, 1fr));
+				gap: 0.5rem;
 			}
 			.segment {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				justify-content: flex-start;
+				gap: 0.2rem;
 				text-align: center;
-				min-width: 3.2rem;
-				max-width: 11rem;
-				padding: 0.2rem 0.3rem;
-				border-radius: 4px;
-				cursor: pointer;
-			}
-			.segment:hover, .segment:focus { background: var(--lightgray); outline: none; }
-			.seg-grondtekst {
-				font-style: italic;
-				color: var(--dark);
-				font-size: 1.05rem;
-				margin: 0.1rem 0;
-			}
-			.seg-strong-btn {
-				font-family: sans-serif;
-				font-size: 0.6rem;
-				color: var(--tertiary);
+				padding: 0.55rem 0.3rem 0.5rem;
+				border: 1px solid transparent;
+				border-radius: 6px;
 				background: none;
-				border: none;
-				padding: 0;
+				font: inherit;
+				color: inherit;
 				cursor: pointer;
 			}
-			.seg-strong-btn:hover, .seg-strong-btn:focus { color: var(--accent); text-decoration: underline; }
+			.segment:hover, .segment.licht { background: var(--lightgray); }
+			.segment:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+			.segment[aria-expanded="true"] { border-color: var(--tertiary); }
+			.seg-grondtekst { font-size: 1.15rem; line-height: 1.3; color: var(--dark); font-style: normal; }
+			.seg-nl { font-size: 0.88rem; line-height: 1.3; color: var(--tekst); }
+			.seg-nl.leeg { color: var(--tertiary); }
+			.seg-strong { font-family: sans-serif; font-size: 0.72rem; color: var(--tekst); opacity: 0.85; }
+			/* Wederzijds: muis op een grondtekstblok licht het Nederlandse woord op, en andersom.
+			   Er licht altijd maar één paar tegelijk op. */
+			.vw { border-radius: 3px; transition: background 0.12s; }
+			.vw.licht, .vers.open .vw:hover { background: var(--lightgray); box-shadow: 0 0 0 2px var(--lightgray); }
+			.toevoeging-note { margin: 0.8rem 0 0; font-size: 0.8rem; color: var(--tertiary); }
 
 			.woord-uitleg {
 				margin-top: 1rem;
@@ -356,13 +341,21 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 				letter-spacing: 0.06em;
 				text-transform: uppercase;
 				color: var(--tertiary);
-				margin: 0.7rem 0 0.3rem;
+				margin: 1.2rem 0 0.4rem;
 			}
 			.vindplaatsen-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
 			.vp-item { padding: 0.3rem 0.4rem; border-radius: 4px; }
 			.vp-item-hoofd { display: flex; gap: 0.6rem; font-size: 0.88rem; }
-			.vp-ref { color: var(--tekst); font-weight: 600; min-width: 9rem; }
+			.vp-ref { color: var(--tekst); font-weight: 600; min-width: 9rem; text-decoration: none; }
+			a.vp-ref:hover, a.vp-ref:focus-visible { text-decoration: underline; color: var(--dark); }
 			.vp-vorm { font-style: italic; color: var(--dark); }
+			.vp-item:hover { background: var(--lightgray); }
+			.vp-voorbeeld { margin: 0.7rem 0 0; padding: 0.7rem 0.9rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+			.vp-voorbeeld[hidden] { display: none; }
+			.vp-voorbeeld p { margin: 0; }
+			.vp-vers { font-size: 1rem; line-height: 1.6; }
+			.vp-bron { font-family: sans-serif; font-size: 0.66rem; letter-spacing: 0.06em; color: var(--tertiary); margin-right: 0.3rem; }
+			.vp-grondtekst { margin-top: 0.5rem !important; font-size: 1.02rem; line-height: 1.7; color: var(--dark); }
 			.vindplaatsen-note { margin: 0.35rem 0 0; font-size: 0.8rem; color: var(--tertiary); }
 
 			.meld-btn {
@@ -395,17 +388,16 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
 			.pill-btn {
 				display: inline-block;
 				font-family: var(--body-font);
-				font-weight: 400;
-				font-size: 1.05rem;
-				background: var(--accent-donker);
-				color: var(--bg);
-				border: none;
-				padding: 0.7rem 1.5rem;
+				font-size: 0.98rem;
+				color: var(--tekst);
+				background: none;
+				border: 1px solid var(--border);
+				padding: 0.5rem 1.2rem;
 				border-radius: 999px;
 				cursor: pointer;
 				text-decoration: none;
 			}
-			.pill-btn:hover { opacity: 0.88; }
+			.pill-btn:hover { background: var(--bg-soft); color: var(--dark); }
 
 			@media (prefers-reduced-motion: reduce) {
 				* { transition: none !important; }

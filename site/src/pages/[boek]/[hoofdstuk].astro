@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import Base from "../../layouts/Base.astro";
 import { laadGrondtekstHoofdstuk, zoekVindplaatsen } from "../../lib/grondtekst";
+import type { Koppeling } from "../../lib/vertalingtabs";
 
 interface BoekInfo {
 	code: string;
@@ -50,7 +51,7 @@ const kjvVerzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
 
 // BereaBijbel is de hoofdvertaling; nog niet vertaalde hoofdstukken hebben geen bestand.
 interface BereaVoetnoot { nr: number; anker: string | null; tekst: string }
-interface BereaVers { vers: number; tekst: string; voetnoten?: BereaVoetnoot[] }
+interface BereaVers { vers: number; tekst: string; voetnoten?: BereaVoetnoot[]; koppeling?: Koppeling[] }
 let bereaVerzen: BereaVers[] = [];
 try {
 	bereaVerzen = JSON.parse(
@@ -77,6 +78,8 @@ const versDetail: Record<
 	{
 		berea: { tekst: string; voetnoten: BereaVoetnoot[] } | null;
 		kjv: string | null;
+		koppeling: Koppeling[] | null;
+		rtl: boolean;
 		grondtekst: string | null;
 		woorden: {
 			tekst: string;
@@ -93,6 +96,8 @@ for (const v of verzen) {
 	versDetail[v.vers] = {
 		berea: berea ? { tekst: berea.tekst, voetnoten: berea.voetnoten ?? [] } : null,
 		kjv: toonKjv ? (kjvPerVers.get(v.vers) ?? null) : null,
+		koppeling: berea?.koppeling ?? null,
+		rtl: boekInfo.testament === "ot",
 		grondtekst: gt ? gt.woorden.map((w) => w.tekst).join(" ") : null,
 		woorden: (gt?.woorden ?? []).map((w) => {
 			const { totaal, voorbeelden } = zoekVindplaatsen(w.strong, {
@@ -168,7 +173,7 @@ for (const v of verzen) {
 	<script type="application/json" id="versdetail" set:html={JSON.stringify(versDetail)} />
 
 	<script>
-		import { buildTabs, koppelTabs, type VertalingDetail } from "../../lib/vertalingtabs";
+		import { vulDetailPaneel, type VersDetail } from "../../lib/vertalingtabs";
 
 		function normalizeBoek(s: string) {
 			return s.trim().toLowerCase().replace(/\./g, "");
@@ -230,56 +235,9 @@ for (const v of verzen) {
 			}
 		}
 
-		interface WoordDetail {
-			tekst: string;
-			strong: string;
-			morf: string | null;
-			vindplaatsen: {
-				totaal: number;
-				voorbeelden: { boek: string; naam: string; hoofdstuk: number; vers: number; tekst: string }[];
-			};
-		}
-
-		function buildVindplaatsenHtml(w: WoordDetail): string {
-			const { totaal, voorbeelden } = w.vindplaatsen;
-			if (totaal === 0) {
-				return '<p class="vindplaatsen-note">Geen andere vindplaatsen van dit grondtaalwoord.</p>';
-			}
-			let html = '<ul class="vindplaatsen-list">';
-			for (const vp of voorbeelden) {
-				html += `<li class="vp-item"><div class="vp-item-hoofd"><span class="vp-ref">${vp.naam} ${vp.hoofdstuk}:${vp.vers}</span><span class="vp-vorm">${vp.tekst}</span></div></li>`;
-			}
-			html += "</ul>";
-			if (totaal > voorbeelden.length) {
-				html += `<p class="vindplaatsen-note">En ${totaal - voorbeelden.length} andere vindplaats${totaal - voorbeelden.length === 1 ? "" : "en"} (totaal ${totaal}).</p>`;
-			}
-			return html;
-		}
-
-		function buildWoordUitleg(w: WoordDetail): string {
-			let html = `<p class="uitleg-intro"><b>${w.strong}</b>${w.morf ? " — " + w.morf : ""}</p>`;
-			html += '<p class="field-label">Ook elders in de Bijbel</p>';
-			html += buildVindplaatsenHtml(w);
-			return html;
-		}
-
-		function buildDetail(grondtekst: string, woorden: WoordDetail[]): string {
-			let html = `<div class="detail-row"><div class="detail-label">grondtekst</div><div class="detail-body"><span class="grondtekst">${grondtekst}</span></div></div>`;
-			html += '<div class="segmenten">';
-			woorden.forEach((w, i) => {
-				html += `<div class="segment" tabindex="0" role="button" aria-label="${w.strong}">`;
-				html += `<div class="seg-grondtekst">${w.tekst}</div>`;
-				html += `<button type="button" class="seg-strong-btn" data-i="${i}">${w.strong}</button>`;
-				html += "</div>";
-			});
-			html += "</div>";
-			html += '<div class="woord-uitleg" hidden></div>';
-			return html;
-		}
-
 		function initVersen() {
 			const el = document.getElementById("versdetail");
-			const versDetail: Record<string, VertalingDetail & { grondtekst: string | null; woorden: WoordDetail[] }> = el
+			const versDetail: Record<string, VersDetail> = el
 				? JSON.parse(el.textContent || "{}")
 				: {};
 
@@ -307,31 +265,8 @@ for (const v of verzen) {
 						return;
 					}
 
-					// Tabs met de vertalingen (BereaBijbel eerst), daaronder de grondtekst.
-					panel.innerHTML =
-						buildTabs(detail) +
-						(detail.grondtekst
-							? buildDetail(detail.grondtekst, detail.woorden)
-							: '<p class="placeholder-detail">Nog geen grondtekst gekoppeld aan dit vers.</p>');
 					row.appendChild(panel);
-
-					koppelTabs(panel);
-
-					const uitlegEl = panel.querySelector(".woord-uitleg") as HTMLElement;
-					panel.querySelectorAll<HTMLElement>(".seg-strong-btn").forEach((btn) => {
-						btn.addEventListener("click", (e) => {
-							e.stopPropagation();
-							const i = parseInt(btn.getAttribute("data-i") || "0", 10);
-							if (!uitlegEl.hidden && uitlegEl.dataset.open === String(i)) {
-								uitlegEl.hidden = true;
-								uitlegEl.dataset.open = "";
-								return;
-							}
-							uitlegEl.innerHTML = buildWoordUitleg(detail.woorden[i]);
-							uitlegEl.hidden = false;
-							uitlegEl.dataset.open = String(i);
-						});
-					});
+					vulDetailPaneel(panel, detail);
 				});
 			});
 
