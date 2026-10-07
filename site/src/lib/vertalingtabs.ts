@@ -130,8 +130,43 @@ function vindplaatsenHtml(w: WoordDetail): string {
 	return html;
 }
 
+interface LexiconItem {
+	translit: string;
+	uitspraak: string;
+	definitie: string;
+	kjv: string[];
+}
+const lexiconCache = new Map<string, Promise<Record<string, LexiconItem> | null>>();
+
+function haalLexicon(strong: string): Promise<Record<string, LexiconItem> | null> {
+	const taal = strong.startsWith("H") ? "hebrew" : "greek";
+	let p = lexiconCache.get(taal);
+	if (!p) {
+		p = fetch(`/api/lexicon/${taal}.json`)
+			.then((r) => (r.ok ? (r.json() as Promise<Record<string, LexiconItem>>) : null))
+			.catch(() => null);
+		lexiconCache.set(taal, p);
+	}
+	return p;
+}
+
+// Betekenissen uit Strong's woordenboek (Engels, 1890): de definitie en hoe de KJV het woord
+// weergeeft. Een klik op een weergave opent de pagina van het Strong-nummer met alle betekenissen.
+async function vulBetekenissen(doel: HTMLElement, strong: string): Promise<void> {
+	const item = (await haalLexicon(strong))?.[strong];
+	if (!item || !doel.isConnected) return;
+	const pagina = `/strong/${strong}#betekenissen`;
+	const chips = item.kjv.map((k) => `<a class="chip" href="${pagina}">${esc(k)}</a>`).join("");
+	doel.innerHTML =
+		'<p class="field-label">Betekenissen</p>' +
+		`<p class="bet-def">${esc(item.definitie)}</p>` +
+		(chips ? `<p class="field-label">In de KJV vertaald als</p><p class="bet-kjv">${chips}</p>` : "") +
+		`<p class="vindplaatsen-note">Strong (1890), Engels. <a class="alle-link" href="${pagina}">Alle betekenissen &rarr;</a></p>`;
+}
+
 function woordUitlegHtml(w: WoordDetail): string {
 	let html = `<p class="uitleg-intro"><b>${w.strong}</b>${w.morf ? " — " + w.morf : ""}</p>`;
+	html += `<div class="betekenissen" data-strong="${w.strong}"></div>`;
 	html += '<p class="field-label">Ook elders in de Bijbel</p>';
 	return html + vindplaatsenHtml(w);
 }
@@ -275,6 +310,8 @@ export function vulDetailPaneel(panel: HTMLElement, d: VersDetail): void {
 
 			seg.setAttribute("aria-expanded", "true");
 			uitlegEl.innerHTML = woordUitlegHtml(d.woorden[i]);
+			const bet = uitlegEl.querySelector<HTMLElement>(".betekenissen");
+			if (bet) void vulBetekenissen(bet, d.woorden[i].strong);
 			uitlegEl.hidden = false;
 			uitlegEl.dataset.open = String(i);
 

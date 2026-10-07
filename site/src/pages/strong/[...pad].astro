@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Base from "../../layouts/Base.astro";
-import { alleStrongNummers, alleVindplaatsen } from "../../lib/grondtekst";
+import { alleStrongNummers, alleVindplaatsen, laadLexiconItem } from "../../lib/grondtekst";
 
 interface BoekInfo {
 	code: string;
@@ -34,6 +34,7 @@ const alle = alleVindplaatsen(nummer);
 const van = (pagina - 1) * PER_PAGINA;
 const getoond = alle.slice(van, van + PER_PAGINA);
 const rtl = nummer.startsWith("H");
+const lexicon = laadLexiconItem(nummer);
 const adres = (p: number) => (p === 1 ? `/strong/${nummer}` : `/strong/${nummer}/${p}`);
 
 // Per boek groeperen (de concordantie staat al in Bijbelvolgorde).
@@ -54,6 +55,21 @@ for (const vp of getoond) {
 			Dit grondtaalwoord komt {alle.length} keer voor in de Bijbel.
 			{paginas > 1 && ` Vindplaats ${van + 1} tot en met ${van + getoond.length}.`}
 		</p>
+
+		{lexicon && (
+			<section id="betekenissen" class="betekenissen">
+				<h3>Betekenissen</h3>
+				<p class="woord"><b>{lexicon.translit}</b> <span class="uitspraak">({lexicon.uitspraak})</span></p>
+				<p>{lexicon.definitie}</p>
+				{lexicon.kjv.length > 0 && (
+					<>
+						<h3>In de KJV vertaald als</h3>
+						<p class="bet-kjv">{lexicon.kjv.map((k) => <span class="chip">{k}</span>)}</p>
+					</>
+				)}
+				<p class="bron">Bron: Strong's Exhaustive Concordance (1890), in het Engels, via Open Scriptures.</p>
+			</section>
+		)}
 
 		<div class="kolommen">
 			<div>
@@ -117,6 +133,19 @@ for (const vp of getoond) {
 		.kolommen { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); gap: 2.5rem; align-items: start; }
 		.voorbeeld-kolom { display: block; position: sticky; top: 1rem; }
 	}
+	.betekenissen { margin: 0 0 2.2rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--border); }
+	.betekenissen h3 {
+		font-family: sans-serif;
+		font-size: 0.78rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--tertiary);
+		margin: 1.2rem 0 0.4rem;
+	}
+	.betekenissen h3:first-child { margin-top: 0; }
+	.betekenissen p { margin: 0 0 0.5rem; }
+	.uitspraak { color: var(--tertiary); }
+	.bron { font-size: 0.8rem; color: var(--tertiary); margin-top: 0.8rem !important; }
 	.hint { margin: 0; font-size: 0.85rem; color: var(--tertiary); }
 	.vp-voorbeeld:not([hidden]) + .hint { display: none; }
 	.boek { margin-top: 1.6rem; }

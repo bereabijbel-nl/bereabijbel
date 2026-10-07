@@ -65,6 +65,26 @@ export function alleStrongNummers(): string[] {
 	return Object.keys(laadConcordantie());
 }
 
+export interface LexiconItem {
+	translit: string;
+	uitspraak: string;
+	definitie: string;
+	kjv: string[];
+}
+
+const lexiconCache: Record<string, Record<string, LexiconItem>> = {};
+
+// Strong's woordenboek (Engels, 1890), zie data/grondtekst/VERSIONS.md. Null als het nummer ontbreekt.
+export function laadLexiconItem(strong: string): LexiconItem | null {
+	const taal = strong.startsWith("H") ? "hebrew" : "greek";
+	if (!lexiconCache[taal]) {
+		lexiconCache[taal] = JSON.parse(
+			fs.readFileSync(path.join(process.cwd(), "..", "data", "lexicon", `${taal}.json`), "utf-8"),
+		);
+	}
+	return lexiconCache[taal][strong] ?? null;
+}
+
 export interface VindplaatsenResultaat {
 	totaal: number;
 	voorbeelden: Vindplaats[];

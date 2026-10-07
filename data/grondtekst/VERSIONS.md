@@ -39,3 +39,14 @@
 - **Gebruik**: alleen ter weergave in de tab "Bijbels" en bij de vindplaatsen, in de demo (zelfde schakelaar als de KJV). **Nooit in vertaalprompts** (CLAUDE.md, absolute regel 1).
 - **Omzetting**: `pipeline/scripts/verwerk-staten.js` naar `data/staten/<boek>/<hoofdstuk>.json`. Voetnoten vallen weg.
 - **Bekende restafwijking**: twee hoofdstukken hebben een ander versaantal dan de KJV-indeling (1 Samuël 23: 28 tegen 29; Handelingen 19: 40 tegen 41). Die worden niet getoond, omdat de versnummers daar zouden verspringen.
+
+## Strong's woordenboeken (betekenissen bij een grondtekstwoord)
+
+- **Bron**: [openscriptures/strongs](https://github.com/openscriptures/strongs): `greek/strongsgreek.dat` (989 987 bytes) en `hebrew/strongshebrew.dat` (1 456 344 bytes)
+- **Opgehaald**: 2026-10-07, van de `master`-branch
+- **Inhoud**: Strong's Exhaustive Concordance (1890), de woordenboeken van Grieks (5 624 nummers) en Hebreeuws (8 674). Engelstalig.
+- **Licentie**: de woordenboeken van Strong zijn publiek domein, net als de oorspronkelijke e-tekst van Michael Grier. De gecorrigeerde uitgave van OpenScriptures (2008) behoudt die status en wordt vrijgegeven met een toestemmingstekst in MIT-stijl: "Copyright (c) 2008, OpenScriptures.org … The above copyright notice and this permission notice shall be included in all copies". De kop noemt dit "GPL 3.0", maar de tekst zelf is een MIT-toestemming. Die tegenstrijdigheid staat in de bron. Naamsvermelding: *Strong's Dictionaries, e-tekst van Michael Grier, gecorrigeerd door Ulrik Sandborg-Petersen, Weston Ruter en OpenScriptures.org*.
+- **Bewust niet gebruikt**: de JSON-versie van OpenScriptures (`strongs-*-dictionary.js`) is CC-BY-SA; share-alike past niet bij onze CC0-data.
+- **Omzetting**: `pipeline/scripts/verwerk-strong-lexicon.js` naar `data/lexicon/greek.json` en `hebrew.json` (5 523 en 8 674 vermeldingen; 101 Griekse nummers zijn in de bron "Not Used"). Per nummer: transliteratie, uitspraak, definitie en de weergaven in de KJV.
+- **Taal**: Engels, niet vertaald door een model. Lexicale gegevens moeten verifieerbaar zijn in het woordenboek zelf (CLAUDE.md, notities).
+- **Gebruik**: bij een aangeklikt grondtekstwoord (`Betekenissen`) en op de pagina `/strong/<nummer>`.
