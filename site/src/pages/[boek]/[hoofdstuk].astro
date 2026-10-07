@@ -14,6 +14,11 @@ interface BoekInfo {
 }
 
 const DATA_ROOT = path.join(process.cwd(), "..", "data", "kjv");
+const BEREA_ROOT = path.join(process.cwd(), "..", "data", "bijbel");
+
+// Zelfde schakelaar als noindex (zie Base.astro): KJV is alleen vuldata in de demo.
+const indexable = import.meta.env.PUBLIC_INDEXABLE === "true";
+const toonKjv = !indexable;
 
 export async function getStaticPaths() {
 	const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
@@ -41,7 +46,22 @@ const bestandsnaam = String(hoofdstukNummer).padStart(2, "0") + ".json";
 const hoofdstukData = JSON.parse(
 	fs.readFileSync(path.join(DATA_ROOT, boek!, bestandsnaam), "utf-8"),
 );
-const verzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
+const kjvVerzen: { vers: number; tekst: string }[] = hoofdstukData.verzen;
+
+// BereaBijbel is de hoofdvertaling; nog niet vertaalde hoofdstukken hebben geen bestand.
+interface BereaVoetnoot { nr: number; anker: string | null; tekst: string }
+interface BereaVers { vers: number; tekst: string; voetnoten?: BereaVoetnoot[] }
+let bereaVerzen: BereaVers[] = [];
+try {
+	bereaVerzen = JSON.parse(
+		fs.readFileSync(path.join(BEREA_ROOT, boek!, bestandsnaam), "utf-8"),
+	).verzen;
+} catch {}
+const bereaPerVers = new Map(bereaVerzen.map((v) => [v.vers, v]));
+const kjvPerVers = new Map(kjvVerzen.map((v) => [v.vers, v.tekst]));
+
+// Versnummers volgen de vertaling; zonder vertaling de KJV (zelfde versindeling).
+const verzen = bereaVerzen.length > 0 ? bereaVerzen : kjvVerzen;
 
 const hoofdstukkenVanDitBoek = Array.from({ length: boekInfo.hoofdstukken }, (_, i) => i + 1);
 
@@ -55,7 +75,9 @@ const grondtekstPerVers = new Map(
 const versDetail: Record<
 	number,
 	{
-		grondtekst: string;
+		berea: { tekst: string; voetnoten: BereaVoetnoot[] } | null;
+		kjv: string | null;
+		grondtekst: string | null;
 		woorden: {
 			tekst: string;
 			strong: string;
@@ -67,10 +89,12 @@ const versDetail: Record<
 
 for (const v of verzen) {
 	const gt = grondtekstPerVers.get(v.vers);
-	if (!gt) continue;
+	const berea = bereaPerVers.get(v.vers);
 	versDetail[v.vers] = {
-		grondtekst: gt.woorden.map((w) => w.tekst).join(" "),
-		woorden: gt.woorden.map((w) => {
+		berea: berea ? { tekst: berea.tekst, voetnoten: berea.voetnoten ?? [] } : null,
+		kjv: toonKjv ? (kjvPerVers.get(v.vers) ?? null) : null,
+		grondtekst: gt ? gt.woorden.map((w) => w.tekst).join(" ") : null,
+		woorden: (gt?.woorden ?? []).map((w) => {
 			const { totaal, voorbeelden } = zoekVindplaatsen(w.strong, {
 				boek: boek!,
 				hoofdstuk: hoofdstukNummer,
@@ -123,7 +147,13 @@ for (const v of verzen) {
 			<div class="vers" id={`vers-${v.vers}`} data-vers={v.vers}>
 				<div class="vers-hoofd">
 					<div class="vnr">{v.vers}</div>
-					<div class="vtekst placeholder-tekst">{v.tekst}</div>
+					{bereaPerVers.has(v.vers) ? (
+						<div class="vtekst">{v.tekst}</div>
+					) : toonKjv ? (
+						<div class="vtekst placeholder-tekst">{v.tekst}</div>
+					) : (
+						<div class="vtekst placeholder-tekst">Nog niet vertaald.</div>
+					)}
 					<button class="meld-btn" type="button" title="Verbetering voorstellen bij dit vers" data-meld>
 						<svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5 17V4M5 4h9l-2 3 2 3H5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -138,6 +168,8 @@ for (const v of verzen) {
 	<script type="application/json" id="versdetail" set:html={JSON.stringify(versDetail)} />
 
 	<script>
+		import { buildTabs, koppelTabs, type VertalingDetail } from "../../lib/vertalingtabs";
+
 		function normalizeBoek(s: string) {
 			return s.trim().toLowerCase().replace(/\./g, "");
 		}
@@ -247,7 +279,7 @@ for (const v of verzen) {
 
 		function initVersen() {
 			const el = document.getElementById("versdetail");
-			const versDetail: Record<string, { grondtekst: string; woorden: WoordDetail[] }> = el
+			const versDetail: Record<string, VertalingDetail & { grondtekst: string | null; woorden: WoordDetail[] }> = el
 				? JSON.parse(el.textContent || "{}")
 				: {};
 
@@ -275,8 +307,15 @@ for (const v of verzen) {
 						return;
 					}
 
-					panel.innerHTML = buildDetail(detail.grondtekst, detail.woorden);
+					// Tabs met de vertalingen (BereaBijbel eerst), daaronder de grondtekst.
+					panel.innerHTML =
+						buildTabs(detail) +
+						(detail.grondtekst
+							? buildDetail(detail.grondtekst, detail.woorden)
+							: '<p class="placeholder-detail">Nog geen grondtekst gekoppeld aan dit vers.</p>');
 					row.appendChild(panel);
+
+					koppelTabs(panel);
 
 					const uitlegEl = panel.querySelector(".woord-uitleg") as HTMLElement;
 					panel.querySelectorAll<HTMLElement>(".seg-strong-btn").forEach((btn) => {

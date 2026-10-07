@@ -14,18 +14,26 @@ interface BoekInfo {
 }
 
 const dataRoot = path.join(process.cwd(), "..", "data", "kjv");
+const bereaRoot = path.join(process.cwd(), "..", "data", "bijbel");
+
+// KJV is alleen vuldata in de demo (zelfde schakelaar als noindex, zie Base.astro).
+const toonKjv = import.meta.env.PUBLIC_INDEXABLE !== "true";
 const index: BoekInfo[] = JSON.parse(
 	fs.readFileSync(path.join(dataRoot, "index.json"), "utf-8"),
 );
 
-// Voorbeeld op de homepage: eerste 5 verzen van Johannes 1, zoals in de referentie.
+// Voorbeeld op de homepage: eerste 5 verzen van Johannes 1, in de BereaBijbel.
 const VOORBEELD_BOEK = "joh";
 const VOORBEELD_HOOFDSTUK = 1;
 const voorbeeldBoekInfo = index.find((b) => b.code === VOORBEELD_BOEK)!;
-const voorbeeldData = JSON.parse(
+const kjvVerzen: { vers: number; tekst: string }[] = JSON.parse(
 	fs.readFileSync(path.join(dataRoot, VOORBEELD_BOEK, "01.json"), "utf-8"),
-);
-const voorbeeldVerzen: { vers: number; tekst: string }[] = voorbeeldData.verzen.slice(0, 5);
+).verzen;
+const kjvPerVers = new Map(kjvVerzen.map((v) => [v.vers, v.tekst]));
+const bereaVerzen: { vers: number; tekst: string; voetnoten?: { nr: number; anker: string | null; tekst: string }[] }[] =
+	JSON.parse(fs.readFileSync(path.join(bereaRoot, VOORBEELD_BOEK, "01.json"), "utf-8")).verzen;
+const bereaPerVers = new Map(bereaVerzen.map((v) => [v.vers, v]));
+const voorbeeldVerzen = bereaVerzen.slice(0, 5);
 const hoofdstukkenVanVoorbeeldboek = Array.from(
 	{ length: voorbeeldBoekInfo.hoofdstukken },
 	(_, i) => i + 1,
@@ -45,7 +53,9 @@ const grondtekstPerVers = new Map(
 const versDetail: Record<
 	number,
 	{
-		grondtekst: string;
+		berea: { tekst: string; voetnoten: { nr: number; anker: string | null; tekst: string }[] } | null;
+		kjv: string | null;
+		grondtekst: string | null;
 		woorden: {
 			tekst: string;
 			strong: string;
@@ -57,10 +67,12 @@ const versDetail: Record<
 
 for (const v of voorbeeldVerzen) {
 	const gt = grondtekstPerVers.get(v.vers);
-	if (!gt) continue;
+	const berea = bereaPerVers.get(v.vers);
 	versDetail[v.vers] = {
-		grondtekst: gt.woorden.map((w) => w.tekst).join(" "),
-		woorden: gt.woorden.map((w) => {
+		berea: berea ? { tekst: berea.tekst, voetnoten: berea.voetnoten ?? [] } : null,
+		kjv: toonKjv ? (kjvPerVers.get(v.vers) ?? null) : null,
+		grondtekst: gt ? gt.woorden.map((w) => w.tekst).join(" ") : null,
+		woorden: (gt?.woorden ?? []).map((w) => {
 			const { totaal, voorbeelden } = zoekVindplaatsen(w.strong, {
 				boek: VOORBEELD_BOEK,
 				hoofdstuk: VOORBEELD_HOOFDSTUK,
@@ -113,7 +125,7 @@ for (const v of voorbeeldVerzen) {
 			<div class="vers" id={`vers-${v.vers}`} data-vers={v.vers}>
 				<div class="vers-hoofd">
 					<div class="vnr">{v.vers}</div>
-					<div class="vtekst placeholder-tekst">{v.tekst}</div>
+					<div class="vtekst">{v.tekst}</div>
 				</div>
 			</div>
 		))}
@@ -127,6 +139,8 @@ for (const v of voorbeeldVerzen) {
 	<script type="application/json" id="versdetail" set:html={JSON.stringify(versDetail)} />
 
 	<script>
+		import { buildTabs, koppelTabs, type VertalingDetail } from "../lib/vertalingtabs";
+
 		function normalizeBoek(s: string) {
 			return s.trim().toLowerCase().replace(/\./g, "");
 		}
@@ -235,7 +249,7 @@ for (const v of voorbeeldVerzen) {
 
 		function initVersen() {
 			const el = document.getElementById("versdetail");
-			const versDetail: Record<string, { grondtekst: string; woorden: WoordDetail[] }> = el
+			const versDetail: Record<string, VertalingDetail & { grondtekst: string | null; woorden: WoordDetail[] }> = el
 				? JSON.parse(el.textContent || "{}")
 				: {};
 
@@ -256,8 +270,13 @@ for (const v of voorbeeldVerzen) {
 
 					const panel = document.createElement("div");
 					panel.className = "vers-detail";
-					panel.innerHTML = buildDetail(detail.grondtekst, detail.woorden);
+					panel.innerHTML =
+						buildTabs(detail) +
+						(detail.grondtekst
+							? buildDetail(detail.grondtekst, detail.woorden)
+							: '<p class="placeholder-detail">Nog geen grondtekst gekoppeld aan dit vers.</p>');
 					row.appendChild(panel);
+					koppelTabs(panel);
 
 					const uitlegEl = panel.querySelector(".woord-uitleg") as HTMLElement;
 					panel.querySelectorAll<HTMLElement>(".seg-strong-btn").forEach((btn) => {
