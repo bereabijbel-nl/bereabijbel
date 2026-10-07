@@ -163,7 +163,12 @@ for (const v of voorbeeldVerzen) {
 			30%, 50%, 70%, 90% { transform: rotate(9deg); }
 			40%, 60%, 80% { transform: rotate(-9deg); }
 		}
-		.hint-aan #home-verses { padding-top: 2.7rem; }
+		/* Tijdens de hint is er ruimte boven vers 1; daarna schuift alles terug naar de gewone plek. */
+		.hint-aan #home-verses { padding-top: 2.7rem; animation: hintruimte 3.3s ease-in-out 1 forwards; }
+		@keyframes hintruimte {
+			0%, 78% { padding-top: 2.7rem; }
+			100% { padding-top: 0; }
+		}
 		/* Korte uitleg met pijltje boven vers 1, vervaagt samen met de gloed. */
 		.hint-aan #vers-1 .vers-hoofd { position: relative; }
 		.hint-aan #vers-1 .vers-hoofd::after {
@@ -200,6 +205,8 @@ for (const v of voorbeeldVerzen) {
 		}
 		@media (prefers-reduced-motion: reduce) {
 			.hint-aan #vers-1 .vers-hoofd, .hint-aan #vers-1 .vnr { animation: none; }
+			.hint-aan #home-verses { animation: none; padding-top: 0; }
+			.hint-aan #vers-1 .vers-hoofd::before, .hint-aan #vers-1 .vers-hoofd::after { display: none; }
 		}
 	</style>
 
