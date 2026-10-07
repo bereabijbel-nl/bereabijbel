@@ -1,29 +1,66 @@
 // Zet de CrossWire SWORD-module KJV (met Strong-nummers per woord) om naar JSON per hoofdstuk.
-// Alleen vuldata voor de demo: de uitvoer (data/kjv_strong/) staat niet in git, zie .gitignore en
-// data/grondtekst/VERSIONS.md.
+// Alleen vuldata voor de demo: de uitvoer (data/kjv_strong/) staat niet in git, zie .gitignore,
+// pipeline/vuldata/NOTICE.md en data/grondtekst/VERSIONS.md. In een productiebuild
+// (PUBLIC_INDEXABLE=true) doet het script niets.
 //
-// Gebruik: node pipeline/scripts/verwerk-kjv-strong.js <map met de uitgepakte KJV.zip>
-// Invoer:  <map>/modules/texts/ztext/kjv/{ot,nt}.{bzs,bzv,bzz}
+// Gebruik: node pipeline/scripts/verwerk-kjv-strong.js <KJV.zip of de map met de uitgepakte zip>
+// Invoer:  modules/texts/ztext/kjv/{ot,nt}.{bzs,bzv,bzz}
 // Uitvoer: data/kjv_strong/<boek>/<hoofdstuk>.json
 //          { boek, hoofdstuk, bron, verzen: [{ vers, delen: [[tekst, [strong, ...]?], ...] }] }
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-const swordMap = process.argv[2];
-if (!swordMap) {
-	console.error('Gebruik: node verwerk-kjv-strong.js <map met uitgepakte KJV.zip>');
+if (process.env.PUBLIC_INDEXABLE === 'true') {
+	console.log('productiebuild: KJV met Strong-nummers wordt overgeslagen');
+	process.exit(0);
+}
+const bron = process.argv[2];
+if (!bron) {
+	console.error('Gebruik: node verwerk-kjv-strong.js <KJV.zip of map met uitgepakte KJV.zip>');
 	process.exit(1);
 }
 const ROOT = path.join(__dirname, '..', '..');
 const KJV = path.join(ROOT, 'data', 'kjv');
 const OUT = path.join(ROOT, 'data', 'kjv_strong');
 
+// Minimale zip-lezer (alleen "stored" en "deflate"): geeft de inhoud van één bestand uit de zip.
+function zipLezer(bestand) {
+	const zip = fs.readFileSync(bestand);
+	let eocd = zip.length - 22;
+	while (eocd >= 0 && zip.readUInt32LE(eocd) !== 0x06054b50) eocd--;
+	if (eocd < 0) throw new Error('geen geldige zip: ' + bestand);
+	const aantal = zip.readUInt16LE(eocd + 10);
+	let pos = zip.readUInt32LE(eocd + 16);
+	const items = new Map();
+	for (let i = 0; i < aantal; i++) {
+		const methode = zip.readUInt16LE(pos + 10);
+		const csize = zip.readUInt32LE(pos + 20);
+		const nlen = zip.readUInt16LE(pos + 28);
+		const xlen = zip.readUInt16LE(pos + 30);
+		const clen = zip.readUInt16LE(pos + 32);
+		const lokaal = zip.readUInt32LE(pos + 42);
+		items.set(zip.toString('utf8', pos + 46, pos + 46 + nlen), { methode, csize, lokaal });
+		pos += 46 + nlen + xlen + clen;
+	}
+	return (naam) => {
+		const it = items.get(naam);
+		if (!it) throw new Error('niet in zip: ' + naam);
+		const start = it.lokaal + 30 + zip.readUInt16LE(it.lokaal + 26) + zip.readUInt16LE(it.lokaal + 28);
+		const data = zip.subarray(start, start + it.csize);
+		return it.methode === 8 ? zlib.inflateRawSync(data) : data;
+	};
+}
+
+const lees = fs.statSync(bron).isFile()
+	? zipLezer(bron)
+	: (naam) => fs.readFileSync(path.join(bron, naam));
+
 function laadTestament(naam) {
-	const basis = path.join(swordMap, 'modules', 'texts', 'ztext', 'kjv', naam);
-	const bzs = fs.readFileSync(basis + '.bzs');
-	const bzz = fs.readFileSync(basis + '.bzz');
-	const bzv = fs.readFileSync(basis + '.bzv');
+	const basis = 'modules/texts/ztext/kjv/' + naam;
+	const bzs = lees(basis + '.bzs');
+	const bzz = lees(basis + '.bzz');
+	const bzv = lees(basis + '.bzv');
 	const blokken = [];
 	for (let i = 0; i < bzs.length; i += 12) {
 		const o = bzs.readUInt32LE(i);

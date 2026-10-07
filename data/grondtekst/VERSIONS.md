@@ -26,7 +26,7 @@
 - **Bron**: [CrossWire SWORD Project, module KJV 3.1](https://www.crosswire.org/sword/modules/ModInfo.jsp?modName=KJV) (2023-07-19), pakket `KJV.zip` (4 026 621 bytes)
 - **Opgehaald**: 2026-10-07 van `crosswire.org/ftpmirror/pub/sword/packages/rawzip/KJV.zip`
 - **Gebruik**: alleen in de demo, om bij een vindplaats het Engelse woord te markeren dat bij het Strong-nummer hoort. Zelfde schakelaar als `noindex` (`PUBLIC_INDEXABLE`); in productie wordt het niet getoond.
-- **Licentie**: CrossWire: "hereby grants a general public license to use this text for any purpose"; distributielicentie GPL. Past niet vanzelf bij de CC0-regel voor onze data, daarom staat de omgezette uitvoer (`data/kjv_strong/`) in `.gitignore` en komt niet in de repository.
-- **Omzetting**: `pipeline/scripts/verwerk-kjv-strong.js` (uitgepakte zip als argument). Per vers een lijst van tekstdelen met hun Strong-nummers. Voetnoten en koppen vallen weg.
+- **Licentie**: CrossWire: "hereby grants a general public license to use this text for any purpose"; distributielicentie GPL. Past niet vanzelf bij de CC0-regel voor onze data. Daarom staat het onveranderde `KJV.zip` apart in `pipeline/vuldata/` (met `NOTICE.md`, buiten `data/`) en de omgezette uitvoer (`data/kjv_strong/`) in `.gitignore`. In productiebuilds (`PUBLIC_INDEXABLE=true`) wordt het niet omgezet en niet getoond.
+- **Omzetting**: `pipeline/scripts/verwerk-kjv-strong.js` (als argument `pipeline/vuldata/KJV.zip`; draait ook als `prebuild` van de site). Per vers een lijst van tekstdelen met hun Strong-nummers. Voetnoten en koppen vallen weg.
 - **Controle**: alle 31 102 verzen sluiten aan op onze versindeling; in 293 verzen verschilt de tekst licht van `data/kjv` (leestekens, uitgavenverschil).
 

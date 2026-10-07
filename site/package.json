@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node ../pipeline/scripts/bouw-concordantie.js ../data/grondtekst ../data/grondtekst/concordantie.json",
+    "prebuild": "node ../pipeline/scripts/bouw-concordantie.js ../data/grondtekst ../data/grondtekst/concordantie.json && node ../pipeline/scripts/verwerk-kjv-strong.js ../pipeline/vuldata/KJV.zip",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
