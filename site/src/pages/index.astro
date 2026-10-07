@@ -135,24 +135,38 @@ for (const v of voorbeeldVerzen) {
 		<a class="pill-btn" href={`/${VOORBEELD_BOEK}/${VOORBEELD_HOOFDSTUK}`}>Lees het hele hoofdstuk &rarr;</a>
 	</div>
 
+	<!-- Openingsanimatie: maximaal 3 keer, en niet meer zodra iemand een vers heeft geopend. -->
+	<script is:inline>
+		try {
+			var geopend = localStorage.getItem("bb-vers-geopend") === "1";
+			var keer = parseInt(localStorage.getItem("bb-hint-keer") || "0", 10) || 0;
+			if (!geopend && keer < 3) {
+				document.documentElement.classList.add("hint-aan");
+				localStorage.setItem("bb-hint-keer", String(keer + 1));
+			}
+		} catch (e) {
+			document.documentElement.classList.add("hint-aan");
+		}
+	</script>
+
 	<style is:global>
-		#vers-1 .vers-hoofd { animation: openingsgloed 2.2s ease-out 1; }
+		.hint-aan #vers-1 .vers-hoofd { animation: openingsgloed 2.2s ease-out 1; }
 		@keyframes openingsgloed {
 			0%, 25% { background: var(--bg-soft); }
 			100% { background: transparent; }
 		}
 		/* Versnummer van vers 1 schudt even heen en weer (1,1 s, zonder te vergroten), naar het voorbeeld van Relight. */
-		#vers-1 .vnr { animation: versnummer-schud 1.1s ease 1; transform-origin: 80% 50%; }
+		.hint-aan #vers-1 .vnr { animation: versnummer-schud 1.1s ease 1; transform-origin: 80% 50%; }
 		@keyframes versnummer-schud {
 			0%, 100% { transform: none; }
 			10%, 20% { transform: rotate(-9deg); }
 			30%, 50%, 70%, 90% { transform: rotate(9deg); }
 			40%, 60%, 80% { transform: rotate(-9deg); }
 		}
-		#home-verses { padding-top: 2.1rem; }
+		.hint-aan #home-verses { padding-top: 2.1rem; }
 		/* Korte uitleg met pijltje boven vers 1, vervaagt samen met de gloed. */
-		#vers-1 .vers-hoofd { position: relative; }
-		#vers-1 .vers-hoofd::after {
+		.hint-aan #vers-1 .vers-hoofd { position: relative; }
+		.hint-aan #vers-1 .vers-hoofd::after {
 			content: "Klik op vers";
 			position: absolute;
 			left: 2.9rem;
@@ -165,7 +179,7 @@ for (const v of voorbeeldVerzen) {
 			pointer-events: none;
 			animation: klikhint 2.6s ease 1;
 		}
-		#vers-1 .vers-hoofd::before {
+		.hint-aan #vers-1 .vers-hoofd::before {
 			content: "";
 			position: absolute;
 			left: 5rem;
@@ -185,7 +199,7 @@ for (const v of voorbeeldVerzen) {
 			100% { opacity: 0; }
 		}
 		@media (prefers-reduced-motion: reduce) {
-			#vers-1 .vers-hoofd, #vers-1 .vnr { animation: none; }
+			.hint-aan #vers-1 .vers-hoofd, .hint-aan #vers-1 .vnr { animation: none; }
 		}
 	</style>
 
@@ -310,6 +324,7 @@ for (const v of voorbeeldVerzen) {
 			document.querySelectorAll<HTMLElement>(".vers").forEach((row) => {
 				const hoofd = row.querySelector(".vers-hoofd");
 				hoofd?.addEventListener("click", () => {
+					try { localStorage.setItem("bb-vers-geopend", "1"); } catch {}
 					const open = row.classList.contains("open");
 					document.querySelectorAll(".vers.open").forEach((r) => {
 						r.classList.remove("open");
