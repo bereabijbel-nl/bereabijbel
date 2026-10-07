@@ -154,7 +154,7 @@ function markeerWoorden(vtekst: HTMLElement, d: VersDetail): void {
 }
 
 interface HoofdstukJson {
-	verzen: Record<string, { gt?: [string, string][]; berea?: string; staten?: string; kjv?: string; kd?: [string, string[]?][] }>;
+	verzen: Record<string, { gt?: [string, string][]; berea?: string; kjv?: string; kd?: [string, string[]?][] }>;
 }
 const hoofdstukCache = new Map<string, Promise<HoofdstukJson | null>>();
 
@@ -174,7 +174,11 @@ function haalHoofdstuk(boek: string, hoofdstuk: string): Promise<HoofdstukJson |
 // (alleen in de demo) en de grondtekst. Het woord is gemarkeerd zoals bij de verstekst: in de
 // grondtekst en in de KJV (via het Strong-nummer). In de Nederlandse tekst kan dat pas als de
 // pijplijn een woordkoppeling voor dat vers levert.
-async function toonVoorbeeld(item: HTMLElement, doel: HTMLElement): Promise<void> {
+export async function toonVoorbeeld(
+	item: HTMLElement,
+	doel: HTMLElement,
+	opties: { grondtekstEerst?: boolean } = {},
+): Promise<void> {
 	const { boek, hst, vers, vorm, strong } = item.dataset;
 	const sleutel = `${boek}/${hst}:${vers}`;
 	doel.dataset.huidig = sleutel;
@@ -185,25 +189,27 @@ async function toonVoorbeeld(item: HTMLElement, doel: HTMLElement): Promise<void
 		doel.hidden = true;
 		return;
 	}
-	let html = "";
-	if (v.berea) html += `<p class="vp-vers">${esc(v.berea)}</p>`;
-	if (v.staten) html += `<p class="vp-vers"><span class="vp-bron">Statenvertaling</span> ${esc(v.staten)}</p>`;
+	const berea = v.berea ? `<p class="vp-vers">${esc(v.berea)}</p>` : "";
+	let kjv = "";
 	if (v.kd) {
 		// Het Engelse woord of de woordgroep met hetzelfde Strong-nummer (uit de bron, niet geraden).
 		const delen = v.kd
 			.map(([t, s]) => (s?.includes(strong!) ? `<span class="vw licht">${esc(t)}</span>` : esc(t)))
 			.join("");
-		html += `<p class="vp-vers"><span class="vp-bron">KJV</span> ${delen}</p>`;
+		kjv = `<p class="vp-vers"><span class="vp-bron">KJV</span> ${delen}</p>`;
 	} else if (v.kjv) {
-		html += `<p class="vp-vers"><span class="vp-bron">KJV</span> ${esc(v.kjv)}</p>`;
+		kjv = `<p class="vp-vers"><span class="vp-bron">KJV</span> ${esc(v.kjv)}</p>`;
 	}
+	let grondtekst = "";
 	if (v.gt) {
 		let gemarkeerd = v.gt.findIndex(([t, s]) => s === strong && t === vorm);
 		if (gemarkeerd < 0) gemarkeerd = v.gt.findIndex(([, s]) => s === strong);
-		html += `<p class="vp-grondtekst" lang="grc">${v.gt
+		grondtekst = `<p class="vp-grondtekst" lang="grc">${v.gt
 			.map(([t], i) => (i === gemarkeerd ? `<span class="vw licht">${esc(t)}</span>` : esc(t)))
 			.join(" ")}</p>`;
 	}
+	// De Statenvertaling staat alleen in de tab "Bijbels", niet in dit voorbeeld.
+	const html = opties.grondtekstEerst ? grondtekst + berea + kjv : berea + kjv + grondtekst;
 	doel.innerHTML = html;
 	doel.hidden = html === "";
 }

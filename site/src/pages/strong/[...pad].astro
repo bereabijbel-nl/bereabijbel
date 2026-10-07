@@ -1,0 +1,140 @@
+---
+// Alle vindplaatsen van één Strong-nummer, per 1000 op een pagina: /strong/G2638, /strong/G3588/2, ...
+// Alleen vindplaats en grondtaalwoord, plus bij hover het vers (zie lib/vertalingtabs.ts). Geen
+// vertaling van verzen die nog niet door de pijplijn zijn.
+import fs from "node:fs";
+import path from "node:path";
+import Base from "../../layouts/Base.astro";
+import { alleStrongNummers, alleVindplaatsen } from "../../lib/grondtekst";
+
+interface BoekInfo {
+	code: string;
+	naam_nl: string;
+}
+
+export function getStaticPaths() {
+	const PER_PAGINA = 1000; // getStaticPaths ziet geen variabelen buiten zichzelf
+	return alleStrongNummers().flatMap((nummer) => {
+		const paginas = Math.max(1, Math.ceil(alleVindplaatsen(nummer).length / PER_PAGINA));
+		return Array.from({ length: paginas }, (_, i) => ({
+			params: { pad: i === 0 ? nummer : `${nummer}/${i + 1}` },
+			props: { nummer, pagina: i + 1, paginas },
+		}));
+	});
+}
+
+const PER_PAGINA = 1000;
+const { nummer, pagina, paginas } = Astro.props as { nummer: string; pagina: number; paginas: number };
+const index: BoekInfo[] = JSON.parse(
+	fs.readFileSync(path.join(process.cwd(), "..", "data", "kjv", "index.json"), "utf-8"),
+);
+const bijCode = new Map(index.map((b) => [b.code, b]));
+
+const alle = alleVindplaatsen(nummer);
+const van = (pagina - 1) * PER_PAGINA;
+const getoond = alle.slice(van, van + PER_PAGINA);
+const rtl = nummer.startsWith("H");
+const adres = (p: number) => (p === 1 ? `/strong/${nummer}` : `/strong/${nummer}/${p}`);
+
+// Per boek groeperen (de concordantie staat al in Bijbelvolgorde).
+const groepen: { boek: BoekInfo; items: typeof getoond }[] = [];
+for (const vp of getoond) {
+	const boek = bijCode.get(vp.boek);
+	if (!boek) continue;
+	const laatste = groepen[groepen.length - 1];
+	if (laatste && laatste.boek.code === boek.code) laatste.items.push(vp);
+	else groepen.push({ boek, items: [vp] });
+}
+---
+
+<Base title={`${nummer} — BereaBijbel`} huidigeNav="bijbel">
+	<div class="prose">
+		<h2 class="sectie">{nummer}</h2>
+		<p>
+			Dit grondtaalwoord komt {alle.length} keer voor in de Bijbel.
+			{paginas > 1 && ` Vindplaats ${van + 1} tot en met ${van + getoond.length}.`}
+		</p>
+
+		<div class="kolommen">
+			<div>
+				{groepen.map((g) => (
+					<section class="boek">
+						<h3>{g.boek.naam_nl}</h3>
+						<ul>
+							{g.items.map((vp) => (
+								<li
+									data-boek={vp.boek}
+									data-hst={vp.hoofdstuk}
+									data-vers={vp.vers}
+									data-vorm={vp.tekst}
+									data-strong={nummer}
+								>
+									<a href={`/${vp.boek}/${vp.hoofdstuk}#vers-${vp.vers}`}>{g.boek.naam_nl} {vp.hoofdstuk}:{vp.vers}</a>
+									<span class="vorm" lang={rtl ? "he" : "grc"} dir={rtl ? "rtl" : undefined}>{vp.tekst}</span>
+								</li>
+							))}
+						</ul>
+					</section>
+				))}
+
+				{paginas > 1 && (
+					<nav class="paginas">
+						{pagina > 1 && <a href={adres(pagina - 1)}>&larr; zie de vorige {PER_PAGINA}</a>}
+						{pagina < paginas && <a href={adres(pagina + 1)}>zie de volgende {PER_PAGINA} &rarr;</a>}
+					</nav>
+				)}
+			</div>
+
+			<aside class="voorbeeld-kolom">
+				<div class="vp-voorbeeld" hidden></div>
+				<p class="hint">Ga met de muis over een vindplaats om het vers te zien.</p>
+			</aside>
+		</div>
+	</div>
+</Base>
+
+<script>
+	import { toonVoorbeeld } from "../../lib/vertalingtabs";
+
+	const doel = document.querySelector<HTMLElement>(".voorbeeld-kolom .vp-voorbeeld");
+	if (doel) {
+		document.querySelectorAll<HTMLElement>(".boek li").forEach((li) => {
+			li.addEventListener("mouseenter", () => toonVoorbeeld(li, doel, { grondtekstEerst: true }));
+			li.addEventListener("focusin", () => toonVoorbeeld(li, doel, { grondtekstEerst: true }));
+		});
+	}
+</script>
+
+<style is:global>
+	/* Deze pagina heeft ruimte nodig voor lijst en voorbeeldvers naast elkaar. */
+	main:has(.kolommen) { max-width: 1100px; }
+</style>
+
+<style>
+	.kolommen { display: block; }
+	.voorbeeld-kolom { display: none; }
+	@media (min-width: 900px) {
+		.kolommen { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 26rem); gap: 2.5rem; align-items: start; }
+		.voorbeeld-kolom { display: block; position: sticky; top: 1rem; }
+	}
+	.hint { margin: 0; font-size: 0.85rem; color: var(--tertiary); }
+	.vp-voorbeeld:not([hidden]) + .hint { display: none; }
+	.boek { margin-top: 1.6rem; }
+	.boek h3 {
+		font-family: sans-serif;
+		font-size: 0.78rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--tertiary);
+		margin: 0 0 0.4rem;
+	}
+	ul { margin: 0; padding: 0; list-style: none; }
+	li { display: flex; gap: 1rem; padding: 0.25rem 0.4rem; margin-left: -0.4rem; border-radius: 4px; }
+	li:hover { background: var(--bg-soft); }
+	li a { min-width: 11rem; font-weight: 600; color: var(--tekst); text-decoration: none; }
+	li a:hover { text-decoration: underline; color: var(--dark); }
+	.vorm { color: var(--dark); }
+	.paginas { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+	.paginas a { color: var(--tekst); text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 0.45rem 1.1rem; }
+	.paginas a:hover { background: var(--bg-soft); color: var(--dark); }
+</style>
