@@ -4,6 +4,9 @@
 # Gegenereerd build-artefact, zie pipeline/scripts/bouw-concordantie.js
 data/grondtekst/concordantie.json
 
+# KJV met Strong-nummers (CrossWire, alleen demo-vuldata), zie pipeline/scripts/verwerk-kjv-strong.js
+data/kjv_strong/
+
 # Logs
 logs
 *.log
